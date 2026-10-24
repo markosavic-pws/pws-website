@@ -1,7 +1,7 @@
 /* Probably Worth Sharing — site styles. Rules for changing these live in rules/design.md. */
 
 :root {
-  --cobalt: #001f89;       /* brand blue, from the logo */
+  --cobalt: #094cdc;       /* brand blue, rgb(9, 76, 220), as on the old Squarespace site */
   --sun: #ffda00;          /* brand yellow, from the logo */
   --paper: #fbf8f1;
   --surface: #ffffff;
@@ -11,7 +11,7 @@
   --link: var(--cobalt);
   --mark: color-mix(in srgb, var(--sun) 70%, transparent);
   --radius: 14px;
-  --shadow: 0 1px 2px rgb(0 0 0 / .05), 0 6px 20px rgb(0 31 137 / .07);
+  --shadow: 0 1px 2px rgb(0 0 0 / .05), 0 6px 20px rgb(9 76 220 / .07);
   --display: "Bricolage Grotesque", ui-sans-serif, system-ui, sans-serif;
   --serif: "Source Serif 4", Georgia, "Times New Roman", serif;
   --sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
