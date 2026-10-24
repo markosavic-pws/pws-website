@@ -42,19 +42,42 @@
   </div>
 </header>
 <main id="main">
-<article class="post post-recipes">
-  <header class="wrap-narrow post-head">
-    <p class="meta"><a class="kind" href="/recipes/">Recipe</a> <time datetime="2023-01-27">January 27, 2023</time></p>
-    <h1>Honey garlic glazed parsnips</h1>
+<article class="recipe" data-units="weight">
+  <header class="wrap-wide recipe-head">
+    <div class="recipe-head-text">
+      <p class="meta"><a class="kind" href="/recipes/">Recipe</a></p>
+      <h1>Honey garlic glazed parsnips</h1>
+      <p class="byline">Recipe by <a href="/about/">Marko Savic</a></p>
+      <p class="published">Published <time datetime="2023-01-27">January 27, 2023</time></p>
+      <p class="recipe-actions">
+        <a class="btn btn-sm" href="#recipe">Jump to recipe</a>
+        <button class="btn btn-ghost btn-sm" type="button" onclick="print()">Print</button>
+      </p>
+    </div>
+    <div class="recipe-media">
+      <img src="/images/recipes/honey-garlic-glazed-parsnips/DSC01035-092066.jpg" alt="Honey garlic glazed parsnips" fetchpriority="high">
+    </div>
   </header>
-  <div class="wrap-narrow prose">
-    <p><img loading="lazy" decoding="async" alt="" src="/images/recipes/honey-garlic-glazed-parsnips/DSC01035-092066.jpg"></p>
-<p><em>This recipe is part of Ugly Vegetable Winter – weird winter vegetables that are delicious, locally grown, and often ignored. Celery root and celeriac can be used interchangeably and people have very strong opinions about which is correct. Call it what you want.</em></p>
+
+  <div class="wrap-wide recipe-prose"><div class="prose"><p><em>This recipe is part of Ugly Vegetable Winter – weird winter vegetables that are delicious, locally grown, and often ignored. Celery root and celeriac can be used interchangeably and people have very strong opinions about which is correct. Call it what you want.</em></p>
 <p>Celeriac is the ugly, alien-looking root system of the celery plant. Don’t be scared – once cut it looks like a potato. Once cooked, celery root has a very creamy texture, again similar to a creamer potato. The flavour is mildly-celery, with a very sweet and nutty taste that pairs incredibly well with savoury dishes. It’s light, it’s bright, it’s the best mashed potatoes you’ll ever have – and it’s not even potatoes.</p>
 <p>Every head of celery has a celery root. Since demand for celeriac is low, it’s often left to rot in the fields. This is a shame since it’s incredibly delicious, nutritious, and easy to cook. If more people start to ask for celeriac it can create a big impact on the food system.</p>
-<p>Celeriac: boil it, mash it, stick it in a stew.</p>
-<h3>Ingredients</h3>
-<p><em>A side dish for 4 or a meal for 2. To scale this up, roast in the oven.</em></p>
+<p>Celeriac: boil it, mash it, stick it in a stew.</p></div></div>
+  <section class="wrap-wide recipe-grid" id="recipe">
+    <aside class="ingredients" aria-label="Ingredients">
+      <div class="recipe-controls">
+        <div class="control">
+          <span class="control-label" id="scale-label">Make</span>
+          <div class="seg" role="group" aria-labelledby="scale-label">
+            <button type="button" data-scale="1" aria-pressed="true">1×</button>
+            <button type="button" data-scale="2" aria-pressed="false">2×</button>
+            <button type="button" data-scale="3" aria-pressed="false">3×</button>
+          </div>
+        </div>
+        <p class="scale-note" hidden>Ingredients are scaled. Amounts mentioned in the method are for the original recipe.</p>
+      </div>
+      <h2>Ingredients</h2>
+      <div class="ing-list"><p><em>A side dish for 4 or a meal for 2. To scale this up, roast in the oven.</em></p>
 <p><strong>PARSNIPS</strong></p>
 <p>4–6 parsnips, around 650g 2 tbsp olive oil</p>
 <p><strong>GLAZE</strong></p>
@@ -64,9 +87,11 @@ Juice of 1 lemon</p>
 <p>Black pepper</p>
 <p><strong>INGREDIENT NOTES</strong></p>
 <p>Parsnips can be left in the earth over winter and get sweeter in the cold. Parsnips have a strong, nutty flavour that has bitter notes. It needs good amount of heat, can take some char, and strong flavours to balance it. The honey and lemon really cut through the parsnip beautifully here.</p>
-<p>Parsnips are quite starchy and become creamy when cooked at high heat.</p>
-<h3>Method</h3>
-<p><strong>SEAR THE PARSNIPS</strong></p>
+<p>Parsnips are quite starchy and become creamy when cooked at high heat.</p></div>
+    </aside>
+    <div class="method">
+      <h2>Method</h2>
+      <div class="prose"><p><strong>SEAR THE PARSNIPS</strong></p>
 <p>Peel and cut your parsnips. Parsnips come a wide array of sizes, similar to carrots. If your parsnips are very thick, cut them into strips. I cut mine into four strips, about 1/2” thick at the widest part of the parsnip – they will taper naturally.</p>
 <p>Preheat a 12” pan on medium-high heat, then add the olive oil. Once the olive oil shimmers, place the parsnips cut side down and lightly sprinkle with salt. The salt here draws out moisture, the soy sauce will add more salt later – so be gentle with the salt.</p>
 <p>After 3–4 minutes check the bottom of the parsnip, they should be getting a very dark golden colour. Turn the parsnips and check again after 2 minutes. If you quartered your parsnips they will have each three sides to brown. You may want to move the parsnips in the center of the pan to the edges, or sear in batches, if you get uneven browning. After 8–10 minutes your parsnips should be seared on all sides and have a crisp–tender texture.</p>
@@ -75,8 +100,9 @@ Juice of 1 lemon</p>
 <p>Add the soy sauce and honey. It should bubble and sputter. Toss the parsnips to combine in the glaze. Remove from the heat.</p>
 <p>Top with lemon juice and freshly ground black pepper.</p>
 <p><strong>SERVE</strong></p>
-<p>Transfer to a large serving tray or individual plates. To turn this into a meal, serve on a bed of cooked farro.</p>
-  </div>
+<p>Transfer to a large serving tray or individual plates. To turn this into a meal, serve on a bed of cooked farro.</p></div>
+    </div>
+  </section>
 </article>
 </main>
 <footer class="site-footer">
@@ -91,11 +117,6 @@ Juice of 1 lemon</p>
     <p class="fine">© 2026 Marko Savic</p>
   </div>
 </footer>
-<script>
-// give the Ingredients heading an anchor for "Jump to recipe"
-for (const h of document.querySelectorAll('.prose h2, .prose h3')) {
-  if (/^\s*ingredients\s*$/i.test(h.textContent)) { h.id = 'ingredients'; break; }
-}
-</script>
+<script src="/static/js/recipe.js" defer></script>
 </body>
 </html>

@@ -22,7 +22,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400..700&display=swap">
 <link rel="stylesheet" href="/static/css/site.css">
 <meta property="og:type" content="article">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Recipe", "name": "Mushroom and cheese pasta ", "author": {"@type": "Person", "name": "Marko Savic"}, "datePublished": "2023-06-18", "description": "This is a very easy, cheesy pasta full of mushroom flavour. It comes together very quickly and can be frozen as a pasta bake. This works great to showcase unique mushroom…", "recipeIngredient": ["3 tbsp butter", "1lb mushrooms, cleaned and roughly chopped", "3 shallots, diced", "3 cloves of garlic, thinly sliced", "1 tbsp dried thyme", "Salt", "Pepper", "50g Parmesan, grated", "100g mozzarella cheese, coarsely grated", "500g dried pasta"], "recipeInstructions": [{"@type": "HowToStep", "text": "Method"}], "image": ["https://probablyworthsharing.com/images/recipes/cowboy-pasta-zhs6b/DSC02274-f7923d.jpg"]}</script></head>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Recipe", "name": "Mushroom and cheese pasta ", "author": {"@type": "Person", "name": "Marko Savic"}, "datePublished": "2023-06-18", "description": "This is a very easy, cheesy pasta full of mushroom flavour. It comes together very quickly and can be frozen as a pasta bake. This works great to showcase unique mushroom…", "recipeIngredient": ["3 tbsp butter", "1lb mushrooms, cleaned and roughly chopped", "3 shallots, diced", "3 cloves of garlic, thinly sliced", "1 tbsp dried thyme", "Salt", "Pepper", "50g Parmesan, grated", "100g mozzarella cheese, coarsely grated", "500g dried pasta"], "recipeInstructions": [{"@type": "HowToStep", "text": "Bring a large pot of heavily salted water to a boil."}, {"@type": "HowToStep", "text": "Heat a large, high sided skillet on medium-high heat."}, {"@type": "HowToStep", "text": "Add the butter and heat until it is foaming."}, {"@type": "HowToStep", "text": "Add the mushrooms to the pan, lightly salt, and leave them for 10 minutes. Stir and cook for another 10 minutes until deeply golden brown and fragrant."}, {"@type": "HowToStep", "text": "Add the shallot, garlic, thyme, some fresh black pepper, a pinch of salt, and cook for 10 minutes, until softened. Reduce heat to low and cook your pasta to 1-minute less than the cook time on the box. Reserve 3/4 cup of pasta water in a mug."}, {"@type": "HowToStep", "text": "Add the Parmesan and 1/2 cup of pasta water to mushrooms and stir until a glossy sauce forms. Transfer the pasta to the sauce using a spider strainer. Add in half the mozzarella. Stir to combine. If the sauce looks very thick, add more pasta water and stir to loosen it up."}, {"@type": "HowToStep", "text": "If serving immediately, top with additional mozzarella."}, {"@type": "HowToStep", "text": "If freezing, transfer to containers and top with mozzarella. Bake at 350°F from frozen until bubbling in the centre and the cheese on top is browned."}], "image": ["https://probablyworthsharing.com/images/recipes/cowboy-pasta-zhs6b/DSC02274-f7923d.jpg"]}</script></head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <header class="masthead">
@@ -42,37 +42,63 @@
   </div>
 </header>
 <main id="main">
-<article class="post post-recipes">
-  <header class="wrap-narrow post-head">
-    <p class="meta"><a class="kind" href="/recipes/">Recipe</a> <time datetime="2023-06-18">June 18, 2023</time></p>
-    <h1>Mushroom and cheese pasta </h1>
-<p><a class="btn btn-sm" href="#ingredients">Jump to recipe</a> <button class="btn btn-ghost btn-sm" type="button" onclick="print()">Print</button></p>  </header>
-  <div class="wrap-narrow prose">
-    <p><img loading="lazy" decoding="async" alt="" src="/images/recipes/cowboy-pasta-zhs6b/DSC02274-f7923d.jpg"></p>
-<p>This is a very easy, cheesy pasta full of mushroom flavour. It comes together very quickly and can be frozen as a pasta bake. This works great to showcase unique mushroom flavours.</p>
-<h3>Ingredients</h3>
-<ul>
-<li>3 tbsp butter</li>
-<li>1lb mushrooms, cleaned and roughly chopped</li>
-<li>3 shallots, diced</li>
-<li>3 cloves of garlic, thinly sliced</li>
-<li>1 tbsp dried thyme</li>
+<article class="recipe" data-units="weight">
+  <header class="wrap-wide recipe-head">
+    <div class="recipe-head-text">
+      <p class="meta"><a class="kind" href="/recipes/">Recipe</a></p>
+      <h1>Mushroom and cheese pasta </h1>
+      <p class="byline">Recipe by <a href="/about/">Marko Savic</a></p>
+      <p class="published">Published <time datetime="2023-06-18">June 18, 2023</time></p>
+      <p class="recipe-actions">
+        <a class="btn btn-sm" href="#recipe">Jump to recipe</a>
+        <button class="btn btn-ghost btn-sm" type="button" onclick="print()">Print</button>
+      </p>
+    </div>
+    <div class="recipe-media">
+      <img src="/images/recipes/cowboy-pasta-zhs6b/DSC02274-f7923d.jpg" alt="Mushroom and cheese pasta " fetchpriority="high">
+    </div>
+  </header>
+
+  <div class="wrap-wide recipe-prose"><div class="prose"><p>This is a very easy, cheesy pasta full of mushroom flavour. It comes together very quickly and can be frozen as a pasta bake. This works great to showcase unique mushroom flavours.</p></div></div>
+  <section class="wrap-wide recipe-grid" id="recipe">
+    <aside class="ingredients" aria-label="Ingredients">
+      <div class="recipe-controls">
+        <div class="control">
+          <span class="control-label" id="scale-label">Make</span>
+          <div class="seg" role="group" aria-labelledby="scale-label">
+            <button type="button" data-scale="1" aria-pressed="true">1×</button>
+            <button type="button" data-scale="2" aria-pressed="false">2×</button>
+            <button type="button" data-scale="3" aria-pressed="false">3×</button>
+          </div>
+        </div>
+        <p class="scale-note" hidden>Ingredients are scaled. Amounts mentioned in the method are for the original recipe.</p>
+      </div>
+      <h2>Ingredients</h2>
+      <div class="ing-list"><ul>
+<li><span class="n" data-n="3" data-approx="">3</span> tbsp butter</li>
+<li><span class="n" data-n="1" data-approx="">1</span>lb mushrooms, cleaned and roughly chopped</li>
+<li><span class="n" data-n="3" data-approx="">3</span> shallots, diced</li>
+<li><span class="n" data-n="3" data-approx="">3</span> cloves of garlic, thinly sliced</li>
+<li><span class="n" data-n="1" data-approx="">1</span> tbsp dried thyme</li>
 <li>Salt</li>
 <li>Pepper</li>
-<li>50g Parmesan, grated</li>
-<li>100g mozzarella cheese, coarsely grated</li>
-<li>500g dried pasta</li>
-</ul>
-<h3>Method</h3>
-<p>Bring a large pot of heavily salted water to a boil.</p>
+<li><span class="n" data-n="50" data-approx="">50</span>g Parmesan, grated</li>
+<li><span class="n" data-n="100" data-approx="">100</span>g mozzarella cheese, coarsely grated</li>
+<li><span class="n" data-n="500" data-approx="">500</span>g dried pasta</li>
+</ul></div>
+    </aside>
+    <div class="method">
+      <h2>Method</h2>
+      <div class="prose"><p>Bring a large pot of heavily salted water to a boil.</p>
 <p>Heat a large, high sided skillet on medium-high heat.</p>
 <p>Add the butter and heat until it is foaming.</p>
 <p>Add the mushrooms to the pan, lightly salt, and leave them for 10 minutes. Stir and cook for another 10 minutes until deeply golden brown and fragrant.</p>
 <p>Add the shallot, garlic, thyme, some fresh black pepper, a pinch of salt, and cook for 10 minutes, until softened. Reduce heat to low and cook your pasta to 1-minute less than the cook time on the box. Reserve 3/4 cup of pasta water in a mug.</p>
 <p>Add the Parmesan and 1/2 cup of pasta water to mushrooms and stir until a glossy sauce forms. Transfer the pasta to the sauce using a spider strainer. Add in half the mozzarella. Stir to combine. If the sauce looks very thick, add more pasta water and stir to loosen it up.</p>
 <p>If serving immediately, top with additional mozzarella.</p>
-<p>If freezing, transfer to containers and top with mozzarella. Bake at 350°F from frozen until bubbling in the centre and the cheese on top is browned.</p>
-  </div>
+<p>If freezing, transfer to containers and top with mozzarella. Bake at 350°F from frozen until bubbling in the centre and the cheese on top is browned.</p></div>
+    </div>
+  </section>
 </article>
 </main>
 <footer class="site-footer">
@@ -87,11 +113,6 @@
     <p class="fine">© 2026 Marko Savic</p>
   </div>
 </footer>
-<script>
-// give the Ingredients heading an anchor for "Jump to recipe"
-for (const h of document.querySelectorAll('.prose h2, .prose h3')) {
-  if (/^\s*ingredients\s*$/i.test(h.textContent)) { h.id = 'ingredients'; break; }
-}
-</script>
+<script src="/static/js/recipe.js" defer></script>
 </body>
 </html>
