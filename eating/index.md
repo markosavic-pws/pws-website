@@ -25,7 +25,7 @@ What Marko Savic is cooking, baking, buying, and eating: home cooking, cookbook 
 - [Soy-glazed meatballs](https://probablyworthsharing.com/eating/2026-04-07-soy-glazed-meatballs/index.md) (2026-04-07): Soy-glazed meatballs
 - [Sticky bun from Boulangerie La Vendéenne](https://probablyworthsharing.com/eating/2026-05-12-la-vendeenne-sticky-bun/index.md) (2026-05-12): From Boulangerie La Vendéenne in Blockhouse, picked up at Noggins Corner Farm Market in Greenwich.
 - [Mini pineapple upside-down cakes](https://probablyworthsharing.com/eating/2026-05-16-mini-pineapple-upside-down-cakes/index.md) (2026-05-16): Mini pineapple upside-down cakes
-- [Asparagus and spring onion pasta](https://probablyworthsharing.com/eating/2026-05-31-asparagus-and-spring-onion-pasta/index.md) (2026-05-31): Spring onions and asparagus, an egg-yolk dough, and a green filling for hand-shaped pasta. Started from the garganelli in Flour + Water.
+- [Asparagus and spring onion pasta](https://probablyworthsharing.com/eating/2026-05-31-asparagus-and-spring-onion-pasta/index.md) (2026-05-31): Spring onions and asparagus, an egg-yolk dough, and a green filling for hand-shaped pasta. Started from a recipe in Flour + Water.
 - [Dipped soft serve from Leonidas](https://probablyworthsharing.com/eating/2026-06-21-leonidas-dipped-soft-serve/index.md) (2026-06-21): Dipped soft serve from Leonidas
 - [No-bake pistachio and vanilla cheesecake](https://probablyworthsharing.com/eating/2026-08-16-no-bake-pistachio-vanilla-cheesecake/index.md) (2026-08-16): No-bake pistachio and vanilla cheesecake
 - [Salad from Poyo + The Sprout](https://probablyworthsharing.com/eating/2026-09-16-poyo-and-the-sprout-salad/index.md) (2026-09-16): The Super Saiyan salad, I think. Salad from Poyo + The Sprout

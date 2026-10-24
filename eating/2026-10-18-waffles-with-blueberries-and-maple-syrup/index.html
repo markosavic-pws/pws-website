@@ -28,7 +28,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400..700&display=swap">
-<link rel="stylesheet" href="/static/css/site.css?v=f3edca15">
+<link rel="stylesheet" href="/static/css/site.css?v=0fdd9db4">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -48,7 +48,7 @@
         <li><a href="/recipes/">Recipes</a></li>
         <li><a href="/house/">House</a></li>
         <li><a href="/newsletter/">Newsletter</a></li>
-        <li><a href="https://www.youtube.com/channel/UCF3Rvw0Hh8iPXbm_4VeF_dQ">YouTube</a></li>
+        <li><a href="https://www.youtube.com/channel/UCF3Rvw0Hh8iPXbm_4VeF_dQ" target="_blank" rel="noopener">YouTube</a></li>
         <li><a href="/about/">About</a></li>
       </ul>
     </nav>
@@ -56,38 +56,58 @@
   </div>
 </header>
 <main id="main">
-<article class="entry">
-  <header class="wrap-wide entry-head">
-    <p class="meta"><a class="kind" href="/eating/">What I’m Eating</a> <time datetime="2026-10-18">October 18, 2026 · 10:06</time></p>
-    <h1>Waffles with blueberries &amp; maple syrup</h1>
-    <p class="entry-where">At home</p>
-<p class="tags"><span class="tag">breakfast</span><span class="tag">blueberries</span></p>  </header>
-
-  <div class="entry-media" tabindex="0" aria-label="Photos and videos">
-    <figure class="entry-slide" id="m1">
+<article class="recipe ext-recipe">
+  <header class="wrap-wide recipe-head">
+    <div class="recipe-head-text">
+      <p class="meta"><a class="kind" href="/recipes/">Recipe</a></p>
+      <h1>Waffles with blueberries &amp; maple syrup</h1>
+<p class="byline">Recipe by <strong>Melissa Clark</strong></p>      <p class="byline publication">From “Waffles” in <em>NYT Cooking</em></p>
+      <p class="published">Cooked by Marko on <time datetime="2026-10-18">October 18, 2026</time></p>
+<p class="credit-note">I served with butter, maple syrup, and blueberries</p><p class="tags"><span class="tag">breakfast</span><span class="tag">blueberries</span></p>      <p class="recipe-actions">
+<a class="btn btn-sm" href="https://cooking.nytimes.com/recipes/1017409-waffles" target="_blank" rel="noopener">Read recipe →</a>      </p>
+    </div>
+    <div class="recipe-media">
       <img src="/images/eating/2026-10-18-img-8723/img-8723.jpg" alt="" width="1200" height="1600" loading="eager" decoding="async">
 
-    </figure>
-  </div>
-  <div class="wrap-narrow entry-body">
-    <aside class="credit-box" aria-label="Recipe source">
-  <p class="credit-kind">Made as written from</p>
-  <ul>
-    <li>
-      <strong><a href="https://cooking.nytimes.com/recipes/1017409-waffles" rel="noopener">Waffles</a></strong> in <em>NYT Cooking</em> by Melissa Clark    </li>
-  </ul>
-<p class="credit-note">I served with butter, maple syrup, and blueberries</p></aside>
-
-  </div>
-
-  <nav class="wrap-narrow entry-nav" aria-label="More from What I’m Eating">
+    </div>
+  </header>
+  <nav class="wrap-wide entry-nav" aria-label="More from What I’m Eating">
 <a href="/eating/2026-10-16-bessie-north-house/" rel="prev">← Dinner at Bessie North House</a>  </nav>
 </article>
-</main>
+<script type="application/json" id="stories-data">[{"chapters": [{"caption": "", "credit": "Made as written from NYT Cooking recipe by Melissa Clark, I served with butter, maple syrup, and blueberries", "date": "October 18, 2026", "rating": null, "recipe": {"external": true, "url": "https://cooking.nytimes.com/recipes/1017409-waffles"}, "title": "Waffles with blueberries \u0026 maple syrup", "trip": null, "url": "/eating/2026-10-18-waffles-with-blueberries-and-maple-syrup/", "where": "At home"}], "media": [{"ch": 0, "h": 1600, "src": "/images/eating/2026-10-18-img-8723/img-8723.jpg", "type": "photo", "w": 1200}], "title": "Waffles with blueberries \u0026 maple syrup", "trip": false, "url": "/eating/2026-10-18-waffles-with-blueberries-and-maple-syrup/", "wide": false}]</script>
+<dialog class="viewer" id="viewer" aria-label="Story viewer">
+  <div class="viewer-bars" aria-hidden="true"></div>
+  <header class="viewer-head">
+    <div>
+      <p class="viewer-title"></p>
+      <p class="viewer-sub"></p>
+    </div>
+    <div class="viewer-controls">
+      <button type="button" class="viewer-pause" aria-label="Pause" aria-pressed="false">
+        <svg class="i-pause" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M4 2h3v12H4zM9 2h3v12H9z" fill="currentColor"/></svg>
+        <svg class="i-play" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M4 2l10 6-10 6z" fill="currentColor"/></svg>
+      </button>
+      <button type="button" class="viewer-close" aria-label="Close">×</button>
+    </div>
+  </header>
+  <div class="viewer-stage">
+    <button type="button" class="viewer-prev" aria-label="Previous"></button>
+    <div class="viewer-media"></div>
+    <button type="button" class="viewer-next" aria-label="Next"></button>
+    <a class="viewer-recipe" href="#" target="_blank" rel="noopener" hidden>Recipe <span aria-hidden="true">→</span><span class="sr-only"> (opens in a new tab)</span></a>
+  </div>
+  <footer class="viewer-foot">
+    <p class="viewer-credit"></p>
+    <div class="viewer-caption"></div>
+    <div class="viewer-actions">
+      <a class="viewer-btn viewer-btn-ghost viewer-link" href="#">Read more about this →</a>
+    </div>
+  </footer>
+</dialog></main>
 <footer class="site-footer">
   <div class="wrap footer-inner">
-    <p class="footer-about">I make a cooking show on <a href="https://www.youtube.com/channel/UCF3Rvw0Hh8iPXbm_4VeF_dQ">YouTube</a> sometimes. But mostly I post photos of <a href="/eating/">what I’m cooking</a>. I used to write a <a href="/newsletter/">newsletter</a> that I hope to start again one day, but I’m busy these days <a href="/house/">building a house</a> and working full-time in tech. This site is a home for all my adventures in food (and life).</p>
-    <p class="footer-cta">Like and subscribe on <a href="https://www.youtube.com/channel/UCF3Rvw0Hh8iPXbm_4VeF_dQ">YouTube</a> or follow along on <a href="https://www.instagram.com/markosavic/">Instagram</a>.</p>
+    <p class="footer-about">I make a cooking show on <a href="https://www.youtube.com/channel/UCF3Rvw0Hh8iPXbm_4VeF_dQ" target="_blank" rel="noopener">YouTube</a> sometimes. But mostly I post photos of <a href="/eating/">what I’m cooking</a>. I used to write a <a href="/newsletter/">newsletter</a> that I hope to start again one day, but I’m busy these days <a href="/house/">building a house</a> and working full-time in tech. This site is a home for all my adventures in food (and life).</p>
+    <p class="footer-cta">Like and subscribe on <a href="https://www.youtube.com/channel/UCF3Rvw0Hh8iPXbm_4VeF_dQ" target="_blank" rel="noopener">YouTube</a> or follow along on <a href="https://www.instagram.com/markosavic/" target="_blank" rel="noopener">Instagram</a>.</p>
     <p class="footer-links">
       <a href="/about/">About</a>
       <a href="/ethics-in-advertising/">Ethics &amp; Ads</a>
@@ -114,5 +134,5 @@
   addEventListener('keydown', e => { if (e.key === 'Escape' && document.body.classList.contains('menu-open')) set(false); });
 })();
 </script>
-<script src="/static/js/stories.js?v=00dde4b5" defer></script></body>
+<script src="/static/js/stories.js?v=bc19c061" defer></script></body>
 </html>

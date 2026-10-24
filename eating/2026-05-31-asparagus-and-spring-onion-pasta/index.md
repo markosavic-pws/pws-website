@@ -4,16 +4,16 @@ url: "https://probablyworthsharing.com/eating/2026-05-31-asparagus-and-spring-on
 author: "Marko Savic"
 published: "2026-05-31"
 type: "food log entry"
-description: "Spring onions and asparagus, an egg-yolk dough, and a green filling for hand-shaped pasta. Started from the garganelli in Flour + Water."
+description: "Spring onions and asparagus, an egg-yolk dough, and a green filling for hand-shaped pasta. Started from a recipe in Flour + Water."
 ---
 
 # Asparagus and spring onion pasta
 
-Spring onions and asparagus, an egg-yolk dough, and a green filling for hand-shaped pasta. Started from the garganelli in Flour + Water.
+Spring onions and asparagus, an egg-yolk dough, and a green filling for hand-shaped pasta. Started from a recipe in Flour + Water.
 
 **Where:** At home
 
-**A riff on:** Garganelli with Prosciutto and Peas, Flour + Water: Pasta, by Thomas McNaughton, p. 232
+**A riff on:** Flour + Water: Pasta, by Thomas McNaughton
 
 ## Photos and videos
 

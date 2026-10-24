@@ -4,7 +4,7 @@ url: "https://probablyworthsharing.com/eating/2026-05-16-mini-pineapple-upside-d
 author: "Marko Savic"
 published: "2026-05-16"
 type: "food log entry"
-description: "Mini pineapple upside-down cakes, at home, May 16, 2026. Made as written from La cuisine des souvenirs. From What I'm Eating, Marko Savic's food log."
+description: "Mini pineapple upside-down cakes, at home, May 16, 2026. Made as written from La cuisine des souvenirs recipe by Emma. From What I'm Eating, Marko…"
 ---
 
 # Mini pineapple upside-down cakes
@@ -13,7 +13,7 @@ description: "Mini pineapple upside-down cakes, at home, May 16, 2026. Made as w
 
 **Where:** At home
 
-**Made as written from:** La cuisine des souvenirs
+**Made as written from:** Petits Moelleux Renversés à l’Ananas & Mascarpone, La cuisine des souvenirs, by Emma, https://www.lacuisinedessouvenirs.com/petits-moelleux-renverses-a-lananas-mascarpone/
 
 ## Photos and videos
 

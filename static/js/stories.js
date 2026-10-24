@@ -111,7 +111,8 @@
   function render() {
     clearTimeout(timer);
     const st = stories[s], item = st.media[m], ch = st.chapters[item.ch || 0];
-    dlg.classList.toggle('is-wide', !!st.wide);
+    // house stories: landscape photos spread across the screen; portrait ones keep the story column
+    dlg.classList.toggle('is-wide', !!st.wide && (item.w || 0) > (item.h || 0));
     // a trip shows the stop's name, with the trip as the subtitle
     $('.viewer-title', dlg).textContent = ch.title;
     $('.viewer-sub', dlg).textContent = [st.trip ? st.title : ch.trip, ch.date, ch.where].filter(Boolean).join(' · ');
@@ -125,7 +126,8 @@
     if (ch.recipe) rec.href = ch.recipe.url;
     const link = $('.viewer-link', dlg);
     link.href = ch.url;
-    link.hidden = location.pathname === ch.url;
+    // house weeks have nothing to read until Marko writes a summary
+    link.hidden = location.pathname === ch.url || (st.wide && !(ch.caption || '').trim());
     bars.innerHTML = st.media.map((_, i) => `<span><i style="width:${i < m ? 100 : 0}%"></i></span>`).join('');
     stage.innerHTML = '';
     let el;

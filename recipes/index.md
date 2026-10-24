@@ -11,7 +11,7 @@ description: "68 recipes from Marko Savic's kitchen: seasonal, market-driven hom
 
 - [Waffles with blueberries & maple syrup](https://probablyworthsharing.com/eating/2026-10-18-waffles-with-blueberries-and-maple-syrup/index.md) (2026-10-18): Waffles with blueberries & maple syrup
 - [No-Bake Pistachio & Vanilla Cheesecake](https://probablyworthsharing.com/recipes/no-bake-pistachio-vanilla-cheesecake/index.md) (2026-08-16): A no-bake vanilla bean cheesecake on a Biscoff base, with a crunchy pistachio praline layer and a smooth pistachio cream on top.
-- [Asparagus and spring onion pasta](https://probablyworthsharing.com/eating/2026-05-31-asparagus-and-spring-onion-pasta/index.md) (2026-05-31): Spring onions and asparagus, an egg-yolk dough, and a green filling for hand-shaped pasta. Started from the garganelli in Flour + Water.
+- [Asparagus and spring onion pasta](https://probablyworthsharing.com/eating/2026-05-31-asparagus-and-spring-onion-pasta/index.md) (2026-05-31): Spring onions and asparagus, an egg-yolk dough, and a green filling for hand-shaped pasta. Started from a recipe in Flour + Water.
 - [Mini pineapple upside-down cakes](https://probablyworthsharing.com/eating/2026-05-16-mini-pineapple-upside-down-cakes/index.md) (2026-05-16): Mini pineapple upside-down cakes
 - [Soy-glazed meatballs](https://probablyworthsharing.com/eating/2026-04-07-soy-glazed-meatballs/index.md) (2026-04-07): Soy-glazed meatballs
 - [Salted caramel chocolate cake](https://probablyworthsharing.com/eating/2025-08-02-salted-caramel-chocolate-cake/index.md) (2025-08-02): Salted caramel chocolate cake
