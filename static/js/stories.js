@@ -21,6 +21,12 @@
     tl.scrollLeft += (r.left + r.width / 2) - (box.left + box.width / 2);
   };
   if (tl) {
+    // focus ring on the strip for keyboard users only (a tap on iOS also focuses it)
+    let keyboard = false;
+    addEventListener('keydown', e => { if (e.key === 'Tab') keyboard = true; }, true);
+    addEventListener('pointerdown', () => { keyboard = false; }, true);
+    tl.addEventListener('focus', () => tl.classList.toggle('kb-focus', keyboard));
+    tl.addEventListener('blur', () => tl.classList.remove('kb-focus'));
     centreNewest();
     addEventListener('load', centreNewest);
     // once you scroll away, a "Newest" button brings today's moment back to the centre
