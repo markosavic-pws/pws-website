@@ -9,6 +9,7 @@ description: "What Marko Savic is cooking, baking, buying, and eating: home cook
 
 What Marko Savic is cooking, baking, buying, and eating: home cooking, cookbook recipes, markets, bakeries, and restaurants, mostly in Nova Scotia.
 
+- [Jersey Spring Frolic at St Brigid's Creamery](https://probablyworthsharing.com/eating/2024-05-04-jersey-spring-frolic/index.md) (2024-05-04): Jersey Spring Frolic at St Brigid's Creamery
 - [Pecan sticky bun](https://probablyworthsharing.com/eating/2025-01-11-pecan-sticky-bun/index.md) (2025-01-11): Pecan sticky bun
 - [Baked Mont d’Or](https://probablyworthsharing.com/eating/2025-01-17-baked-mont-dor/index.md) (2025-01-17): A stinky, traditional French-Swiss cheese that tastes incredible baked, with thyme and garlic.
 - [Brown butter chocolate chip cookies](https://probablyworthsharing.com/eating/2025-01-25-brown-butter-chocolate-chip-cookies/index.md) (2025-01-25): Brown butter chocolate chip cookies
@@ -19,9 +20,13 @@ What Marko Savic is cooking, baking, buying, and eating: home cooking, cookbook 
 - [Gougères](https://probablyworthsharing.com/eating/2025-03-08-gougeres/index.md) (2025-03-08): Gruyère gougères, piped and baked the same afternoon as the rolls.
 - [Sliders, two ways](https://probablyworthsharing.com/eating/2025-03-09-sliders-two-ways/index.md) (2025-03-09): Two kinds: Frère Jacques cheese with local smoked bacon, and a beef slider with Comté.
 - [KJ & Gabe’s wedding cake](https://probablyworthsharing.com/eating/2025-03-15-kj-and-gabes-wedding-cake/index.md) (2025-03-15): KJ & Gabe’s wedding cake
+- [Dinner at Bessie North House](https://probablyworthsharing.com/eating/2025-05-30-bessie-north-house/index.md) (2025-05-30): Dinner at Bessie North House
 - [Fraisier cake](https://probablyworthsharing.com/eating/2025-06-24-fraisier-cake/index.md) (2025-06-24): Fraisier cake
+- [Dinner at Fossil Farms](https://probablyworthsharing.com/eating/2025-07-26-fossil-farms/index.md) (2025-07-26): Dinner at Fossil Farms
 - [Oreo cheesecake](https://probablyworthsharing.com/eating/2025-07-30-oreo-cheesecake/index.md) (2025-07-30): My own recipe, made up as I went. Oreo cheesecake
 - [Salted caramel chocolate cake](https://probablyworthsharing.com/eating/2025-08-02-salted-caramel-chocolate-cake/index.md) (2025-08-02): Salted caramel chocolate cake
+- [Dinner at Bessie North House](https://probablyworthsharing.com/eating/2025-09-13-bessie-north-house/index.md) (2025-09-13): Dinner at Bessie North House
+- [Dinner at Oxalis](https://probablyworthsharing.com/eating/2025-10-09-oxalis/index.md) (2025-10-09): Dinner at Oxalis
 - [Soy-glazed meatballs](https://probablyworthsharing.com/eating/2026-04-07-soy-glazed-meatballs/index.md) (2026-04-07): Soy-glazed meatballs
 - [Sticky bun from Boulangerie La Vendéenne](https://probablyworthsharing.com/eating/2026-05-12-la-vendeenne-sticky-bun/index.md) (2026-05-12): From Boulangerie La Vendéenne in Blockhouse, picked up at Noggins Corner Farm Market in Greenwich.
 - [Mini pineapple upside-down cakes](https://probablyworthsharing.com/eating/2026-05-16-mini-pineapple-upside-down-cakes/index.md) (2026-05-16): Mini pineapple upside-down cakes
@@ -32,6 +37,7 @@ What Marko Savic is cooking, baking, buying, and eating: home cooking, cookbook 
 - [Burger and fries at Bannerman Brewing](https://probablyworthsharing.com/eating/2026-09-17-bannerman-brewing-burger/index.md) (2026-09-17): Burger and fries at Bannerman Brewing
 - [Pastries from Birdie](https://probablyworthsharing.com/eating/2026-09-17-birdie-pastries/index.md) (2026-09-17): Pastries from Birdie
 - [Pastry from Rocket Bakery](https://probablyworthsharing.com/eating/2026-09-18-rocket-bakery-pastry/index.md) (2026-09-18): Pastry from Rocket Bakery
+- [Mussels](https://probablyworthsharing.com/eating/2026-10-02-cape-breton-mussels/index.md) (2026-10-02): Mussels
 - [Plywood Thanksgiving](https://probablyworthsharing.com/eating/2026-10-07-plywood-thanksgiving/index.md) (2026-10-07): Brined, dried in the fridge, roasted, and eaten on the plywood floor of the house we are building.
 - [Dinner at Bessie North House](https://probablyworthsharing.com/eating/2026-10-16-bessie-north-house/index.md) (2026-10-16): Dinner at Bessie North House
 - [Waffles with blueberries & maple syrup](https://probablyworthsharing.com/eating/2026-10-18-waffles-with-blueberries-and-maple-syrup/index.md) (2026-10-18): Waffles with blueberries & maple syrup
