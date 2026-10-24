@@ -97,6 +97,23 @@
   let s = 0, m = 0, timer = null, started = 0, paused = false, remaining = PHOTO_MS;
   let pinned = false;   // paused with the button: stays paused while you step through
   const pauseBtn = $('.viewer-pause', dlg);
+  // sound: off until you turn it on (browsers only autoplay muted video), then on for every video
+  const soundBtn = $('.viewer-sound', dlg);
+  let sound = false;
+  try { sound = sessionStorage.getItem('pws-sound') === 'on'; } catch (e) {}
+  function setSound(on) {
+    sound = on;
+    try { sessionStorage.setItem('pws-sound', on ? 'on' : 'off'); } catch (e) {}
+    soundBtn.setAttribute('aria-pressed', String(on));
+    soundBtn.setAttribute('aria-label', on ? 'Mute' : 'Turn sound on');
+    dlg.classList.toggle('has-sound', on);
+    const v = $('video', stage);
+    if (v) v.muted = !on;
+  }
+  soundBtn.addEventListener('click', () => setSound(!sound));
+  soundBtn.setAttribute('aria-pressed', String(sound));
+  soundBtn.setAttribute('aria-label', sound ? 'Mute' : 'Turn sound on');
+  dlg.classList.toggle('has-sound', sound);
   const setPinned = on => {
     pinned = on;
     pauseBtn.setAttribute('aria-pressed', String(on));
@@ -127,12 +144,15 @@
     const link = $('.viewer-link', dlg);
     link.href = ch.url;
     // house weeks have nothing to read until Marko writes a summary
-    link.hidden = location.pathname === ch.url || (st.wide && !(ch.caption || '').trim());
+    // no "Read more" for the page you're on (travel moments live on their trip page), or for unwritten house weeks
+    link.hidden = location.pathname === ch.url.split('#')[0] || (st.wide && !(ch.caption || '').trim());
     bars.innerHTML = st.media.map((_, i) => `<span><i style="width:${i < m ? 100 : 0}%"></i></span>`).join('');
     stage.innerHTML = '';
     let el;
     if (item.type === 'video') {
-      el = Object.assign(document.createElement('video'), { src: item.src, poster: item.poster || '', muted: true, playsInline: true, autoplay: !pinned, loop: pinned });
+      el = Object.assign(document.createElement('video'), { src: item.src, poster: item.poster || '', muted: !sound, playsInline: true, loop: pinned });
+      // with sound on, some browsers refuse to autoplay; fall back to muted rather than not playing
+      if (!pinned) el.play().catch(() => { el.muted = true; setSound(false); el.play().catch(() => {}); });
       el.addEventListener('timeupdate', () => { const f = fill(m); if (f && el.duration) f.style.width = (100 * el.currentTime / el.duration) + '%'; });
       el.addEventListener('ended', next);
     } else {
@@ -141,6 +161,7 @@
       if (!pinned) startPhotoTimer();
     }
     stage.append(el);
+    soundBtn.hidden = item.type !== 'video';
     // warm the next photo
     const nx = st.media[m + 1] || stories[s + 1]?.media[0];
     if (nx && nx.type === 'photo') new Image().src = nx.src;
@@ -191,6 +212,7 @@
     if (e.key === 'ArrowRight') next();
     else if (e.key === 'ArrowLeft') prev();
     else if (e.key === ' ') { e.preventDefault(); setPinned(!pinned); }
+    else if (e.key === 'm' && !soundBtn.hidden) setSound(!sound);
   });
   // press and hold to pause, swipe sideways to skip, swipe down to close
   let x0 = 0, y0 = 0, held = null;
