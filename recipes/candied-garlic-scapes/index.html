@@ -2,6 +2,7 @@
 <html lang="en-CA">
 <head>
 <meta charset="utf-8">
+<script>document.documentElement.classList.add('js')</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Jin Sol’s Candied Garlic Scapes · Probably Worth Sharing</title>
 <meta name="description" content="My friend Jin Sol Kim, founder of Vital Little Plans candles, told me about candied garlic scapes. They sound wild – a sweet-salty-garlic treat? Sign me…">
@@ -27,7 +28,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400..700&display=swap">
-<link rel="stylesheet" href="/static/css/site.css">
+<link rel="stylesheet" href="/static/css/site.css?v=f3edca15">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Recipe", "name": "Jin Sol’s Candied Garlic Scapes", "author": {"@type": "Person", "name": "Marko Savic"}, "datePublished": "2023-07-13", "description": "My friend Jin Sol Kim, founder of Vital Little Plans candles , told me about candied garlic scapes. They sound wild – a sweet-salty-garlic treat? Sign me up. They taste amazing.…", "recipeIngredient": ["10 garlic scapes, cut into 1” pieces", "1 tbsp water", "1 tbsp toasted sesame oil", "2 tbsp light soy sauce", "1 tbsp cane sugar", "1 tbsp sesame seeds"], "recipeInstructions": [{"@type": "HowToStep", "text": "Cut the garlic scapes into 1” long pieces."}, {"@type": "HowToStep", "text": "Place a medium saucepan on medium heat and add the cut garlic scapes and water. Cover with a lid and cook for 10 minutes until the garlic scapes are softened."}, {"@type": "HowToStep", "text": "Add the sesame oil, soy sauce, and cane sugar. Stir to coat. Cook for 3–5 minutes until the soy sauce is thickened and the sugar is beginning to caramelize."}, {"@type": "HowToStep", "text": "Add the sesame seeds and cook for another 30–60 seconds until the sesame seeds begin to take on some colour."}, {"@type": "HowToStep", "text": "Serving"}, {"@type": "HowToStep", "text": "Eat warm as a side dish. Make a rice bowl with candied scapes and a fried egg. Allow to cool and use as a topper for salads. Eat it straight from the bowl as a TV snack. This recipe is addictive."}], "image": ["https://probablyworthsharing.com/images/recipes/candied-garlic-scapes/DSC03183-fc651b.jpeg"]}</script></head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -37,7 +38,11 @@
       <img src="/logo.png" alt="" width="56" height="56">
       <span>Probably Worth Sharing</span>
     </a>
-    <nav aria-label="Main">
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="site-nav" aria-label="Main">
+      <button class="menu-close" type="button" aria-label="Close menu">×</button>
       <ul>
         <li><a href="/eating/">Eating</a></li>
         <li><a href="/recipes/" aria-current="page">Recipes</a></li>
@@ -47,6 +52,7 @@
         <li><a href="/about/">About</a></li>
       </ul>
     </nav>
+    <div class="menu-scrim" hidden></div>
   </div>
 </header>
 <main id="main">
@@ -108,6 +114,7 @@
 </main>
 <footer class="site-footer">
   <div class="wrap footer-inner">
+    <p class="footer-about">I make a cooking show on <a href="https://www.youtube.com/channel/UCF3Rvw0Hh8iPXbm_4VeF_dQ">YouTube</a> sometimes. But mostly I post photos of <a href="/eating/">what I’m cooking</a>. I used to write a <a href="/newsletter/">newsletter</a> that I hope to start again one day, but I’m busy these days <a href="/house/">building a house</a> and working full-time in tech. This site is a home for all my adventures in food (and life).</p>
     <p class="footer-cta">Like and subscribe on <a href="https://www.youtube.com/channel/UCF3Rvw0Hh8iPXbm_4VeF_dQ">YouTube</a> or follow along on <a href="https://www.instagram.com/markosavic/">Instagram</a>.</p>
     <p class="footer-links">
       <a href="/about/">About</a>
@@ -118,6 +125,23 @@
     <p class="fine">© 2026 Marko Savic</p>
   </div>
 </footer>
-<script src="/static/js/recipe.js" defer></script>
+<script>
+// phone menu: slide-over panel
+(() => {
+  const btn = document.querySelector('.menu-toggle'), nav = document.getElementById('site-nav');
+  const scrim = document.querySelector('.menu-scrim'), close = nav.querySelector('.menu-close');
+  const set = open => {
+    document.body.classList.toggle('menu-open', open);
+    btn.setAttribute('aria-expanded', String(open));
+    scrim.hidden = !open;
+    if (open) nav.querySelector('a')?.focus(); else if (document.activeElement && nav.contains(document.activeElement)) btn.focus();
+  };
+  btn.addEventListener('click', () => set(true));
+  close.addEventListener('click', () => set(false));
+  scrim.addEventListener('click', () => set(false));
+  addEventListener('keydown', e => { if (e.key === 'Escape' && document.body.classList.contains('menu-open')) set(false); });
+})();
+</script>
+<script src="/static/js/recipe.js?v=77197dc0" defer></script>
 </body>
 </html>

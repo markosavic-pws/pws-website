@@ -1,5 +1,5 @@
 ---
-title: "Cookies &amp; Cream Granola"
+title: "Cookies & Cream Granola"
 url: "https://probablyworthsharing.com/recipes/oreo-inspired-granola/"
 author: "Marko Savic"
 published: "2023-03-09"
@@ -7,7 +7,7 @@ type: "recipe"
 description: "I love Oreos, but Oreos are high in sugar (and corn starch). A sleeve of Oreos is a unit of food. So I don’t buy Oreos. This granola hits the same…"
 ---
 
-# Cookies &amp; Cream Granola
+# Cookies & Cream Granola
 
 ![](https://probablyworthsharing.com/images/recipes/oreo-inspired-granola/30446D61-593F-4AFF-A579-8CA5207DB03F-e8ae72.jpg)
 

@@ -1,5 +1,5 @@
 ---
-title: "Bacon &amp; Gruyère Egg Bites"
+title: "Bacon & Gruyère Egg Bites"
 url: "https://probablyworthsharing.com/recipes/bacon-gruyre-egg-bites/"
 author: "Marko Savic"
 published: "2023-06-18"
@@ -7,7 +7,7 @@ type: "recipe"
 description: "I love Starbucks egg bites, but I do not like paying for Starbucks egg bites. This recipe is an exceptional dupe that comes together with very little…"
 ---
 
-# Bacon &amp; Gruyère Egg Bites
+# Bacon & Gruyère Egg Bites
 
 ![](https://probablyworthsharing.com/images/recipes/bacon-gruyre-egg-bites/DSC01629-8420c8.jpg)
 

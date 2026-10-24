@@ -1,5 +1,5 @@
 ---
-title: "Hazelnut &amp; Chocolate Granola"
+title: "Hazelnut & Chocolate Granola"
 url: "https://probablyworthsharing.com/recipes/hazelnut-chocolate-granola-recipe/"
 author: "Marko Savic"
 published: "2024-02-11"
@@ -7,7 +7,7 @@ type: "recipe"
 description: "This is based on one of my best selling granola recipes, from when I had a granola business."
 ---
 
-# Hazelnut &amp; Chocolate Granola
+# Hazelnut & Chocolate Granola
 
 ![](https://probablyworthsharing.com/images/recipes/hazelnut-chocolate-granola-recipe/03BD1483-5341-4CF0-B957-C2386F18BBCB-2-be768a.jpg)
 

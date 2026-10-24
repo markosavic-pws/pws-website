@@ -2,6 +2,7 @@
 <html lang="en-CA">
 <head>
 <meta charset="utf-8">
+<script>document.documentElement.classList.add('js')</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Whole milk ricotta · Probably Worth Sharing</title>
 <meta name="description" content="Store-bought ricotta cheese is... fine. In North America, it&#39;s not really true ricotta cheese. Whole milk ricotta cheese may not be a traditional…">
@@ -27,7 +28,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400..700&display=swap">
-<link rel="stylesheet" href="/static/css/site.css">
+<link rel="stylesheet" href="/static/css/site.css?v=f3edca15">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Recipe", "name": "Whole milk ricotta", "author": {"@type": "Person", "name": "Marko Savic"}, "datePublished": "2022-07-28", "description": "Store-bought ricotta cheese is... fine. In North America, it's not really true ricotta cheese. Whole milk ricotta cheese may not be a traditional ricotta, but it's incredibly…", "recipeIngredient": ["1L whole milk (2% is also fine)", "20ml acid, I prefer white wine vinegar but you can use white vinegar or lemon juice"], "recipeInstructions": [{"@type": "HowToStep", "text": "Slowly heat your milk to 185°F. It’s important to use a thermometer and stir frequently here to prevent the milk from scorching. Take it slow, if you boil the milk (212°F) then your cheese might not form."}, {"@type": "HowToStep", "text": "Once you’ve reached 185°F, swirl your stirring spoon to create a vortex and add your acid. Then reverse direction and do 2 figure-8s. Stop stirring. At this point you have cottage cheese!"}, {"@type": "HowToStep", "text": "If you are making cottage cheese, you can immediately take this off the stove, strain, and then add 1tbsp of cream per 1L of milk you started with."}, {"@type": "HowToStep", "text": "If you are making ricotta cheese, you want to cook the cheese curds for 20 minutes. This helps create the cooked milk flavor similar to a traditional ricotta (ricotta translates to “re-cooked”). Keep the curds and whey between 175°F and 195°F for 20 minutes."}, {"@type": "HowToStep", "text": "To strain the cheese, you will need a colander inside of a larger bowl, a ladle, and cheese cloth or a nut milk bag."}, {"@type": "HowToStep", "text": "For cheese cloth, arrange 3 layers in a staggered pattern inside of your colander."}, {"@type": "HowToStep", "text": "For a nut milk bag, fold down the sides to form a collar and give you an easier opening to ladle into."}, {"@type": "HowToStep", "text": "Ladle the curds into the cheese cloth or nut milk bag until only whey remains in your pot."}, {"@type": "HowToStep", "text": "Allow the cheese to drain until it reaches your desired texture. You may need to tug on the cheese cloth or nut milk bag to help this along, but do not squeeze it (it will change the texture)."}, {"@type": "HowToStep", "text": "If you’re using this in a cooking application with high heat, like lasagna or pizza, you can leave a bit more whey. If you’re using this in a dessert or on toast, you can make it a bit drier."}, {"@type": "HowToStep", "text": "Store in a sealed container and use within 2-3 days. Home made ricotta is best the day it’s made. Home made cottage cheese will last a bit longer as the milk fills in all the air gaps in the cheese, which helps limit spoilage – but I still wouldn’t keep it more than a few days."}, {"@type": "HowToStep", "text": "This is an acid-based whey (because you use acid to curdle the milk). Traditional ricotta is actually made from sweet whey leftover from mozzarella making (made with using rennet to curdle the milk)."}, {"@type": "HowToStep", "text": "These are very different whey products. The whey from this recipe is a bit sour, so your best use case would be to replace buttermilk anywhere you would use it, such as in:"}, {"@type": "HowToStep", "text": "Bread Pancakes Biscuits"}], "image": ["https://probablyworthsharing.com/images/recipes/whole-milk-ricotta/IMG_2123-b53b38.jpeg"]}</script></head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -37,7 +38,11 @@
       <img src="/logo.png" alt="" width="56" height="56">
       <span>Probably Worth Sharing</span>
     </a>
-    <nav aria-label="Main">
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="site-nav" aria-label="Main">
+      <button class="menu-close" type="button" aria-label="Close menu">×</button>
       <ul>
         <li><a href="/eating/">Eating</a></li>
         <li><a href="/recipes/" aria-current="page">Recipes</a></li>
@@ -47,6 +52,7 @@
         <li><a href="/about/">About</a></li>
       </ul>
     </nav>
+    <div class="menu-scrim" hidden></div>
   </div>
 </header>
 <main id="main">
@@ -123,6 +129,7 @@
 </main>
 <footer class="site-footer">
   <div class="wrap footer-inner">
+    <p class="footer-about">I make a cooking show on <a href="https://www.youtube.com/channel/UCF3Rvw0Hh8iPXbm_4VeF_dQ">YouTube</a> sometimes. But mostly I post photos of <a href="/eating/">what I’m cooking</a>. I used to write a <a href="/newsletter/">newsletter</a> that I hope to start again one day, but I’m busy these days <a href="/house/">building a house</a> and working full-time in tech. This site is a home for all my adventures in food (and life).</p>
     <p class="footer-cta">Like and subscribe on <a href="https://www.youtube.com/channel/UCF3Rvw0Hh8iPXbm_4VeF_dQ">YouTube</a> or follow along on <a href="https://www.instagram.com/markosavic/">Instagram</a>.</p>
     <p class="footer-links">
       <a href="/about/">About</a>
@@ -133,6 +140,23 @@
     <p class="fine">© 2026 Marko Savic</p>
   </div>
 </footer>
-<script src="/static/js/recipe.js" defer></script>
+<script>
+// phone menu: slide-over panel
+(() => {
+  const btn = document.querySelector('.menu-toggle'), nav = document.getElementById('site-nav');
+  const scrim = document.querySelector('.menu-scrim'), close = nav.querySelector('.menu-close');
+  const set = open => {
+    document.body.classList.toggle('menu-open', open);
+    btn.setAttribute('aria-expanded', String(open));
+    scrim.hidden = !open;
+    if (open) nav.querySelector('a')?.focus(); else if (document.activeElement && nav.contains(document.activeElement)) btn.focus();
+  };
+  btn.addEventListener('click', () => set(true));
+  close.addEventListener('click', () => set(false));
+  scrim.addEventListener('click', () => set(false));
+  addEventListener('keydown', e => { if (e.key === 'Escape' && document.body.classList.contains('menu-open')) set(false); });
+})();
+</script>
+<script src="/static/js/recipe.js?v=77197dc0" defer></script>
 </body>
 </html>

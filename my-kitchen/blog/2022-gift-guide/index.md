@@ -1,5 +1,5 @@
 ---
-title: "How to buy gifts for people who love to cook &amp; bake"
+title: "How to buy gifts for people who love to cook & bake"
 url: "https://probablyworthsharing.com/my-kitchen/blog/2022-gift-guide/"
 author: "Marko Savic"
 published: "2022-11-27"
@@ -7,7 +7,7 @@ type: "blog post"
 description: "Fussy home cooks can be difficult to shop for – in this guide, I break down 5 types of gifts home cooks will love. Bonus: recipes to cook for home cooks…"
 ---
 
-# How to buy gifts for people who love to cook &amp; bake
+# How to buy gifts for people who love to cook & bake
 
 ![](https://probablyworthsharing.com/images/blog/2022-gift-guide/Screenshot-2022-11-24-at-10-22-13-AM-f999a6.png)
 

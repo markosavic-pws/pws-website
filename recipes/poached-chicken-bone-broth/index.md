@@ -1,5 +1,5 @@
 ---
-title: "Poached Chicken &amp; Bone Broth"
+title: "Poached Chicken & Bone Broth"
 url: "https://probablyworthsharing.com/recipes/poached-chicken-bone-broth/"
 author: "Marko Savic"
 published: "2023-06-18"
@@ -7,7 +7,7 @@ type: "recipe"
 description: "Buying frozen chicken makes it more affordable to buy high quality, regeneratively raised birds that lived happy lives outdoors. But frozen chicken can…"
 ---
 
-# Poached Chicken &amp; Bone Broth
+# Poached Chicken & Bone Broth
 
 ![](https://probablyworthsharing.com/images/recipes/poached-chicken-bone-broth/DSC02481-99c566.jpeg)
 

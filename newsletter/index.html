@@ -2,6 +2,7 @@
 <html lang="en-CA">
 <head>
 <meta charset="utf-8">
+<script>document.documentElement.classList.add('js')</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Newsletter · Probably Worth Sharing</title>
 <meta name="description" content="Stories and recipes about food, written occasionally. Follow along with the RSS feed.">
@@ -26,7 +27,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400..700&display=swap">
-<link rel="stylesheet" href="/static/css/site.css">
+<link rel="stylesheet" href="/static/css/site.css?v=f3edca15">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -36,7 +37,11 @@
       <img src="/logo.png" alt="" width="56" height="56">
       <span>Probably Worth Sharing</span>
     </a>
-    <nav aria-label="Main">
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="site-nav" aria-label="Main">
+      <button class="menu-close" type="button" aria-label="Close menu">×</button>
       <ul>
         <li><a href="/eating/">Eating</a></li>
         <li><a href="/recipes/">Recipes</a></li>
@@ -46,6 +51,7 @@
         <li><a href="/about/">About</a></li>
       </ul>
     </nav>
+    <div class="menu-scrim" hidden></div>
   </div>
 </header>
 <main id="main">
@@ -54,7 +60,7 @@
     <h1>Newsletter</h1>
 <p class="lede">Stories and recipes about food, written occasionally. Follow along with the RSS feed.</p><p><a class="btn btn-ghost btn-sm" href="/newsletter/feed.xml">RSS feed</a></p>  </header>
   <div class="grid grid-posts">
-<article class="card" data-search="travel canada  canadians spend 1% of our gdp on travel to the us annually, spend it here instead " data-source="mine">
+<article class="card" data-search="travel canada  canadians spend 1% of our gdp on travel to the us annually, spend it here instead " data-source="mine" data-video="0">
   <a class="card-link" href="/newsletter/travel-canada/">
     <div class="card-img">
 <img src="/images/newsletter/travel-canada/37fb8c08-ac5f-4b37-b1a8-cdeb876e8d20-ffc3b8.jpeg" alt="" loading="lazy" decoding="async">    </div>
@@ -64,7 +70,7 @@
 <p class="dek">Canadians spend 1% of our GDP on travel to the US annually, spend it here instead</p><p class="card-summary">Collectively, Canadians $20.5 billion on travel to the US annually, supporting 110,000 US jobs – equivalent to 1% of Canada’s GDP.</p>    </div>
   </a>
 </article>
-<article class="card" data-search="buy canadian. bye american.  it&#39;s time to start buying local " data-source="mine">
+<article class="card" data-search="buy canadian. bye american.  it&#39;s time to start buying local " data-source="mine" data-video="0">
   <a class="card-link" href="/newsletter/buy-canadian-bye-american/">
     <div class="card-img">
 <img src="/images/newsletter/buy-canadian-bye-american/5c760a7b-4588-414d-8e79-052cf5101101-3b490b.jpg" alt="" loading="lazy" decoding="async">    </div>
@@ -74,7 +80,7 @@
 <p class="dek">It&#39;s time to start buying local</p><p class="card-summary">I am an advocate for buying Canadian at most times, but we are entering into an economic war with the United States, a war where the leader of the United States…</p>    </div>
   </a>
 </article>
-<article class="card" data-search="cookbook supper club  a book club for people who love to cook " data-source="mine">
+<article class="card" data-search="cookbook supper club  a book club for people who love to cook " data-source="mine" data-video="0">
   <a class="card-link" href="/newsletter/cookbook-supper-club/">
     <div class="card-img">
 <img src="/images/newsletter/cookbook-supper-club/8724197f-c8ce-49c1-a581-5b5576ea63ec-5e2ffe.jpeg" alt="" loading="lazy" decoding="async">    </div>
@@ -84,7 +90,7 @@
 <p class="dek">A book club for people who love to cook</p><p class="card-summary">As I pack up my life and get ready to move in just over two weeks, I’m reflecting a lot on what I want to keep in my life and what I want to get rid of.</p>    </div>
   </a>
 </article>
-<article class="card" data-search="buying an electric vehicle  i had questions, you had questions " data-source="mine">
+<article class="card" data-search="buying an electric vehicle  i had questions, you had questions " data-source="mine" data-video="0">
   <a class="card-link" href="/newsletter/buying-an-electric-vehicle/">
     <div class="card-img">
 <img src="/images/newsletter/buying-an-electric-vehicle/99fdeba1-cc9e-402e-801f-03c91e3ce906-9afb98.jpeg" alt="" loading="lazy" decoding="async">    </div>
@@ -94,7 +100,7 @@
 <p class="dek">I had questions, you had questions</p><p class="card-summary">It’s an electric pick-up truck with a large battery! I’ve had it for just over a week as I write this post. I really like it so far.</p>    </div>
   </a>
 </article>
-<article class="card" data-search="let it be, then let it go  i&#39;m going on an adventure! " data-source="mine">
+<article class="card" data-search="let it be, then let it go  i&#39;m going on an adventure! " data-source="mine" data-video="0">
   <a class="card-link" href="/newsletter/let-it-be-then-let-it-go/">
     <div class="card-img">
 <img src="/images/newsletter/let-it-be-then-let-it-go/1fbb7241-ce35-4875-802a-0368d90cbefa-047714.png" alt="" loading="lazy" decoding="async">    </div>
@@ -104,7 +110,7 @@
 <p class="dek">I&#39;m going on an adventure!</p><p class="card-summary">“Okay – so what if I’m in Banff, camping alone, filming a Banff Bourguignon recipefor YouTube, and it smells so good it attracts a bear.</p>    </div>
   </a>
 </article>
-<article class="card" data-search="what i learned starting (and ending) a food business  a long post about margin and personal values " data-source="mine">
+<article class="card" data-search="what i learned starting (and ending) a food business  a long post about margin and personal values " data-source="mine" data-video="0">
   <a class="card-link" href="/newsletter/what-i-learned-starting-and-ending/">
     <div class="card-img">
 <img src="/images/newsletter/what-i-learned-starting-and-ending/1afe25c6-749a-4e17-a72a-e293a4b05324-789be9.jpeg" alt="" loading="lazy" decoding="async">    </div>
@@ -114,7 +120,7 @@
 <p class="dek">A long post about margin and personal values</p><p class="card-summary">Last summer I started a granola business under this same brand – Probably Worth Sharing – and I shut it down six months later, despite having relatively good sales for a…</p>    </div>
   </a>
 </article>
-<article class="card" data-search="i lost over 70lbs of body fat in 2023  spoiler: i started walking every day " data-source="mine">
+<article class="card" data-search="i lost over 70lbs of body fat in 2023  spoiler: i started walking every day " data-source="mine" data-video="0">
   <a class="card-link" href="/newsletter/i-lost-over-70lbs-of-body-fat-in/">
     <div class="card-img">
 <img src="/images/newsletter/i-lost-over-70lbs-of-body-fat-in/35b83bce-3270-4a81-b962-9fc1c638fa5a-44be90.png" alt="" loading="lazy" decoding="async">    </div>
@@ -124,7 +130,7 @@
 <p class="dek">Spoiler: I started walking every day</p><p class="card-summary">It’s the New Year: the busiest time of year for the gym. Many people decide the calendar changing over means it’s time for a fresh start.</p>    </div>
   </a>
 </article>
-<article class="card" data-search="what i&#39;ve lost  a personal update " data-source="mine">
+<article class="card" data-search="what i&#39;ve lost  a personal update " data-source="mine" data-video="0">
   <a class="card-link" href="/newsletter/what-ive-lost/">
     <div class="card-img">
 <span class="card-noimg" aria-hidden="true">PWS</span>    </div>
@@ -134,7 +140,7 @@
 <p class="dek">A personal update</p><p class="card-summary">I haven’t figured out yet how to restart this newsletter. I think it’s because I don’t know how to explain, or to even understand for myself, what I’ve lost over the…</p>    </div>
   </a>
 </article>
-<article class="card" data-search="easy, high protein breakfast  2 minutes, 2 ingredients, 40g protein, 1 bowl " data-source="mine">
+<article class="card" data-search="easy, high protein breakfast  2 minutes, 2 ingredients, 40g protein, 1 bowl " data-source="mine" data-video="0">
   <a class="card-link" href="/newsletter/easy-high-protein-breakfast/">
     <div class="card-img">
 <img src="/images/newsletter/easy-high-protein-breakfast/8121b405-864f-4dde-8e2c-923d0a8abcbe-8f9639.jpeg" alt="" loading="lazy" decoding="async">    </div>
@@ -144,7 +150,7 @@
 <p class="dek">2 minutes, 2 ingredients, 40g protein, 1 bowl</p><p class="card-summary">My dad is still in the hospital. In fact, he moved back to the stroke ward after being sent out to a different hospital for rehab.</p>    </div>
   </a>
 </article>
-<article class="card" data-search="know the signs of a stroke  and advocate for people in your life " data-source="mine">
+<article class="card" data-search="know the signs of a stroke  and advocate for people in your life " data-source="mine" data-video="0">
   <a class="card-link" href="/newsletter/know-the-signs-of-a-stroke/">
     <div class="card-img">
 <span class="card-noimg" aria-hidden="true">PWS</span>    </div>
@@ -154,7 +160,7 @@
 <p class="dek">And advocate for people in your life</p><p class="card-summary">On Thursday when my dad picked me up from the kitchen he wasn’t able to speak in full sentences. He is currently in the hospital – and stable.</p>    </div>
   </a>
 </article>
-<article class="card" data-search="we raised over $23,000 for food4kids waterloo region  community magic, fueled by granola " data-source="mine">
+<article class="card" data-search="we raised over $23,000 for food4kids waterloo region  community magic, fueled by granola " data-source="mine" data-video="0">
   <a class="card-link" href="/newsletter/we-raised-over-23000-for-food4kids/">
     <div class="card-img">
 <img src="/images/newsletter/we-raised-over-23000-for-food4kids/6639f376-201a-49df-8860-360d43667162-a8cf00.jpeg" alt="" loading="lazy" decoding="async">    </div>
@@ -164,7 +170,7 @@
 <p class="dek">Community magic, fueled by granola</p><p class="card-summary">Last Sunday, on Oct 1, I hosted Probably Worth Sharing’s first ever Bake-A-Thon and Fall Fair Fundraiser – for Food4Kids Waterloo Region.</p>    </div>
   </a>
 </article>
-<article class="card" data-search="fall recipes, from last fall  because granola daddy is tired " data-source="mine">
+<article class="card" data-search="fall recipes, from last fall  because granola daddy is tired " data-source="mine" data-video="0">
   <a class="card-link" href="/newsletter/fall-recipes-from-last-fall/">
     <div class="card-img">
 <img src="/images/newsletter/fall-recipes-from-last-fall/vbYfDA4HUs-184675.jpg" alt="" loading="lazy" decoding="async">    </div>
@@ -174,7 +180,7 @@
 <p class="dek">Because Granola Daddy Is Tired</p><p class="card-summary">Hi friends, I had my first weekend with two markets – my friend Nigel worked at the Kitchener Market for me, while I was at Art Hop’s Sculpted Market in Waterloo.</p>    </div>
   </a>
 </article>
-<article class="card" data-search="a 24-hour bake-a-thon  on oct 1, we&#39;re making 1,100 bags of granola for food4kids waterloo region " data-source="mine">
+<article class="card" data-search="a 24-hour bake-a-thon  on oct 1, we&#39;re making 1,100 bags of granola for food4kids waterloo region " data-source="mine" data-video="0">
   <a class="card-link" href="/newsletter/a-24-hour-bake-a-thon/">
     <div class="card-img">
 <img src="/images/newsletter/a-24-hour-bake-a-thon/016a2e97-dcd1-4a5f-808e-e8162f41c064-4d8aff.png" alt="" loading="lazy" decoding="async">    </div>
@@ -184,7 +190,7 @@
 <p class="dek">On Oct 1, we&#39;re making 1,100 bags of granola for Food4Kids Waterloo Region</p><p class="card-summary">On October 1, I’m hosting a charity Bake-A-Thon and community fundraiser to make 1,100 bags of granola for Food4Kids Waterloo Region.</p>    </div>
   </a>
 </article>
-<article class="card" data-search="finding time for joy  be the goldilocks you want to see in the world " data-source="mine">
+<article class="card" data-search="finding time for joy  be the goldilocks you want to see in the world " data-source="mine" data-video="0">
   <a class="card-link" href="/newsletter/find-time-for-joy/">
     <div class="card-img">
 <img src="/images/newsletter/find-time-for-joy/22b5e353-bc82-4796-9823-423eda528d1d-d96511.jpeg" alt="" loading="lazy" decoding="async">    </div>
@@ -194,7 +200,7 @@
 <p class="dek">Be the Goldilocks you want to see in the world</p><p class="card-summary">I’ve been running at a non-stop pace since I got back from San Francisco. Launching a new business is a lot of work.</p>    </div>
   </a>
 </article>
-<article class="card" data-search="granola daddy  when the community brands you " data-source="mine">
+<article class="card" data-search="granola daddy  when the community brands you " data-source="mine" data-video="0">
   <a class="card-link" href="/newsletter/granola-daddy/">
     <div class="card-img">
 <img src="/images/newsletter/granola-daddy/cdbbd330-de34-4900-896b-4722d0dcd62b-1e72eb.png" alt="" loading="lazy" decoding="async">    </div>
@@ -204,7 +210,7 @@
 <p class="dek">When the community brands you</p><p class="card-summary">My life is currently all granola, all the time. I had meant to write you all a bunch of recipes for peaches this week, but I spent my whole week being Granola Daddy (in…</p>    </div>
   </a>
 </article>
-<article class="card" data-search="guest post: home is toronto  and updates from granola daddy " data-source="mine">
+<article class="card" data-search="guest post: home is toronto  and updates from granola daddy " data-source="mine" data-video="0">
   <a class="card-link" href="/newsletter/guest-post-home-is-toronto/">
     <div class="card-img">
 <img src="/images/newsletter/guest-post-home-is-toronto/0fbe47ec-41f3-4dc1-b4e3-ef26172c5420-ee05c4.png" alt="" loading="lazy" decoding="async">    </div>
@@ -214,7 +220,7 @@
 <p class="dek">And updates from Granola Daddy</p><p class="card-summary">Marko here – it’s been a crazy week launching the granola business.</p>    </div>
   </a>
 </article>
-<article class="card" data-search="cereal entrepreneur  i started a granola business " data-source="mine">
+<article class="card" data-search="cereal entrepreneur  i started a granola business " data-source="mine" data-video="0">
   <a class="card-link" href="/newsletter/cereal-entrepreneur/">
     <div class="card-img">
 <img src="/images/newsletter/cereal-entrepreneur/18e3db4b-8079-408c-b980-afad96f09087-6674bd.jpeg" alt="" loading="lazy" decoding="async">    </div>
@@ -224,7 +230,7 @@
 <p class="dek">I started a granola business</p><p class="card-summary">I started a granola business! Today, as you read this, it is my first day working in a commercial kitchen making granola under the Probably Worth Sharing brand.</p>    </div>
   </a>
 </article>
-<article class="card" data-search="the american breakfast sandwich  pickles may make an appearance " data-source="mine">
+<article class="card" data-search="the american breakfast sandwich  pickles may make an appearance " data-source="mine" data-video="0">
   <a class="card-link" href="/newsletter/the-american-breakfast-sandwich/">
     <div class="card-img">
 <img src="/images/newsletter/the-american-breakfast-sandwich/36a08bb5-425e-4476-b5c0-2e590cbeed7c-18eb62.jpeg" alt="" loading="lazy" decoding="async">    </div>
@@ -234,7 +240,7 @@
 <p class="dek">Pickles may make an appearance</p><p class="card-summary">What makes a good, classic American breakfast sandwich? I didn’t expect this to be the question I needed to answer on my vacation, but the question found me.</p>    </div>
   </a>
 </article>
-<article class="card" data-search="recipes for summer vacation  my vacation, not your vacation. you’re at home. " data-source="mine">
+<article class="card" data-search="recipes for summer vacation  my vacation, not your vacation. you’re at home. " data-source="mine" data-video="0">
   <a class="card-link" href="/newsletter/recipes-for-summer-vacation/">
     <div class="card-img">
 <img src="/images/newsletter/recipes-for-summer-vacation/764b4260-60b1-49cb-ac93-cfc773e00722-682b3b.jpeg" alt="" loading="lazy" decoding="async">    </div>
@@ -244,7 +250,7 @@
 <p class="dek">My vacation, not your vacation. You’re at home.</p><p class="card-summary">I’m on vacation this week! I’m finally seeing my American friends I haven’t seen in (eighty) FOUR YEARS!</p>    </div>
   </a>
 </article>
-<article class="card" data-search="an honest guide to dog sitting  and a recipe for dog treats " data-source="mine">
+<article class="card" data-search="an honest guide to dog sitting  and a recipe for dog treats " data-source="mine" data-video="0">
   <a class="card-link" href="/newsletter/an-honest-guide-to-dog-sitting/">
     <div class="card-img">
 <img src="/images/newsletter/an-honest-guide-to-dog-sitting/ddee8b2a-5788-4627-847f-96770a5c2259-0bc4a5.jpeg" alt="" loading="lazy" decoding="async">    </div>
@@ -254,7 +260,7 @@
 <p class="dek">And a recipe for dog treats</p><p class="card-summary">I highly recommend listening to the audio version of the article this week. I like dog sitting for my friends. I try to have a dog here every month.</p>    </div>
   </a>
 </article>
-<article class="card" data-search="the cherry tree  and recipes for sour cherries " data-source="mine">
+<article class="card" data-search="the cherry tree  and recipes for sour cherries " data-source="mine" data-video="0">
   <a class="card-link" href="/newsletter/the-cherry-tree/">
     <div class="card-img">
 <img src="/images/newsletter/the-cherry-tree/e8e28299-2e86-4bec-8e10-446cc73c9cdf-0f8d59.jpg" alt="" loading="lazy" decoding="async">    </div>
@@ -264,7 +270,7 @@
 <p class="dek">And recipes for sour cherries</p><p class="card-summary">My parents built our childhood home in 1981, back when Kitchener was mostly fields.</p>    </div>
   </a>
 </article>
-<article class="card" data-search="invite your friends to read probably worth sharing  you could earn a free market bag! " data-source="mine">
+<article class="card" data-search="invite your friends to read probably worth sharing  you could earn a free market bag! " data-source="mine" data-video="0">
   <a class="card-link" href="/newsletter/invite-your-friends-to-read-probably/">
     <div class="card-img">
 <img src="/images/newsletter/invite-your-friends-to-read-probably/5fe736f7-1cb0-4a85-9895-4037c2e0e768-72fde6.jpeg" alt="" loading="lazy" decoding="async">    </div>
@@ -274,7 +280,7 @@
 <p class="dek">You could earn a free market bag!</p><p class="card-summary">Thank you for reading Probably Worth Sharing — your support allows me to keep doing this work.</p>    </div>
   </a>
 </article>
-<article class="card" data-search="how to take care of yourself  and how i learned to love flossing my teeth " data-source="mine">
+<article class="card" data-search="how to take care of yourself  and how i learned to love flossing my teeth " data-source="mine" data-video="0">
   <a class="card-link" href="/newsletter/how-to-take-care-of-yourself/">
     <div class="card-img">
 <img src="/images/newsletter/how-to-take-care-of-yourself/e9ee21f4-de32-4560-9b47-e7f4017c59ef-7356f1.jpeg" alt="" loading="lazy" decoding="async">    </div>
@@ -284,7 +290,7 @@
 <p class="dek">And how I learned to love flossing my teeth</p><p class="card-summary">I now schedule my entire life around flossing. I have to clean my teeth three or four times a day. It takes 14 minutes any time I want to eat.</p>    </div>
   </a>
 </article>
-<article class="card" data-search="the responsible adults friendship club  how to take care of your friends who are taking care of everyone else " data-source="mine">
+<article class="card" data-search="the responsible adults friendship club  how to take care of your friends who are taking care of everyone else " data-source="mine" data-video="0">
   <a class="card-link" href="/newsletter/the-responsible-adults-friendship/">
     <div class="card-img">
 <img src="/images/newsletter/the-responsible-adults-friendship/3520cbf9-697e-4310-9dbb-5a66bef409b2-31f063.jpeg" alt="" loading="lazy" decoding="async">    </div>
@@ -294,7 +300,7 @@
 <p class="dek">How to take care of your friends who are taking care of everyone else</p><p class="card-summary">I started a merch store! Like me, it is a work in progress. You can order Responsible Adult Friendship Club sweaters and bags! Or a Probably Worth Sharing T-Shirt!</p>    </div>
   </a>
 </article>
-<article class="card" data-search="crispy chickpea, prosciutto, and parm pasta  a pantry pasta for when you&#39;re fresh out of fucks to give " data-source="mine">
+<article class="card" data-search="crispy chickpea, prosciutto, and parm pasta  a pantry pasta for when you&#39;re fresh out of fucks to give " data-source="mine" data-video="0">
   <a class="card-link" href="/newsletter/crispy-chickpea-prosciutto-and-parm/">
     <div class="card-img">
 <img src="/images/newsletter/crispy-chickpea-prosciutto-and-parm/5a8427df-a9f0-47f0-b6ca-0239a32570e3-a0dadb.jpeg" alt="" loading="lazy" decoding="async">    </div>
@@ -304,7 +310,7 @@
 <p class="dek">A pantry pasta for when you&#39;re fresh out of fucks to give</p><p class="card-summary">I’ve been going through a difficult personal time lately. It’s nothing I want to talk about here, but for a variety of reasons I am feeling stuck .</p>    </div>
   </a>
 </article>
-<article class="card" data-search="rhubarb coffee cake  the alternate world where i am the rhubarb lady " data-source="mine">
+<article class="card" data-search="rhubarb coffee cake  the alternate world where i am the rhubarb lady " data-source="mine" data-video="0">
   <a class="card-link" href="/newsletter/rhubarb-coffee-cake/">
     <div class="card-img">
 <img src="/images/newsletter/rhubarb-coffee-cake/02d186f5-3580-41b1-83df-f3a39cb2e176-274d2f.jpeg" alt="" loading="lazy" decoding="async">    </div>
@@ -314,7 +320,7 @@
 <p class="dek">The alternate world where I am The Rhubarb Lady</p><p class="card-summary">I love rhubarb. I think in another life, had I not gone to therapy, I could have grown up to be the rhubarb lady.</p>    </div>
   </a>
 </article>
-<article class="card" data-search="morels: an invitation from spring  spring is a season of change " data-source="mine">
+<article class="card" data-search="morels: an invitation from spring  spring is a season of change " data-source="mine" data-video="0">
   <a class="card-link" href="/newsletter/morels-an-invitation-from-spring/">
     <div class="card-img">
 <img src="/images/newsletter/morels-an-invitation-from-spring/5f2f7333-b22b-44d5-b6f4-abd369ef2137-a13f46.jpeg" alt="" loading="lazy" decoding="async">    </div>
@@ -324,7 +330,7 @@
 <p class="dek">Spring is a season of change</p><p class="card-summary">You can listen to me read my poem below while watching this week’s recipe be made in beautiful slow motion on YouTube.</p>    </div>
   </a>
 </article>
-<article class="card" data-search="how to dine out alone  guest post by marci geisler " data-source="mine">
+<article class="card" data-search="how to dine out alone  guest post by marci geisler " data-source="mine" data-video="0">
   <a class="card-link" href="/newsletter/how-to-dine-out-alone/">
     <div class="card-img">
 <img src="/images/newsletter/how-to-dine-out-alone/dc4ce96a-44a7-431d-8dd4-facae798346e-4d2d28.jpeg" alt="" loading="lazy" decoding="async">    </div>
@@ -334,7 +340,7 @@
 <p class="dek">Guest post by Marci Geisler</p><p class="card-summary">Marko here – something different this week. I’ve been writing this newsletter every week for the last 6 months. I love that this is my job.</p>    </div>
   </a>
 </article>
-<article class="card" data-search="stained glass focaccia  and tips on how to be a better baker " data-source="mine">
+<article class="card" data-search="stained glass focaccia  and tips on how to be a better baker " data-source="mine" data-video="0">
   <a class="card-link" href="/newsletter/stained-glass-focaccia/">
     <div class="card-img">
 <img src="/images/newsletter/stained-glass-focaccia/48b96ccc-8b3d-4cb5-9d10-326c75a17421-a9c800.jpeg" alt="" loading="lazy" decoding="async">    </div>
@@ -344,7 +350,7 @@
 <p class="dek">And tips on how to be a better baker</p><p class="card-summary">I relate a lot to Ted Lasso. I think I have the relentless optimism he has in people, the ability to believe them no matter what, and to help them believe in themselves.</p>    </div>
   </a>
 </article>
-<article class="card" data-search="healing our relationship with the earth  a hard look at ourselves and a food system that abuses the planet. " data-source="mine">
+<article class="card" data-search="healing our relationship with the earth  a hard look at ourselves and a food system that abuses the planet. " data-source="mine" data-video="0">
   <a class="card-link" href="/newsletter/healing-our-relationship-with-the/">
     <div class="card-img">
 <img src="/images/newsletter/healing-our-relationship-with-the/eda7485f-dbd0-4b72-9651-f6819b9d47a2-05509d.jpg" alt="" loading="lazy" decoding="async">    </div>
@@ -354,7 +360,7 @@
 <p class="dek">A hard look at ourselves and a food system that abuses the planet.</p><p class="card-summary">This email discusses domestic abuse and alcoholism, if that’s something you can’t read right now please skip this email.</p>    </div>
   </a>
 </article>
-<article class="card" data-search="chickens can save the planet  4 days on a regenerative chicken farm, alone " data-source="mine">
+<article class="card" data-search="chickens can save the planet  4 days on a regenerative chicken farm, alone " data-source="mine" data-video="0">
   <a class="card-link" href="/newsletter/chickens-can-save-the-planet/">
     <div class="card-img">
 <img src="/images/newsletter/chickens-can-save-the-planet/96b9da75-2570-4d17-ae57-9f6d95974639-6b3f23.png" alt="" loading="lazy" decoding="async">    </div>
@@ -364,7 +370,7 @@
 <p class="dek">4 days on a regenerative chicken farm, alone</p><p class="card-summary">April is Earth Month, and this month I’m writing about sustainability efforts in the kitchen. This week is the day in the life of a regenerative chicken farm.</p>    </div>
   </a>
 </article>
-<article class="card" data-search="composting isn&#39;t always composting  returning to the earth is... complicated. " data-source="mine">
+<article class="card" data-search="composting isn&#39;t always composting  returning to the earth is... complicated. " data-source="mine" data-video="0">
   <a class="card-link" href="/newsletter/composting-isnt-always-composting/">
     <div class="card-img">
 <img src="/images/newsletter/composting-isnt-always-composting/c21121e4-29ea-4425-8195-437ba2ac6e56-63d583.jpeg" alt="" loading="lazy" decoding="async">    </div>
@@ -374,7 +380,7 @@
 <p class="dek">Returning to the earth is... complicated.</p><p class="card-summary">April is Earth Month, and this month I’m going to focus on sustainability efforts in the kitchen. This week is focused on how to have a plastic-free kitchen.</p>    </div>
   </a>
 </article>
-<article class="card" data-search="a plastic-free kitchen  earth month at probably worth sharing " data-source="mine">
+<article class="card" data-search="a plastic-free kitchen  earth month at probably worth sharing " data-source="mine" data-video="0">
   <a class="card-link" href="/newsletter/a-plastic-free-kitchen/">
     <div class="card-img">
 <span class="card-noimg" aria-hidden="true">PWS</span>    </div>
@@ -384,7 +390,7 @@
 <p class="dek">Earth month at Probably Worth Sharing</p><p class="card-summary">April is Earth Month, and this month I’m going to focus on sustainability efforts in the kitchen. This week is focused on how to have a plastic-free kitchen.</p>    </div>
   </a>
 </article>
-<article class="card" data-search="winter recipe round-up  my first quarter as a full-time internet food person! " data-source="mine">
+<article class="card" data-search="winter recipe round-up  my first quarter as a full-time internet food person! " data-source="mine" data-video="0">
   <a class="card-link" href="/newsletter/winter-recipe-round/">
     <div class="card-img">
 <img src="/images/newsletter/winter-recipe-round/12b60abd-8c1b-4b4d-b435-9c4f792587f8-999ccf.jpeg" alt="" loading="lazy" decoding="async">    </div>
@@ -394,7 +400,7 @@
 <p class="dek">My first quarter as a full-time Internet Food Person!</p><p class="card-summary">Regular newsletter will still be tomorrow – with a guide to a plastic-free kitchen! If you are a free subscriber, please consider subscribing for only $5/month.</p>    </div>
   </a>
 </article>
-<article class="card" data-search="white bean pot pie with olive oil pie crust  it tastes better than chicken pot pie – with a luscious texture " data-source="mine">
+<article class="card" data-search="white bean pot pie with olive oil pie crust  it tastes better than chicken pot pie – with a luscious texture " data-source="mine" data-video="0">
   <a class="card-link" href="/newsletter/white-bean-pot-pie/">
     <div class="card-img">
 <img src="/images/newsletter/white-bean-pot-pie/17ddad8f-1f09-4025-b618-ddc4503965da-3fe700.jpeg" alt="" loading="lazy" decoding="async">    </div>
@@ -404,7 +410,7 @@
 <p class="dek">It tastes better than chicken pot pie – with a luscious texture</p><p class="card-summary">A quick note: I am behind schedule this week – I’ve had a number of special projects taking up my time this week that I’ll hopefully be able to tell you about soon – but…</p>    </div>
   </a>
 </article>
-<article class="card" data-search="beans are magic  beans can save the world, your diet, and your budget – while tasting amazing " data-source="mine">
+<article class="card" data-search="beans are magic  beans can save the world, your diet, and your budget – while tasting amazing " data-source="mine" data-video="0">
   <a class="card-link" href="/newsletter/beans-are-magic/">
     <div class="card-img">
 <img src="/images/newsletter/beans-are-magic/631bc9b0-db60-4970-a963-d96bebbafb43-34d74f.jpeg" alt="" loading="lazy" decoding="async">    </div>
@@ -414,7 +420,7 @@
 <p class="dek">Beans can save the world, your diet, and your budget – while tasting amazing</p><p class="card-summary">I would like you to reconsider the humble bean. Beans are often seen as an also-ran: beans are a side dish, beans are a component of a meat dish, beans are something…</p>    </div>
   </a>
 </article>
-<article class="card" data-search="babies, brothels, and babushkas  ... and birthday tiramisu " data-source="mine">
+<article class="card" data-search="babies, brothels, and babushkas  ... and birthday tiramisu " data-source="mine" data-video="0">
   <a class="card-link" href="/newsletter/babies-brothels-and-babushkas/">
     <div class="card-img">
 <img src="/images/newsletter/babies-brothels-and-babushkas/ff5bfad6-8e43-47bb-9b95-a5061ee0114b-40346c.jpeg" alt="" loading="lazy" decoding="async">    </div>
@@ -424,7 +430,7 @@
 <p class="dek">... and birthday tiramisu</p><p class="card-summary">If you are reading this on Sunday March 12, the finale of The Last of Us is tonight!</p>    </div>
   </a>
 </article>
-<article class="card" data-search="are you eating enough protein?  because i haven&#39;t... bean… " data-source="mine">
+<article class="card" data-search="are you eating enough protein?  because i haven&#39;t... bean… " data-source="mine" data-video="0">
   <a class="card-link" href="/newsletter/are-you-eating-enough-protein/">
     <div class="card-img">
 <img src="/images/newsletter/are-you-eating-enough-protein/a3075963-1578-4c85-a52a-f20e36b7c4bd-9f3fec.jpeg" alt="" loading="lazy" decoding="async">    </div>
@@ -434,7 +440,7 @@
 <p class="dek">Because I haven&#39;t... bean…</p><p class="card-summary">Some notes: I published The Lasagna of Sadness as a YouTube video, which is a shorter, 4-minute long version of the story. I think it’s the best video I’ve made yet!</p>    </div>
   </a>
 </article>
-<article class="card" data-search="why is there corn in my cheese?  and why am i getting butter in the mail? " data-source="mine">
+<article class="card" data-search="why is there corn in my cheese?  and why am i getting butter in the mail? " data-source="mine" data-video="0">
   <a class="card-link" href="/newsletter/why-is-there-corn-in-your-cheese/">
     <div class="card-img">
 <img src="/images/newsletter/why-is-there-corn-in-your-cheese/c3ef82cc-8fc5-45ab-a7c2-d1084ba3b605-59cccf.jpeg" alt="" loading="lazy" decoding="async">    </div>
@@ -444,7 +450,7 @@
 <p class="dek">And why am I getting butter in the mail? </p><p class="card-summary">A note: I self published The Lasagna of Sadness as a 52-page paperback – like a ‘90s zine and beautifully photographed recipe book had a food baby.</p>    </div>
   </a>
 </article>
-<article class="card" data-search="please leave by nine: a dinner party planning guide  how to host a dinner party when you’ve never hosted one " data-source="mine">
+<article class="card" data-search="please leave by nine: a dinner party planning guide  how to host a dinner party when you’ve never hosted one " data-source="mine" data-video="0">
   <a class="card-link" href="/newsletter/please-leave-by-nine-a-dinner-party/">
     <div class="card-img">
 <img src="/images/newsletter/please-leave-by-nine-a-dinner-party/7261bbe3-2b61-4ef8-93f6-0bb1707e121a-f6a33e.jpeg" alt="" loading="lazy" decoding="async">    </div>
@@ -454,7 +460,7 @@
 <p class="dek">How to host a dinner party when you’ve never hosted one</p><p class="card-summary">I have a new YouTube recipe video up – Marko’s Perfect Cabbage, a one-pan meal that’s only 5-minutes of effort, and one of the best vegetable dishes you’ll ever have.</p>    </div>
   </a>
 </article>
-<article class="card" data-search="the lasagna of sadness  layers of grief with ragù and béchamel sauce " data-source="mine">
+<article class="card" data-search="the lasagna of sadness  layers of grief with ragù and béchamel sauce " data-source="mine" data-video="0">
   <a class="card-link" href="/newsletter/the-lasagna-of-sadness/">
     <div class="card-img">
 <img src="/images/newsletter/the-lasagna-of-sadness/CnDBJ5YNN6o-13b020.jpg" alt="" loading="lazy" decoding="async">    </div>
@@ -464,7 +470,7 @@
 <p class="dek">Layers of grief with ragù and béchamel sauce</p><p class="card-summary">If you’re working through the recent loss of a loved one you may want to skip to the recipes at the bottom (it may also be cathartic to read).</p>    </div>
   </a>
 </article>
-<article class="card" data-search="crying snacks  when you’re crying for a long, long time " data-source="mine">
+<article class="card" data-search="crying snacks  when you’re crying for a long, long time " data-source="mine" data-video="0">
   <a class="card-link" href="/newsletter/crying-snacks/">
     <div class="card-img">
 <img src="/images/newsletter/crying-snacks/fd41ebe4-b20e-40a4-b591-79d08ec88c44-e84ace.png" alt="" loading="lazy" decoding="async">    </div>
@@ -474,7 +480,7 @@
 <p class="dek">When you’re crying for a long, long time</p><p class="card-summary">I had another newsletter (also about crying) planned for this week – about when my mom died 11 years ago, how I process my grief through food.</p>    </div>
   </a>
 </article>
-<article class="card" data-search="pdf recipes: an ugly vegetable cookbook  january paid subscriber exclusive " data-source="mine">
+<article class="card" data-search="pdf recipes: an ugly vegetable cookbook  january paid subscriber exclusive " data-source="mine" data-video="0">
   <a class="card-link" href="/newsletter/an-ugly-vegetable-cookbook/">
     <div class="card-img">
 <img src="/images/newsletter/an-ugly-vegetable-cookbook/b5790992-b728-4352-88da-f6fd0b834a7d-918ced.jpeg" alt="" loading="lazy" decoding="async">    </div>
@@ -484,7 +490,7 @@
 <p class="dek">January paid subscriber exclusive</p><p class="card-summary">Ugly Vegetable Winter Cookbook21.5MB ∙ PDF fileDownloadDownloadYou can download it from the link above. If you have any issues with it, please send me an email.</p>    </div>
   </a>
 </article>
-<article class="card" data-search="ugly vegetable winter  give ugly produce a chance to become a beautiful swan " data-source="mine">
+<article class="card" data-search="ugly vegetable winter  give ugly produce a chance to become a beautiful swan " data-source="mine" data-video="0">
   <a class="card-link" href="/newsletter/ugly-vegetable-winter/">
     <div class="card-img">
 <img src="/images/newsletter/ugly-vegetable-winter/a512d056-a808-444c-b7cb-f51b98cea559-28c2e7.jpeg" alt="" loading="lazy" decoding="async">    </div>
@@ -494,7 +500,7 @@
 <p class="dek">Give ugly produce a chance to become a beautiful swan</p><p class="card-summary">People only eat vegetables for the first 7 days of January, until Epiphany, when New Years Resolutions and Christmas trees go out the window.</p>    </div>
   </a>
 </article>
-<article class="card" data-search="i dream of pizza  just when i think that i&#39;m out... the cheese pulls me back in " data-source="mine">
+<article class="card" data-search="i dream of pizza  just when i think that i&#39;m out... the cheese pulls me back in " data-source="mine" data-video="0">
   <a class="card-link" href="/newsletter/i-dream-of-pizza/">
     <div class="card-img">
 <img src="/images/newsletter/i-dream-of-pizza/12a3579d-4ca7-4c19-9c87-fd6eebddb21b-d4a239.jpeg" alt="" loading="lazy" decoding="async">    </div>
@@ -504,7 +510,7 @@
 <p class="dek">Just when I think that I&#39;m out... the cheese pulls me back in</p><p class="card-summary">Special news! I am selling pizza kits at Legacy Greens in Kitchener for pickup on Fri. Jan. 20 and Sat. Jan. 21.</p>    </div>
   </a>
 </article>
-<article class="card" data-search="reset your kitchen, reset your life  big news + tips on how to clean your kitchen " data-source="mine">
+<article class="card" data-search="reset your kitchen, reset your life  big news + tips on how to clean your kitchen " data-source="mine" data-video="0">
   <a class="card-link" href="/newsletter/reset-your-kitchen-reset-your-life/">
     <div class="card-img">
 <img src="/images/newsletter/reset-your-kitchen-reset-your-life/585bde98-4a6f-4d17-a3a7-632f56cc563f-71cd26.jpeg" alt="" loading="lazy" decoding="async">    </div>
@@ -514,7 +520,7 @@
 <p class="dek">I promise there are tips on how to clean your kitchen</p><p class="card-summary">It’s easy to know when you have to reset your kitchen, but it’s harder to know with your life. You don’t see the plates piling up.</p>    </div>
   </a>
 </article>
-<article class="card" data-search="penny-ttone  a miniature golden doodle and an italian christmas bread walk into a bar " data-source="mine">
+<article class="card" data-search="penny-ttone  a miniature golden doodle and an italian christmas bread walk into a bar " data-source="mine" data-video="0">
   <a class="card-link" href="/newsletter/penny-ttone/">
     <div class="card-img">
 <img src="/images/newsletter/penny-ttone/e283e3a8-d371-4119-9b7d-ac5208e5fa70-6ce55a.jpeg" alt="" loading="lazy" decoding="async">    </div>
@@ -524,7 +530,7 @@
 <p class="dek">A miniature golden doodle and an Italian Christmas bread walk into a bar</p><p class="card-summary">‘Twas the night before Christmas, when all through the house Not a creature was stirring, not even a mouse; The panettone were shaped on the counter with care, In hopes…</p>    </div>
   </a>
 </article>
-<article class="card" data-search="homo for the holidays  your home town is probably cool now, if you&#39;re willing to explore " data-source="mine">
+<article class="card" data-search="homo for the holidays  your home town is probably cool now, if you&#39;re willing to explore " data-source="mine" data-video="0">
   <a class="card-link" href="/newsletter/homo-for-the-holidays/">
     <div class="card-img">
 <img src="/images/newsletter/homo-for-the-holidays/e91a06ae-3274-4edd-911b-8227a0cbfd35-6076ea.png" alt="" loading="lazy" decoding="async">    </div>
@@ -534,7 +540,7 @@
 <p class="dek">Your home town is probably cool now, if you&#39;re willing to explore</p><p class="card-summary">Dating apps get weird around the holidays: the big city boys are back in town.</p>    </div>
   </a>
 </article>
-<article class="card" data-search="a solo food trip to montreal  learning to be brave again, one meal at a time " data-source="mine">
+<article class="card" data-search="a solo food trip to montreal  learning to be brave again, one meal at a time " data-source="mine" data-video="0">
   <a class="card-link" href="/newsletter/a-solo-food-trip-to-montreal/">
     <div class="card-img">
 <img src="/images/newsletter/a-solo-food-trip-to-montreal/73b3b736-9ecb-4276-8bee-27df05501261-759ba6.png" alt="" loading="lazy" decoding="async">    </div>
@@ -544,7 +550,7 @@
 <p class="dek">Learning to be brave again, one meal at a time</p><p class="card-summary">I like to tell my therapist that I used to be brave. I think, externally, I seem fairly brave – I started a company, sold it, learned how to renovate my house, and now…</p>    </div>
   </a>
 </article>
-<article class="card" data-search="holiday gift guide for fussy home cooks  how to find gifts people in your life will love " data-source="mine">
+<article class="card" data-search="holiday gift guide for fussy home cooks  how to find gifts people in your life will love " data-source="mine" data-video="0">
   <a class="card-link" href="/newsletter/holiday-gift-guide-for-fussy-home/">
     <div class="card-img">
 <img src="/images/newsletter/holiday-gift-guide-for-fussy-home/91a8abbf-84f6-4d80-b7e9-6d0d3ca2b46f-9d10cd.png" alt="" loading="lazy" decoding="async">    </div>
@@ -554,7 +560,7 @@
 <p class="dek">How to find gifts people in your life will love</p><p class="card-summary">My family and friends will tell you I’m a very… particular person, that I’m very hard to buy gifts for because I have strong opinions and will buy myself what I want or…</p>    </div>
   </a>
 </article>
-<article class="card" data-search="keep pumpkins weird  spooky season is when i find the weirdest, ugliest – and most delicious – pumpkin i can at the farmers market " data-source="mine">
+<article class="card" data-search="keep pumpkins weird  spooky season is when i find the weirdest, ugliest – and most delicious – pumpkin i can at the farmers market " data-source="mine" data-video="0">
   <a class="card-link" href="/newsletter/keep-pumpkins-weird/">
     <div class="card-img">
 <img src="/images/newsletter/keep-pumpkins-weird/08d18009-9755-452b-baef-aaff43d2de21-5b7854.png" alt="" loading="lazy" decoding="async">    </div>
@@ -569,6 +575,7 @@
 </main>
 <footer class="site-footer">
   <div class="wrap footer-inner">
+    <p class="footer-about">I make a cooking show on <a href="https://www.youtube.com/channel/UCF3Rvw0Hh8iPXbm_4VeF_dQ">YouTube</a> sometimes. But mostly I post photos of <a href="/eating/">what I’m cooking</a>. I used to write a <a href="/newsletter/">newsletter</a> that I hope to start again one day, but I’m busy these days <a href="/house/">building a house</a> and working full-time in tech. This site is a home for all my adventures in food (and life).</p>
     <p class="footer-cta">Like and subscribe on <a href="https://www.youtube.com/channel/UCF3Rvw0Hh8iPXbm_4VeF_dQ">YouTube</a> or follow along on <a href="https://www.instagram.com/markosavic/">Instagram</a>.</p>
     <p class="footer-links">
       <a href="/about/">About</a>
@@ -579,5 +586,22 @@
     <p class="fine">© 2026 Marko Savic</p>
   </div>
 </footer>
+<script>
+// phone menu: slide-over panel
+(() => {
+  const btn = document.querySelector('.menu-toggle'), nav = document.getElementById('site-nav');
+  const scrim = document.querySelector('.menu-scrim'), close = nav.querySelector('.menu-close');
+  const set = open => {
+    document.body.classList.toggle('menu-open', open);
+    btn.setAttribute('aria-expanded', String(open));
+    scrim.hidden = !open;
+    if (open) nav.querySelector('a')?.focus(); else if (document.activeElement && nav.contains(document.activeElement)) btn.focus();
+  };
+  btn.addEventListener('click', () => set(true));
+  close.addEventListener('click', () => set(false));
+  scrim.addEventListener('click', () => set(false));
+  addEventListener('keydown', e => { if (e.key === 'Escape' && document.body.classList.contains('menu-open')) set(false); });
+})();
+</script>
 </body>
 </html>

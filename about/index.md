@@ -14,7 +14,6 @@ I write an occasional newsletter filled with recipes and stories about food, and
 
 * [Home goods in my videos](https://probablyworthsharing.com/my-kitchen/in-my-videos/): the makers behind the bowls, boards, and mugs
 * [Favourite cookbooks](https://probablyworthsharing.com/my-kitchen/cookbooks/)
-* [Major appliances](https://probablyworthsharing.com/my-kitchen/major-appliances/)
 * [How I film at home](https://probablyworthsharing.com/home-kitchen-studio/)
 * [Ethics & ads](https://probablyworthsharing.com/ethics-in-advertising/): how this site is funded, and what I won’t do
 * [Buying guides and notes](https://probablyworthsharing.com/my-kitchen/blog/)

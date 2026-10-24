@@ -1,5 +1,5 @@
 ---
-title: "Olive oil &amp; honey cake with pears"
+title: "Olive oil & honey cake with pears"
 url: "https://probablyworthsharing.com/recipes/olive-oil-amp-honey-cake-with-pears/"
 author: "Marko Savic"
 published: "2022-09-21"
@@ -7,7 +7,7 @@ type: "recipe"
 description: "This is an easy, delicious dessert for a dinner party. If there are any leftovers, this cake makes a great breakfast – it tastes even better after a few…"
 ---
 
-# Olive oil &amp; honey cake with pears
+# Olive oil & honey cake with pears
 
 This is an easy, delicious dessert for a dinner party. If there are any leftovers, this cake makes a great breakfast – it tastes even better after a few days.
 

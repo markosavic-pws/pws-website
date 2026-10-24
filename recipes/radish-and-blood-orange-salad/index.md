@@ -1,5 +1,5 @@
 ---
-title: "Radish &amp; blood orange salad"
+title: "Radish & blood orange salad"
 url: "https://probablyworthsharing.com/recipes/radish-and-blood-orange-salad/"
 author: "Marko Savic"
 published: "2023-01-27"
@@ -7,7 +7,7 @@ type: "recipe"
 description: "This recipe is part of Ugly Vegetable Winter – weird winter vegetables that are delicious, locally grown, and often ignored. Radishes are delicious…"
 ---
 
-# Radish &amp; blood orange salad
+# Radish & blood orange salad
 
 ![](https://probablyworthsharing.com/images/recipes/radish-and-blood-orange-salad/DSC01048-2-447e26.jpg)
 

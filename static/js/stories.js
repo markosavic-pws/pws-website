@@ -47,7 +47,7 @@
     const page = dir => scrollByX(dir * tl.clientWidth * 0.8);
     $('.tl-older')?.addEventListener('click', () => page(-1));
     $('.tl-newer')?.addEventListener('click', () => page(1));
-    const chips = $$('.eating-head [data-filter]');
+    const chips = $$('.tl-filters [data-filter]');
     const search = $('#tl-search');
     let filter = 'all';
     const apply = () => {
@@ -56,7 +56,9 @@
       $$('.tl-item', tl).forEach(li => {
         const f = filter;
         const byChip = f === 'all' || (f === 'home' && li.dataset.where === 'home') || (f === 'out' && li.dataset.where === 'out')
-          || (f === 'recipe' && li.dataset.recipe === '1') || (f.startsWith('tag:') && li.dataset.tags.includes('|' + f.slice(4) + '|'));
+          || (f === 'recipe' && li.dataset.recipe === '1') || (f.startsWith('tag:') && li.dataset.tags.includes('|' + f.slice(4) + '|'))
+          || (f.startsWith('year:') && (li.dataset.month || '').startsWith(f.slice(5)))
+          || (f.startsWith('month:') && li.dataset.month === f.slice(6));
         const byText = words.every(w => li.dataset.search.includes(w));
         li.hidden = !(byChip && byText);
         if (!li.hidden) shown++;
@@ -71,6 +73,10 @@
     chips.forEach(c => c.addEventListener('click', () => {
       filter = c.dataset.filter;
       chips.forEach(x => x.setAttribute('aria-pressed', String(x === c)));
+      // date filter: picking a year reveals its months; a month keeps its year highlighted
+      const year = filter.startsWith('year:') ? filter.slice(5) : filter.startsWith('month:') ? filter.slice(6, 10) : null;
+      $$('.tl-filters [data-filter^="month:"]').forEach(m => { m.hidden = !year || !m.dataset.filter.startsWith('month:' + year); });
+      if (filter.startsWith('month:')) $$('.tl-filters [data-filter="year:' + year + '"]').forEach(y => y.setAttribute('aria-pressed', 'true'));
       apply();
     }));
     search?.addEventListener('input', apply);
@@ -105,6 +111,7 @@
   function render() {
     clearTimeout(timer);
     const st = stories[s], item = st.media[m], ch = st.chapters[item.ch || 0];
+    dlg.classList.toggle('is-wide', !!st.wide);
     // a trip shows the stop's name, with the trip as the subtitle
     $('.viewer-title', dlg).textContent = ch.title;
     $('.viewer-sub', dlg).textContent = [st.trip ? st.title : ch.trip, ch.date, ch.where].filter(Boolean).join(' · ');
@@ -169,6 +176,12 @@
   $('.viewer-next', dlg).addEventListener('click', () => { if (suppress) suppress = false; else next(); });
   $('.viewer-prev', dlg).addEventListener('click', () => { if (suppress) suppress = false; else prev(); });
   $('.viewer-close', dlg).addEventListener('click', close);
+  // in the wide layout the photo extends past the tap zones: tap its left or right half
+  stage.addEventListener('click', e => {
+    if (!dlg.classList.contains('is-wide') || suppress) return;
+    const r = stage.getBoundingClientRect();
+    (e.clientX < r.left + r.width * 0.35 ? prev : next)();
+  });
   pauseBtn.addEventListener('click', () => setPinned(!pinned));
   // 'close' fires asynchronously; if a story was reopened in the meantime, leave it alone
   dlg.addEventListener('close', () => { if (dlg.open) return; clearTimeout(timer); stage.innerHTML = ''; document.body.classList.remove('viewing'); });

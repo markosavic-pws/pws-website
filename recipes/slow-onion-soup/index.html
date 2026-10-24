@@ -2,6 +2,7 @@
 <html lang="en-CA">
 <head>
 <meta charset="utf-8">
+<script>document.documentElement.classList.add('js')</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Slow onion soup · Probably Worth Sharing</title>
 <meta name="description" content="This recipe is part of Ugly Vegetable Winter – weird winter vegetables that are delicious, locally grown, and often ignored. Think about this dish as a…">
@@ -27,7 +28,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400..700&display=swap">
-<link rel="stylesheet" href="/static/css/site.css">
+<link rel="stylesheet" href="/static/css/site.css?v=f3edca15">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Recipe", "name": "Slow onion soup", "author": {"@type": "Person", "name": "Marko Savic"}, "datePublished": "2023-01-27", "description": "This recipe is part of Ugly Vegetable Winter – weird winter vegetables that are delicious, locally grown, and often ignored. Think about this dish as a way to explore the power of…", "recipeIngredient": ["1kg onions, a mixed variety is ideal but any kind will work", "4 tbsp olive oil", "1L water", "1 bay leaf", "1 tbsp thyme", "Salt and pepper"], "recipeInstructions": [{"@type": "HowToStep", "text": "CARAMELIZE THE ONIONS"}, {"@type": "HowToStep", "text": "Cut the onions in half, remove the peel, then cut into thin strips. You will have an impossibly large amount of onions."}, {"@type": "HowToStep", "text": "In a very large pot add the olive oil, onions, a big pinch of salt, and 1/4 cup of water. Set on medium-high heat, cover, and steam-cook for 10 minutes. The onions will rapidly soften and begin to release their water."}, {"@type": "HowToStep", "text": "Remove the lid, reduce the heat to low (on my cooktop I use setting 3 of 10) and cook, stirring occasionally, until deeply caramelized. You will have an impossibly small amount of onions."}, {"@type": "HowToStep", "text": "Due to the lack of butter the onions will take a long time to brown, but it also means they are less likely to burn. You can stop at around 45 minutes, but I usually let this go for 3–4 hours. The slow cook time creates a deep, rich flavour comparable to French onion soup made with beef stock."}, {"@type": "HowToStep", "text": "MAKE THE SOUP"}, {"@type": "HowToStep", "text": "Add water, bay, thyme, salt, and pepper. Bring to a boil, reduce to a simmer, and simmer for 30 minutes. Remove the bay leaf."}, {"@type": "HowToStep", "text": "SERVE"}, {"@type": "HowToStep", "text": "This soup is delicious on its own as a side dish."}, {"@type": "HowToStep", "text": "To make it into a meal, serve it like French onion soup with garlic bread croutons (see Pumpkin Soup recipe on my website) and Emmental or Gruyère cheese."}, {"@type": "HowToStep", "text": "For a vegan alternative, serve over top of olive oil fried bread, which creates a delicious crispy-gone-soggy flavour. Porridge bread is my favourite to use here."}], "image": ["https://probablyworthsharing.com/images/recipes/slow-onion-soup/IMG_7061-f9ead4.jpg"]}</script></head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -37,7 +38,11 @@
       <img src="/logo.png" alt="" width="56" height="56">
       <span>Probably Worth Sharing</span>
     </a>
-    <nav aria-label="Main">
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="site-nav" aria-label="Main">
+      <button class="menu-close" type="button" aria-label="Close menu">×</button>
       <ul>
         <li><a href="/eating/">Eating</a></li>
         <li><a href="/recipes/" aria-current="page">Recipes</a></li>
@@ -47,6 +52,7 @@
         <li><a href="/about/">About</a></li>
       </ul>
     </nav>
+    <div class="menu-scrim" hidden></div>
   </div>
 </header>
 <main id="main">
@@ -120,6 +126,7 @@ Scales up easily! Caramelize as many onions as you can cut, you will never be so
 </main>
 <footer class="site-footer">
   <div class="wrap footer-inner">
+    <p class="footer-about">I make a cooking show on <a href="https://www.youtube.com/channel/UCF3Rvw0Hh8iPXbm_4VeF_dQ">YouTube</a> sometimes. But mostly I post photos of <a href="/eating/">what I’m cooking</a>. I used to write a <a href="/newsletter/">newsletter</a> that I hope to start again one day, but I’m busy these days <a href="/house/">building a house</a> and working full-time in tech. This site is a home for all my adventures in food (and life).</p>
     <p class="footer-cta">Like and subscribe on <a href="https://www.youtube.com/channel/UCF3Rvw0Hh8iPXbm_4VeF_dQ">YouTube</a> or follow along on <a href="https://www.instagram.com/markosavic/">Instagram</a>.</p>
     <p class="footer-links">
       <a href="/about/">About</a>
@@ -130,6 +137,23 @@ Scales up easily! Caramelize as many onions as you can cut, you will never be so
     <p class="fine">© 2026 Marko Savic</p>
   </div>
 </footer>
-<script src="/static/js/recipe.js" defer></script>
+<script>
+// phone menu: slide-over panel
+(() => {
+  const btn = document.querySelector('.menu-toggle'), nav = document.getElementById('site-nav');
+  const scrim = document.querySelector('.menu-scrim'), close = nav.querySelector('.menu-close');
+  const set = open => {
+    document.body.classList.toggle('menu-open', open);
+    btn.setAttribute('aria-expanded', String(open));
+    scrim.hidden = !open;
+    if (open) nav.querySelector('a')?.focus(); else if (document.activeElement && nav.contains(document.activeElement)) btn.focus();
+  };
+  btn.addEventListener('click', () => set(true));
+  close.addEventListener('click', () => set(false));
+  scrim.addEventListener('click', () => set(false));
+  addEventListener('keydown', e => { if (e.key === 'Escape' && document.body.classList.contains('menu-open')) set(false); });
+})();
+</script>
+<script src="/static/js/recipe.js?v=77197dc0" defer></script>
 </body>
 </html>

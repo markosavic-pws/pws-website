@@ -2,6 +2,7 @@
 <html lang="en-CA">
 <head>
 <meta charset="utf-8">
+<script>document.documentElement.classList.add('js')</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Carrot Top Pesto · Probably Worth Sharing</title>
 <meta name="description" content="Carrot top pesto is a delicious way to use the whole carrot – to love the whole vegetable, not just the parts we are comfortable with. I made this recipe…">
@@ -27,7 +28,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400..700&display=swap">
-<link rel="stylesheet" href="/static/css/site.css">
+<link rel="stylesheet" href="/static/css/site.css?v=f3edca15">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Recipe", "name": "Carrot Top Pesto", "author": {"@type": "Person", "name": "Marko Savic"}, "datePublished": "2022-06-09", "description": "Carrot top pesto is a delicious way to use the whole carrot – to love the whole vegetable, not just the parts we are comfortable with. I made this recipe for Pride month, in the…", "recipeIngredient": ["1 bunch of carrots top, thoroughly washed", "1/2 cup of toasted nuts, such as almonds", "1 cup of leafy greens, such as frozen spinach", "1/2 cup olive oil", "Juice of 1 lemon", "150 grams Parmesan cheese", "5 grams (1-1/2 teaspoons) salt", "2 cloves of garlic"], "recipeInstructions": [{"@type": "HowToStep", "text": "Wash the carrot tops by soaking in a large bowl of clean water several times. Since carrot tops have many fine leaves and grow directly over dirt, they can have quite a bit of hidden dirt. Clean them well."}, {"@type": "HowToStep", "text": "Put everything into a food processor and run until smooth."}, {"@type": "HowToStep", "text": "Adjust the texture with additional olive oil or water as needed."}, {"@type": "HowToStep", "text": "This will keep in the fridge for up to 5 days and can be frozen. Use anywhere you would use pesto, such as on pizza or pasta."}, {"@type": "HowToStep", "text": "Other edible tops include beets, turnips, and radishes – the leafy greens are fully edible and make great pesto. You can swap the nuts with any toasted nut – pistachios, macadamia nuts, walnuts, pine nuts are all good ideas. You can swap the spinach with any leafy green or tender herb, such as kale, arugula, basil, etc."}, {"@type": "HowToStep", "text": "Recently I made a variation with beet tops, pistachios, and basil which was quite delicious."}], "image": ["https://probablyworthsharing.com/images/recipes/carrot-top-pesto/IMG_0927-504ce6.jpeg"]}</script></head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -37,7 +38,11 @@
       <img src="/logo.png" alt="" width="56" height="56">
       <span>Probably Worth Sharing</span>
     </a>
-    <nav aria-label="Main">
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="site-nav" aria-label="Main">
+      <button class="menu-close" type="button" aria-label="Close menu">×</button>
       <ul>
         <li><a href="/eating/">Eating</a></li>
         <li><a href="/recipes/" aria-current="page">Recipes</a></li>
@@ -47,6 +52,7 @@
         <li><a href="/about/">About</a></li>
       </ul>
     </nav>
+    <div class="menu-scrim" hidden></div>
   </div>
 </header>
 <main id="main">
@@ -113,6 +119,7 @@
 </main>
 <footer class="site-footer">
   <div class="wrap footer-inner">
+    <p class="footer-about">I make a cooking show on <a href="https://www.youtube.com/channel/UCF3Rvw0Hh8iPXbm_4VeF_dQ">YouTube</a> sometimes. But mostly I post photos of <a href="/eating/">what I’m cooking</a>. I used to write a <a href="/newsletter/">newsletter</a> that I hope to start again one day, but I’m busy these days <a href="/house/">building a house</a> and working full-time in tech. This site is a home for all my adventures in food (and life).</p>
     <p class="footer-cta">Like and subscribe on <a href="https://www.youtube.com/channel/UCF3Rvw0Hh8iPXbm_4VeF_dQ">YouTube</a> or follow along on <a href="https://www.instagram.com/markosavic/">Instagram</a>.</p>
     <p class="footer-links">
       <a href="/about/">About</a>
@@ -123,6 +130,23 @@
     <p class="fine">© 2026 Marko Savic</p>
   </div>
 </footer>
-<script src="/static/js/recipe.js" defer></script>
+<script>
+// phone menu: slide-over panel
+(() => {
+  const btn = document.querySelector('.menu-toggle'), nav = document.getElementById('site-nav');
+  const scrim = document.querySelector('.menu-scrim'), close = nav.querySelector('.menu-close');
+  const set = open => {
+    document.body.classList.toggle('menu-open', open);
+    btn.setAttribute('aria-expanded', String(open));
+    scrim.hidden = !open;
+    if (open) nav.querySelector('a')?.focus(); else if (document.activeElement && nav.contains(document.activeElement)) btn.focus();
+  };
+  btn.addEventListener('click', () => set(true));
+  close.addEventListener('click', () => set(false));
+  scrim.addEventListener('click', () => set(false));
+  addEventListener('keydown', e => { if (e.key === 'Escape' && document.body.classList.contains('menu-open')) set(false); });
+})();
+</script>
+<script src="/static/js/recipe.js?v=77197dc0" defer></script>
 </body>
 </html>

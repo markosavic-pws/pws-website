@@ -2,6 +2,7 @@
 <html lang="en-CA">
 <head>
 <meta charset="utf-8">
+<script>document.documentElement.classList.add('js')</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Gay Beet Salad · Probably Worth Sharing</title>
 <meta name="description" content="For Pride month, I wanted to challenge the idea that beets are only bottoms. Beets are a versatile vegetable – they are tops too. The entire beet plant…">
@@ -27,7 +28,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400..700&display=swap">
-<link rel="stylesheet" href="/static/css/site.css">
+<link rel="stylesheet" href="/static/css/site.css?v=f3edca15">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Recipe", "name": "Gay Beet Salad", "author": {"@type": "Person", "name": "Marko Savic"}, "datePublished": "2023-06-10", "description": "For Pride month, I wanted to challenge the idea that beets are only bottoms. Beets are a versatile vegetable – they are tops too. The entire beet plant is edible and delicious.…", "recipeIngredient": ["1/3 cup sherry vinegar", "2 tbsp olive oil", "1–2 tbsp dijon mustard (use less for a more neutral flavour / less bite)", "1 tsp salt", "1/2 tsp freshly ground black pepper", "1 tsp sugar", "500–600g beets, with tops (1 bunch, 3–5 beets)", "100g parsley (~ 1/2 bunch)", "50g mint (2 of those plastic packets)", "50g dill (2 of those plastic packets / 1/2 bunch)", "15-ish pieces of mint", "1 stem of dill", "50g roasted pistachios"], "recipeInstructions": [{"@type": "HowToStep", "text": "Make the dressing: Put all the ingredients for the dressing into a clean jar, cover with a lid, and shake until emulsified."}, {"@type": "HowToStep", "text": "Soak the beet greens: Fill a large bowl with clean, cold water. Wear gloves and place a piece of parchment on your work surface to save on cleanup later. Cut the tops off where the stem meets the beetroot and set into the water. Give them a shake and allow them to sit in the water while you prepare the beetroot."}, {"@type": "HowToStep", "text": "Peel and grate the beetroot: Peel the beets and discard the peels. Rinse the beets under cool water. Grate the beets on the coarse side of a box garter, holding the beet so you get the longest strands possible. Add the grated beet to a very large bowl."}, {"@type": "HowToStep", "text": "Clean and dry the beet greens: Check that any dirt on the beet greens has been rubbed off and fallen to the bottom of the bowl. If any dirt remains, change out the water until the beet greens are clean. Place a large kitchen towel you don’t care about on your counter, lay out the beet greens out in an even layer and roll them up in the kitchen towel. 1 As you go through the beet greens, if any are discoloured or show signs of rot they should be discarded."}, {"@type": "HowToStep", "text": "Chiffonade the beet greens: Stack the beet greens (usually 3 piles) and then tightly roll them into a spiral. Chop into 1/8” to 1/4” thick ribbons, matching the thickness of the grated beets. Chop the stems to bite size pieces. Add to your salad bowl."}, {"@type": "HowToStep", "text": "Chop the herbs: Wash your herbs with the same technique as the beet greens. Remove the mint leaves from the stems 2 and reserve 15 of the smallest, prettiest leaves. Reserve 1 stem of dill. Place all the remaining herbs in a large pile in your counter and chop until very fine. 3 Add to your salad bowl."}, {"@type": "HowToStep", "text": "Dress the salad: Add half the dressing to the salad bowl. Toss the salad until well combined. Taste and adjust – do you need more dressing? more salt? more pepper? Remember you can always add more, but you can’t take it away."}, {"@type": "HowToStep", "text": "Save for later option: This salad keeps very well in the fridge, keeping its crisp texture. You can keep it for 5–7 days in the fridge. If you’re planning to make it in advance, put it in the fridge before adding the pistachios so they remain crispy."}, {"@type": "HowToStep", "text": "Decorate the salad: Before serving top with the reserved mint and dill, and add the roasted pistachios."}, {"@type": "HowToStep", "text": ""}, {"@type": "HowToStep", "text": "1 This technique for washing/drying the beet greens in a rolled towel can be used for any leafy green like Swiss chard and kale, as well as for any tender herbs. Storing them rolled up in a damp kitchen towel in the fridge will help them keep longer and they will be clean and ready to use at any point! It’s also much gentler than using a salad spinner, so your greens won’t get bruised."}, {"@type": "HowToStep", "text": "2 The easiest way to quickly separate mint is to hold the top of the stem, then pinch your fingers and pull down the shaft. Most, if not all, of the leaves will come in one movement."}, {"@type": "HowToStep", "text": "3 The easiest way I’ve found to chop a giant pile of herbs is to start with a rough chop to even the surface, then chop in a grid format. Chop from left-to-right, keeping your knife straight in front of you. Then rotate the knife 90-degrees and chop from top-to-bottom. Shuffle the herbs with your hands or a bench scraper and repeat. Repeat this until you have a very fine herb texture, which usually takes 3 passes for me. It’s much faster and you bruise the herbs far less than manically chopping."}], "image": ["https://probablyworthsharing.com/images/recipes/a-tossed-salad-of-beet-tops-and-beet-bottoms/DSC02248-bca58b.jpg"]}</script></head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -37,7 +38,11 @@
       <img src="/logo.png" alt="" width="56" height="56">
       <span>Probably Worth Sharing</span>
     </a>
-    <nav aria-label="Main">
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="site-nav" aria-label="Main">
+      <button class="menu-close" type="button" aria-label="Close menu">×</button>
       <ul>
         <li><a href="/eating/">Eating</a></li>
         <li><a href="/recipes/" aria-current="page">Recipes</a></li>
@@ -47,6 +52,7 @@
         <li><a href="/about/">About</a></li>
       </ul>
     </nav>
+    <div class="menu-scrim" hidden></div>
   </div>
 </header>
 <main id="main">
@@ -131,6 +137,7 @@
 </main>
 <footer class="site-footer">
   <div class="wrap footer-inner">
+    <p class="footer-about">I make a cooking show on <a href="https://www.youtube.com/channel/UCF3Rvw0Hh8iPXbm_4VeF_dQ">YouTube</a> sometimes. But mostly I post photos of <a href="/eating/">what I’m cooking</a>. I used to write a <a href="/newsletter/">newsletter</a> that I hope to start again one day, but I’m busy these days <a href="/house/">building a house</a> and working full-time in tech. This site is a home for all my adventures in food (and life).</p>
     <p class="footer-cta">Like and subscribe on <a href="https://www.youtube.com/channel/UCF3Rvw0Hh8iPXbm_4VeF_dQ">YouTube</a> or follow along on <a href="https://www.instagram.com/markosavic/">Instagram</a>.</p>
     <p class="footer-links">
       <a href="/about/">About</a>
@@ -141,6 +148,23 @@
     <p class="fine">© 2026 Marko Savic</p>
   </div>
 </footer>
-<script src="/static/js/recipe.js" defer></script>
+<script>
+// phone menu: slide-over panel
+(() => {
+  const btn = document.querySelector('.menu-toggle'), nav = document.getElementById('site-nav');
+  const scrim = document.querySelector('.menu-scrim'), close = nav.querySelector('.menu-close');
+  const set = open => {
+    document.body.classList.toggle('menu-open', open);
+    btn.setAttribute('aria-expanded', String(open));
+    scrim.hidden = !open;
+    if (open) nav.querySelector('a')?.focus(); else if (document.activeElement && nav.contains(document.activeElement)) btn.focus();
+  };
+  btn.addEventListener('click', () => set(true));
+  close.addEventListener('click', () => set(false));
+  scrim.addEventListener('click', () => set(false));
+  addEventListener('keydown', e => { if (e.key === 'Escape' && document.body.classList.contains('menu-open')) set(false); });
+})();
+</script>
+<script src="/static/js/recipe.js?v=77197dc0" defer></script>
 </body>
 </html>

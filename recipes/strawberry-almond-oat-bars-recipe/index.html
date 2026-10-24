@@ -2,6 +2,7 @@
 <html lang="en-CA">
 <head>
 <meta charset="utf-8">
+<script>document.documentElement.classList.add('js')</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Strawberry Almond Oat Bars · Probably Worth Sharing</title>
 <meta name="description" content="This is a fresh fruit, summer vacation twist on Karen DeMasco’s Back-To-School Bars – using fresh strawberries, almonds, and vanilla for a sweet, salty…">
@@ -27,7 +28,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400..700&display=swap">
-<link rel="stylesheet" href="/static/css/site.css">
+<link rel="stylesheet" href="/static/css/site.css?v=f3edca15">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Recipe", "name": "Strawberry Almond Oat Bars", "author": {"@type": "Person", "name": "Marko Savic"}, "datePublished": "2024-07-22", "description": "This is a fresh fruit, summer vacation twist on Karen DeMasco’s Back-To-School Bars – using fresh strawberries, almonds, and vanilla for a sweet, salty, buttery, crispy, and soft…", "recipeIngredient": ["190g (1-1/2 cups) all-purpose flour", "115g (1 cup) slivered almonds, chopped almonds, or any kind of nut or seed", "115g (1 1/4) cups old-fashioned oats", "65g (1/3 cup) white sugar", "75g (1/3 cup) packed dark brown sugar", "3g (1 teaspoon) kosher salt", "3g (1 teaspoon) baking powder", "170g (3/4 cup) unsalted butter, melted", "5g (1 tsp) vanilla extract", "350g (1 pint) strawberries, cut in half", "To make vegan, place the butter with melted coconut oil (virgin coconut oil will add a coconut flavour).", "To make gluten free, replace the flour with a 50/50 mix of brown rice flour and potato starch:"], "recipeInstructions": [{"@type": "HowToStep", "text": "Pre-heat the oven to 350°F (175°C) : Pre-heat the oven to 350°F and line an 8x8” baking pan with two sheets of parchment, leaving handles sticking up to lift the cookie out of the baking pan later."}, {"@type": "HowToStep", "text": "Make the crumble: In a large bowl, add the flour, almonds, oats, white sugar, brown sugar, salt, and baking powder. Stir very well ensuring there are no clumps of salt or baking powder."}, {"@type": "HowToStep", "text": "Add the vanilla to the melted butter. Add the butter to the dry ingredients. Stir until no more dry flour is visible, then switch to your hands. Mix until you can squeeze the mixture together and it forms into clumps."}, {"@type": "HowToStep", "text": "Assemble in the pan: Add 2/3 of the oat crumble to the lined baking pan and press it firmly to create an even layer. Slice your strawberries in half, then add to your pan in an even layer. Top with the remaining 1/3 of the crumble and press gently. It’s okay if some strawberries are still visible."}, {"@type": "HowToStep", "text": "Bake: Bake for 45–50 minutes, until the top is golden brown, the visible strawberries look roasted, and the strawberry juices are bubbling at the edges."}, {"@type": "HowToStep", "text": "Cool, then slice: Allow to cool for at least 1 hour, ideally 3 hours. If you remove these from the baking pan early they will crumble. They should cool until the butter is firm. Slice into a 3x3 or 4x5 grid, depending if you want squares or bars."}, {"@type": "HowToStep", "text": "Store: Store in an airtight container at room temperature for a couple of days."}, {"@type": "HowToStep", "text": "You can create variations on this all summer long as fresh fruit changes with the seasons – try peaches with pecans, cooked apples with walnuts, Concord grapes and peanuts, blueberries with lemon zest. There are endless option!"}], "image": ["https://probablyworthsharing.com/images/recipes/strawberry-almond-oat-bars-recipe/Strawberry-Almond-Oat-Bars-2-d9d274.jpg"]}</script></head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -37,7 +38,11 @@
       <img src="/logo.png" alt="" width="56" height="56">
       <span>Probably Worth Sharing</span>
     </a>
-    <nav aria-label="Main">
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="site-nav" aria-label="Main">
+      <button class="menu-close" type="button" aria-label="Close menu">×</button>
       <ul>
         <li><a href="/eating/">Eating</a></li>
         <li><a href="/recipes/" aria-current="page">Recipes</a></li>
@@ -47,6 +52,7 @@
         <li><a href="/about/">About</a></li>
       </ul>
     </nav>
+    <div class="menu-scrim" hidden></div>
   </div>
 </header>
 <main id="main">
@@ -127,6 +133,7 @@
 </main>
 <footer class="site-footer">
   <div class="wrap footer-inner">
+    <p class="footer-about">I make a cooking show on <a href="https://www.youtube.com/channel/UCF3Rvw0Hh8iPXbm_4VeF_dQ">YouTube</a> sometimes. But mostly I post photos of <a href="/eating/">what I’m cooking</a>. I used to write a <a href="/newsletter/">newsletter</a> that I hope to start again one day, but I’m busy these days <a href="/house/">building a house</a> and working full-time in tech. This site is a home for all my adventures in food (and life).</p>
     <p class="footer-cta">Like and subscribe on <a href="https://www.youtube.com/channel/UCF3Rvw0Hh8iPXbm_4VeF_dQ">YouTube</a> or follow along on <a href="https://www.instagram.com/markosavic/">Instagram</a>.</p>
     <p class="footer-links">
       <a href="/about/">About</a>
@@ -137,6 +144,23 @@
     <p class="fine">© 2026 Marko Savic</p>
   </div>
 </footer>
-<script src="/static/js/recipe.js" defer></script>
+<script>
+// phone menu: slide-over panel
+(() => {
+  const btn = document.querySelector('.menu-toggle'), nav = document.getElementById('site-nav');
+  const scrim = document.querySelector('.menu-scrim'), close = nav.querySelector('.menu-close');
+  const set = open => {
+    document.body.classList.toggle('menu-open', open);
+    btn.setAttribute('aria-expanded', String(open));
+    scrim.hidden = !open;
+    if (open) nav.querySelector('a')?.focus(); else if (document.activeElement && nav.contains(document.activeElement)) btn.focus();
+  };
+  btn.addEventListener('click', () => set(true));
+  close.addEventListener('click', () => set(false));
+  scrim.addEventListener('click', () => set(false));
+  addEventListener('keydown', e => { if (e.key === 'Escape' && document.body.classList.contains('menu-open')) set(false); });
+})();
+</script>
+<script src="/static/js/recipe.js?v=77197dc0" defer></script>
 </body>
 </html>

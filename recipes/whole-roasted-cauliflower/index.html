@@ -2,6 +2,7 @@
 <html lang="en-CA">
 <head>
 <meta charset="utf-8">
+<script>document.documentElement.classList.add('js')</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Whole Roasted Cauliflower · Probably Worth Sharing</title>
 <meta name="description" content="Whole roasted cauliflower is deceptively simple. It’s three ingredients: a whole cauliflower, olive oil, and salt – but the technique transforms it into…">
@@ -27,7 +28,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400..700&display=swap">
-<link rel="stylesheet" href="/static/css/site.css">
+<link rel="stylesheet" href="/static/css/site.css?v=f3edca15">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Recipe", "name": "Whole Roasted Cauliflower", "author": {"@type": "Person", "name": "Marko Savic"}, "datePublished": "2022-06-29", "description": "Whole roasted cauliflower is deceptively simple. It’s three ingredients: a whole cauliflower, olive oil, and salt – but the technique transforms it into something magical. It is…", "recipeIngredient": ["1 whole cauliflower – try to pick an ugly one that would otherwise go to food waste", "3 tablespoons olive oil", "3 tablespoons salt (for boiling) + a few pinches for sprinkling"], "recipeInstructions": [{"@type": "HowToStep", "text": "Rinse your whole cauliflower well. You can keep the green leaves on, they are fully edible and taste like cabbage. If there are any firm, light brown spots they are oxidization (the same thing that happens to cut apples). If there are any soft, squishy, dark brown or black spots cut them out."}, {"@type": "HowToStep", "text": "Cut the stem of the cauliflower so it is parallel with the top so it will stand upright on a baking sheet."}, {"@type": "HowToStep", "text": "Place the whole cauliflower into a large, empty pot that is big enough to fit the whole cauliflower. Fill this with cold water to the top, then remove the cauliflower. Add the salt to the water and bring the water to a boil on the stove."}, {"@type": "HowToStep", "text": "Once the water is boiling, gently add in your cauliflower and reduce to a simmer. Cook for 10-15 minutes, until your cauliflower is fork tender."}, {"@type": "HowToStep", "text": "Use a spider strainer to remove the cauliflower to a wire rack and allow it to fully cool. You’ll see an enormous amount of steam leaving the cauliflower, this is what you want. You want all of the steam to escape so that you get a crisp exterior in the next step. If you rush this your cauliflower will not brown."}, {"@type": "HowToStep", "text": "While this cool, pre-heat your oven as hot as it goes – 450° F to 550° F, use convection if you have it."}, {"@type": "HowToStep", "text": "Once cool, place the whole cauliflower so it stands up on a baking sheet. Using a pastry brush (recommended) or your hands, rub 1 tablespoon of olive oil onto the surface of the cauliflower. Sprinkle with 1-2 pinches of salt."}, {"@type": "HowToStep", "text": "Place the cauliflower in the middle of your pre-heated oven and bake for 25-45 minutes. This depends on hot your oven gets and how large your cauliflower is. You want it to be deeply golden brown with some charring."}, {"@type": "HowToStep", "text": "Remove from the oven, allow it to cool slightly before moving to a serving tray. Drizzle the remaining 2 tablespoons of olive oil on top."}, {"@type": "HowToStep", "text": "You can serve this as large slices (like cauliflower steaks) or cut in small pieces. It is delicious on its own, but also great with dips like hummus, lemony yogurt dip, or garlic aioli."}], "image": ["https://probablyworthsharing.com/images/recipes/whole-roasted-cauliflower/DSC00013-3-39b606.jpeg"]}</script></head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -37,7 +38,11 @@
       <img src="/logo.png" alt="" width="56" height="56">
       <span>Probably Worth Sharing</span>
     </a>
-    <nav aria-label="Main">
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="site-nav" aria-label="Main">
+      <button class="menu-close" type="button" aria-label="Close menu">×</button>
       <ul>
         <li><a href="/eating/">Eating</a></li>
         <li><a href="/recipes/" aria-current="page">Recipes</a></li>
@@ -47,6 +52,7 @@
         <li><a href="/about/">About</a></li>
       </ul>
     </nav>
+    <div class="menu-scrim" hidden></div>
   </div>
 </header>
 <main id="main">
@@ -107,6 +113,7 @@
 </main>
 <footer class="site-footer">
   <div class="wrap footer-inner">
+    <p class="footer-about">I make a cooking show on <a href="https://www.youtube.com/channel/UCF3Rvw0Hh8iPXbm_4VeF_dQ">YouTube</a> sometimes. But mostly I post photos of <a href="/eating/">what I’m cooking</a>. I used to write a <a href="/newsletter/">newsletter</a> that I hope to start again one day, but I’m busy these days <a href="/house/">building a house</a> and working full-time in tech. This site is a home for all my adventures in food (and life).</p>
     <p class="footer-cta">Like and subscribe on <a href="https://www.youtube.com/channel/UCF3Rvw0Hh8iPXbm_4VeF_dQ">YouTube</a> or follow along on <a href="https://www.instagram.com/markosavic/">Instagram</a>.</p>
     <p class="footer-links">
       <a href="/about/">About</a>
@@ -117,6 +124,23 @@
     <p class="fine">© 2026 Marko Savic</p>
   </div>
 </footer>
-<script src="/static/js/recipe.js" defer></script>
+<script>
+// phone menu: slide-over panel
+(() => {
+  const btn = document.querySelector('.menu-toggle'), nav = document.getElementById('site-nav');
+  const scrim = document.querySelector('.menu-scrim'), close = nav.querySelector('.menu-close');
+  const set = open => {
+    document.body.classList.toggle('menu-open', open);
+    btn.setAttribute('aria-expanded', String(open));
+    scrim.hidden = !open;
+    if (open) nav.querySelector('a')?.focus(); else if (document.activeElement && nav.contains(document.activeElement)) btn.focus();
+  };
+  btn.addEventListener('click', () => set(true));
+  close.addEventListener('click', () => set(false));
+  scrim.addEventListener('click', () => set(false));
+  addEventListener('keydown', e => { if (e.key === 'Escape' && document.body.classList.contains('menu-open')) set(false); });
+})();
+</script>
+<script src="/static/js/recipe.js?v=77197dc0" defer></script>
 </body>
 </html>

@@ -15,7 +15,7 @@
     const words = q.value.toLowerCase().trim().split(/\s+/).filter(Boolean);
     let shown = 0;
     for (const c of cards) {
-      const hit = words.every(w => c.dataset.search.includes(w)) && (source === 'all' || c.dataset.source === source);
+      const hit = words.every(w => c.dataset.search.includes(w)) && (source === 'all' || (source === 'video' ? c.dataset.video === '1' : c.dataset.source === source));
       c.hidden = !hit;
       if (hit) shown++;
     }

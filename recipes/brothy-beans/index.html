@@ -2,6 +2,7 @@
 <html lang="en-CA">
 <head>
 <meta charset="utf-8">
+<script>document.documentElement.classList.add('js')</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Brothy Beans · Probably Worth Sharing</title>
 <meta name="description" content="Beans are extraordinarily delicious and good for you – high in protein, fibre, and nutrients. Buying dried beans is way more affordable and you can buy…">
@@ -27,7 +28,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400..700&display=swap">
-<link rel="stylesheet" href="/static/css/site.css">
+<link rel="stylesheet" href="/static/css/site.css?v=f3edca15">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Recipe", "name": "Brothy Beans", "author": {"@type": "Person", "name": "Marko Savic"}, "datePublished": "2023-03-09", "description": "Beans are extraordinarily delicious and good for you – high in protein, fibre, and nutrients. Buying dried beans is way more affordable and you can buy heirloom varieties. Brothy…", "recipeIngredient": ["500g (1lb dried) beans", "1 small piece of kombu", "1 bay leaf", "1 lemon, cut in half", "1 onion or shallot, cut in half", "1 head of garlic, cut in half across the equator", "1/2 cup olive oil", "Salt and pepper to taste", "Red wine vinegar or lemon juice to taste"], "recipeInstructions": [{"@type": "HowToStep", "text": "Rinse your beans and remove any stones if present. Place the beans in a large bowl, add a small piece of kombu, and fill with clean, cold water to cover the beans by at least 2”. Depending on how old your beans are they may need more or less soaking time, minimum of 4 hours but overnight is best. The beans will double in size so make sure your bowl is large enough."}, {"@type": "HowToStep", "text": "Remove the kombu – do not cook the kombu , it will become bitter."}, {"@type": "HowToStep", "text": "Pour the beans and bean soaking liquid into a large pot. Add more water to cover by at least 2 inches."}, {"@type": "HowToStep", "text": "I repeat: remove the kombu before cooking! It’s the kind of bitterness you can’t treat, like a relationship too far gone to salvage."}, {"@type": "HowToStep", "text": "Bring to a boil."}, {"@type": "HowToStep", "text": "This will trigger some proteins in the beans to foam, similar to boiling meat for stock. Skim off the foam and reduce to a simmer. Once the beans stops foaming, add the other ingredients. If you add ingredients like olive oil or herbs before all the foam is gone you’ll just be scraping them away."}, {"@type": "HowToStep", "text": "Add:"}, {"@type": "HowToStep", "text": "1 tsp of of salt and pepper to taste A lemon cut in half An onion or shallot, cut in half A head of garlic, cut in half A bay leaf or two 1/2 cup of olive oil Optionally 2 tsp of dried herbs – thyme, oregano, or rosemary Optionally, if you have a carrot or celery kicking around you can add those too"}, {"@type": "HowToStep", "text": "Reduce to low, add a lid slightly ajar, and gently simmer on low for at least 2 hours, longer if you have time, until the beans are soft all the way through. Add more water if needed during the cooking time. Remove the vegetables. Adjust with salt, pepper, and acid."}, {"@type": "HowToStep", "text": "You can separate the beans from the broth and use them in any recipe that calls for that type of bean. You can use the broth as you would any broth. It will be rich and flavourful. Or you can eat them together as a soup – perfect with olive oil fried bread and some Parmesan."}, {"@type": "HowToStep", "text": "Beans keep well in the fridge for a 3–5 days. Beans can be frozen in their broth for a long time. Reheat gently."}, {"@type": "HowToStep", "text": "I keep the bean soaking liquid, some people believe the farts in the bean soaking liquid (they aren’t, they’re in the raffinose, which the enzyme in kombu transforms into glucose). The bean soaking liquid has a lot of flavour. I keep it."}, {"@type": "HowToStep", "text": "Salt at the beginning of cooking to get flavour all the way through the beans and salt at the end to adjust the broth seasoning. When you salt doesn’t change the texture of beans."}, {"@type": "HowToStep", "text": "Beans come in a few textures: firm, like chickpeas. Starchy, like black eyed peas. Creamy, like Lima beans. If you’re expected at chickpea to melt in your mouth you’ll be disappointed, but it shouldn’t be starchy."}, {"@type": "HowToStep", "text": "Old beans can take a very long time to cook."}, {"@type": "HowToStep", "text": "Most raw beans have a toxin called phytohaemagglutinin. This is removed by cooking, so it’s important to make sure your beans come to a boil (212°F). Phytohaemagglutinin breaks down at 176°F, so boiling is effective but slow cookers generally don’t get hot enough."}], "image": ["https://probablyworthsharing.com/images/recipes/brothy-beans/DSC01630-2-7bb466.jpg"]}</script></head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -37,7 +38,11 @@
       <img src="/logo.png" alt="" width="56" height="56">
       <span>Probably Worth Sharing</span>
     </a>
-    <nav aria-label="Main">
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="site-nav" aria-label="Main">
+      <button class="menu-close" type="button" aria-label="Close menu">×</button>
       <ul>
         <li><a href="/eating/">Eating</a></li>
         <li><a href="/recipes/" aria-current="page">Recipes</a></li>
@@ -47,6 +52,7 @@
         <li><a href="/about/">About</a></li>
       </ul>
     </nav>
+    <div class="menu-scrim" hidden></div>
   </div>
 </header>
 <main id="main">
@@ -148,6 +154,7 @@
 </main>
 <footer class="site-footer">
   <div class="wrap footer-inner">
+    <p class="footer-about">I make a cooking show on <a href="https://www.youtube.com/channel/UCF3Rvw0Hh8iPXbm_4VeF_dQ">YouTube</a> sometimes. But mostly I post photos of <a href="/eating/">what I’m cooking</a>. I used to write a <a href="/newsletter/">newsletter</a> that I hope to start again one day, but I’m busy these days <a href="/house/">building a house</a> and working full-time in tech. This site is a home for all my adventures in food (and life).</p>
     <p class="footer-cta">Like and subscribe on <a href="https://www.youtube.com/channel/UCF3Rvw0Hh8iPXbm_4VeF_dQ">YouTube</a> or follow along on <a href="https://www.instagram.com/markosavic/">Instagram</a>.</p>
     <p class="footer-links">
       <a href="/about/">About</a>
@@ -158,6 +165,23 @@
     <p class="fine">© 2026 Marko Savic</p>
   </div>
 </footer>
-<script src="/static/js/recipe.js" defer></script>
+<script>
+// phone menu: slide-over panel
+(() => {
+  const btn = document.querySelector('.menu-toggle'), nav = document.getElementById('site-nav');
+  const scrim = document.querySelector('.menu-scrim'), close = nav.querySelector('.menu-close');
+  const set = open => {
+    document.body.classList.toggle('menu-open', open);
+    btn.setAttribute('aria-expanded', String(open));
+    scrim.hidden = !open;
+    if (open) nav.querySelector('a')?.focus(); else if (document.activeElement && nav.contains(document.activeElement)) btn.focus();
+  };
+  btn.addEventListener('click', () => set(true));
+  close.addEventListener('click', () => set(false));
+  scrim.addEventListener('click', () => set(false));
+  addEventListener('keydown', e => { if (e.key === 'Escape' && document.body.classList.contains('menu-open')) set(false); });
+})();
+</script>
+<script src="/static/js/recipe.js?v=77197dc0" defer></script>
 </body>
 </html>

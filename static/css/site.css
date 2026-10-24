@@ -443,3 +443,60 @@ body.viewing { overflow: hidden; }
 /* home hero: text only, wider paragraph (the logo already sits in the masthead) */
 .hero-inner { grid-template-columns: minmax(0, 1fr); }
 .hero .lede { max-width: 64ch; }
+
+/* --- home page refinements ---------------------------------------------- */
+.section-dek { margin: -8px 0 18px; color: var(--ink-soft); max-width: 60ch; }
+.footer-about { max-width: 70ch; margin-top: 0; color: #dfe5ff; font-size: 1rem; line-height: 1.6; }
+.footer-about a { color: var(--sun); }
+
+/* --- phone menu: hamburger + slide-over panel ------------------------------ */
+.menu-toggle, .menu-close, .menu-scrim { display: none; }
+@media (max-width: 720px) {
+  .js .menu-toggle { display: grid; gap: 5px; align-content: center; justify-items: center; width: 44px; height: 44px; border: 0; border-radius: 10px; background: rgb(255 255 255 / .12); cursor: pointer; margin-left: auto; }
+  .js .menu-toggle span { display: block; width: 22px; height: 2px; border-radius: 2px; background: #fff; }
+  .js .masthead nav { position: fixed; top: 0; right: 0; bottom: 0; z-index: 50; width: min(82vw, 320px); padding: 64px 20px 24px; background: var(--cobalt); box-shadow: -8px 0 30px rgb(0 0 0 / .3); transform: translateX(100%); transition: transform .25s ease; visibility: hidden; overflow-y: auto; }
+  .js body.menu-open .masthead nav { transform: none; visibility: visible; }
+  .js .masthead nav ul { flex-direction: column; gap: 4px; }
+  .js .masthead nav a { font-size: 1.25rem; padding: 14px 16px; border-radius: 12px; }
+  .js .menu-close { display: block; position: absolute; top: 12px; right: 14px; width: 44px; height: 44px; border: 0; background: none; color: #fff; font-size: 2rem; line-height: 1; cursor: pointer; }
+  .js .menu-scrim:not([hidden]) { display: block; position: fixed; inset: 0; z-index: 40; background: rgb(0 0 0 / .45); }
+  .js body.menu-open { overflow: hidden; }
+  .masthead-inner { flex-wrap: nowrap; }
+
+  /* recipes and newsletter on the home page scroll sideways like the story rows */
+  .home-cards { display: flex; gap: 14px; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 12px; margin: 0 -16px; padding-left: 16px; padding-right: 16px; scroll-padding: 16px; }
+  .home-cards .card { flex: 0 0 78%; scroll-snap-align: start; }
+}
+@media (prefers-reduced-motion: reduce) { .masthead nav { transition: none !important; } }
+
+/* --- The House: story-shaped tiles everywhere; the viewer shows photos whole ---- */
+.house-head .lede { max-width: 64ch; }
+.house-log-title { margin: 28px 0 0; font-size: 1.5rem; }
+.month-chips:empty, .month-chips:not(:has(button:not([hidden]))) { display: none; }
+.house-sections { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 12px; margin-top: 22px; }
+.house-section { display: grid; gap: 4px; padding: 16px 18px; border-radius: var(--radius); background: var(--surface); box-shadow: var(--shadow); text-decoration: none; color: var(--ink); border: 2px solid transparent; }
+.house-section:hover { border-color: var(--cobalt); }
+.house-section strong { font: 700 1.1rem/1.25 var(--display); color: var(--link); }
+.house-section span { font-size: .95rem; color: var(--ink-soft); }
+
+.week-grid { columns: auto; display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 12px; }
+.week-tile { margin: 0; }
+.week-tile a { aspect-ratio: 9 / 16; border-radius: 14px; overflow: hidden; background: var(--cobalt); box-shadow: var(--shadow); }
+.week-tile img { width: 100%; height: 100%; object-fit: cover; border-radius: 0; }
+@media (max-width: 720px) { .week-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; } }
+
+/* never crop in the viewer: the whole photo, letterboxed on black */
+.viewer-media img, .viewer-media video { object-fit: contain; background: #000; }
+
+/* Wide viewer (house stories): the controls keep the story column; the photo spreads across the
+   screen, as large as fits without cropping */
+@media (min-width: 721px) {
+  .viewer.is-wide { overflow: visible; }
+  .viewer.is-wide .viewer-stage { overflow: visible; }
+  .viewer.is-wide .viewer-media { left: 50%; right: auto; width: min(92vw, 1600px); transform: translateX(-50%); z-index: 2; cursor: pointer; }
+  .viewer.is-wide .viewer-media img, .viewer.is-wide .viewer-media video { background: transparent; }
+  .viewer.is-wide .viewer-foot, .viewer.is-wide .viewer-head { position: relative; z-index: 3; }
+}
+/* the photo box has a definite size, so 100% height means "fit the frame", never "natural height" */
+.viewer-media { display: block; }
+.viewer-media img, .viewer-media video { display: block; width: 100%; height: 100%; max-width: none; max-height: 100%; }
