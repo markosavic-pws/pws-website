@@ -13,6 +13,7 @@ description: "Week of August 31, 2026: 18 photos and videos from building Marko 
 
 ## Photos and videos
 
+- Video, 2026-09-05 17:08: https://probablyworthsharing.com/images/house/2026-w36/img-8173.mp4
 - Photo, 2026-09-05 15:53: https://probablyworthsharing.com/images/house/2026-w36/img-8137.jpg
 - Photo, 2026-09-05 15:59: https://probablyworthsharing.com/images/house/2026-w36/img-8147.jpg
 - Photo, 2026-09-05 16:02: https://probablyworthsharing.com/images/house/2026-w36/img-8148.jpg
@@ -28,6 +29,5 @@ description: "Week of August 31, 2026: 18 photos and videos from building Marko 
 - Photo, 2026-09-05 16:32: https://probablyworthsharing.com/images/house/2026-w36/img-8165.jpg
 - Photo, 2026-09-05 16:42: https://probablyworthsharing.com/images/house/2026-w36/img-8168.jpg
 - Photo, 2026-09-05 16:48: https://probablyworthsharing.com/images/house/2026-w36/img-8171.jpg
-- Video, 2026-09-05 17:08: https://probablyworthsharing.com/images/house/2026-w36/img-8173.mp4
 - Photo, 2026-09-05 17:09: https://probablyworthsharing.com/images/house/2026-w36/img-8174.jpg
 - Photo, 2026-09-05 17:09: https://probablyworthsharing.com/images/house/2026-w36/img-8176.jpg

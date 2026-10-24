@@ -13,15 +13,15 @@ description: "Week of October 5, 2026: 17 photos and videos from building Marko 
 
 ## Photos and videos
 
+- Video, 2026-10-06 17:13: https://probablyworthsharing.com/images/house/2026-w41/img-8578.mp4
+- Video, 2026-10-06 17:18: https://probablyworthsharing.com/images/house/2026-w41/img-8580.mp4
 - Photo, 2026-10-06 17:10: https://probablyworthsharing.com/images/house/2026-w41/img-8569.jpg
 - Photo, 2026-10-06 17:11: https://probablyworthsharing.com/images/house/2026-w41/img-8570.jpg
 - Photo, 2026-10-06 17:11: https://probablyworthsharing.com/images/house/2026-w41/img-8571.jpg
 - Photo, 2026-10-06 17:12: https://probablyworthsharing.com/images/house/2026-w41/img-8572.jpg
 - Photo, 2026-10-06 17:12: https://probablyworthsharing.com/images/house/2026-w41/img-8573.jpg
 - Photo, 2026-10-06 17:13: https://probablyworthsharing.com/images/house/2026-w41/img-8577.jpg
-- Video, 2026-10-06 17:13: https://probablyworthsharing.com/images/house/2026-w41/img-8578.mp4
 - Photo, 2026-10-06 17:17: https://probablyworthsharing.com/images/house/2026-w41/img-8579.jpg
-- Video, 2026-10-06 17:18: https://probablyworthsharing.com/images/house/2026-w41/img-8580.mp4
 - Photo, 2026-10-06 17:19: https://probablyworthsharing.com/images/house/2026-w41/img-8583.jpg
 - Photo, 2026-10-06 17:20: https://probablyworthsharing.com/images/house/2026-w41/img-8584.jpg
 - Photo, 2026-10-06 17:20: https://probablyworthsharing.com/images/house/2026-w41/img-8586.jpg

@@ -44,9 +44,31 @@
       tl.scrollBy({ left: dx, behavior: still ? 'auto' : 'smooth' });
       setTimeout(() => { if (Math.abs(tl.scrollLeft - start) < 1 && Math.abs(dx) > 1) tl.scrollLeft = start + dx; }, 500);
     };
-    const page = dir => scrollByX(dir * tl.clientWidth * 0.8);
-    $('.tl-older')?.addEventListener('click', () => page(-1));
-    $('.tl-newer')?.addEventListener('click', () => page(1));
+    // the arrows move one story at a time: centre the story next to the one in the middle now
+    const step = dir => {
+      const items = $$('.tl-item:not([hidden])', tl);
+      if (!items.length) return;
+      const box = tl.getBoundingClientRect(), mid = box.left + box.width / 2;
+      const centre = el => { const r = el.getBoundingClientRect(); return r.left + r.width / 2; };
+      const now = items.reduce((best, el) => Math.abs(centre(el) - mid) < Math.abs(centre(best) - mid) ? el : best);
+      const target = items[Math.min(items.length - 1, Math.max(0, items.indexOf(now) + dir))];
+      scrollByX(centre(target) - mid);
+    };
+    $('.tl-older')?.addEventListener('click', () => step(-1));
+    $('.tl-newer')?.addEventListener('click', () => step(1));
+    // hide an arrow when there's nothing further that way (newest or oldest story centred)
+    const arrows = () => {
+      const items = $$('.tl-item:not([hidden])', tl);
+      const box = tl.getBoundingClientRect(), mid = box.left + box.width / 2;
+      const off = el => { if (!el) return 0; const r = el.getBoundingClientRect(); return r.left + r.width / 2 - mid; };
+      const older = $('.tl-older'), newer = $('.tl-newer');
+      if (older) older.hidden = !items.length || off(items[0]) > -8 || tl.scrollLeft < 2;
+      if (newer) newer.hidden = !items.length || off(items[items.length - 1]) < 8 || tl.scrollLeft > tl.scrollWidth - tl.clientWidth - 2;
+    };
+    tl.addEventListener('scroll', arrows, { passive: true });
+    addEventListener('resize', arrows);
+    addEventListener('load', arrows);
+    arrows();
     const chips = $$('.tl-filters [data-filter]');
     const search = $('#tl-search');
     let filter = 'all';
@@ -69,6 +91,7 @@
       $$('.tl-trip', tl).forEach(g => { g.hidden = !$$('.tl-item:not([hidden])', g).length; });
       $('#tl-empty') && ($('#tl-empty').hidden = shown > 0);
       centreNewest();
+      arrows();
     };
     chips.forEach(c => c.addEventListener('click', () => {
       filter = c.dataset.filter;

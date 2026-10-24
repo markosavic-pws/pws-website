@@ -244,7 +244,7 @@ h3 { font-size: 1.25rem; font-weight: 700; }
 .timeline-wrap { position: relative; margin: 24px 0 48px; }
 .timeline { list-style: none; margin: 0; padding: 8px max(16px, calc((100vw - 1240px) / 2 + 16px)) 20px; display: flex; gap: 14px; overflow-x: auto; scroll-snap-type: x proximity; scrollbar-width: thin; }
 .timeline:focus-visible { outline-offset: -3px; }
-.tl-item { flex: 0 0 auto; scroll-snap-align: end; }
+.tl-item { flex: 0 0 auto; scroll-snap-align: center; }
 .tl-month { flex: 0 0 auto; align-self: stretch; display: flex; align-items: flex-start; padding-top: 6px; }
 .tl-month span { font: 800 .8rem/1.2 var(--display); text-transform: uppercase; letter-spacing: .06em; color: var(--ink-soft); border-left: 3px solid var(--sun); padding-left: 8px; }
 .story { display: block; width: clamp(150px, 38vw, 210px); text-decoration: none; color: inherit; }
@@ -339,8 +339,10 @@ body.viewing { overflow: hidden; }
 }
 
 /* --- What I'm Eating, round 2 ------------------------------------------------ */
-/* room after the newest tile so it can sit in the centre of the screen */
-.timeline { padding-right: max(16px, calc(50vw - 110px)); }
+/* room after the newest tile so it can sit in the centre of the screen. A spacer, not padding:
+   Safari ignores the end padding of a scrolling flex row, which left the newest tile stuck at the edge */
+.timeline { padding-right: 0; }
+.timeline::after { content: ""; flex: 0 0 max(2px, calc(50vw - clamp(150px, 38vw, 210px) / 2 - 14px)); }
 .tl-empty { color: var(--ink-soft); }
 
 .story-badge { position: absolute; left: 8px; bottom: 8px; font: 700 .7rem/1 var(--sans); text-transform: uppercase; letter-spacing: .05em; padding: 5px 8px; border-radius: 6px; background: var(--sun); color: #001033; box-shadow: 0 1px 4px rgb(0 0 0 / .25); }
@@ -412,7 +414,7 @@ body.viewing { overflow: hidden; }
 .tl-trip-bar { display: block; font: 700 .85rem/1 var(--sans); padding: 8px 12px; border-radius: 999px; background: var(--cobalt); color: #fff; text-decoration: none; white-space: nowrap; }
 .tl-trip-bar:hover { background: color-mix(in srgb, var(--cobalt) 85%, #000); }
 .tl-trip-items { list-style: none; margin: 0; padding: 0 0 0 0; display: flex; gap: 14px; }
-.tl-trip-items .tl-item { scroll-snap-align: end; }
+.tl-trip-items .tl-item { scroll-snap-align: center; }
 /* line up untripped tiles with the tiles under a bar */
 .tl-item, .tl-month { padding-top: 39px; }
 .tl-trip .tl-item { padding-top: 0; }
