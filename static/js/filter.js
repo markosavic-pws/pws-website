@@ -4,11 +4,18 @@
   const cards = [...document.querySelectorAll('#results [data-search]')];
   const empty = document.getElementById('empty');
   if (!q) return;
+  let source = 'all';
+  const chips = [...document.querySelectorAll('[data-source]')].filter(b => b.tagName === 'BUTTON');
+  chips.forEach(b => b.addEventListener('click', () => {
+    source = b.dataset.source;
+    chips.forEach(x => x.setAttribute('aria-pressed', String(x === b)));
+    run();
+  }));
   const run = () => {
     const words = q.value.toLowerCase().trim().split(/\s+/).filter(Boolean);
     let shown = 0;
     for (const c of cards) {
-      const hit = words.every(w => c.dataset.search.includes(w));
+      const hit = words.every(w => c.dataset.search.includes(w)) && (source === 'all' || c.dataset.source === source);
       c.hidden = !hit;
       if (hit) shown++;
     }

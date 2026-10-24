@@ -230,3 +230,216 @@ h3 { font-size: 1.25rem; font-weight: 700; }
   .recipe-head, .recipe-grid { grid-template-columns: 1fr 2fr; gap: 24px; }
   .ingredients { position: static; max-height: none; box-shadow: none; padding: 0; }
 }
+
+/* ---------------------------------------------------------------------------
+   What I'm Eating: a horizontal timeline of story tiles (oldest left, newest right)
+   ------------------------------------------------------------------------- */
+.eating-head { padding-top: 40px; }
+.eating-head h1 { margin-bottom: 8px; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; margin: 18px 0 0; }
+.chips button { font: 600 .85rem/1.2 var(--sans); padding: 7px 12px; border-radius: 999px; border: 2px solid var(--line); background: var(--surface); color: var(--ink); cursor: pointer; text-transform: capitalize; }
+.chips button:hover { border-color: var(--cobalt); }
+.chips button[aria-pressed="true"] { background: var(--cobalt); border-color: var(--cobalt); color: #fff; }
+
+.timeline-wrap { position: relative; margin: 24px 0 48px; }
+.timeline { list-style: none; margin: 0; padding: 8px max(16px, calc((100vw - 1240px) / 2 + 16px)) 20px; display: flex; gap: 14px; overflow-x: auto; scroll-snap-type: x proximity; scrollbar-width: thin; }
+.timeline:focus-visible { outline-offset: -3px; }
+.tl-item { flex: 0 0 auto; scroll-snap-align: end; }
+.tl-month { flex: 0 0 auto; align-self: stretch; display: flex; align-items: flex-start; padding-top: 6px; }
+.tl-month span { font: 800 .8rem/1.2 var(--display); text-transform: uppercase; letter-spacing: .06em; color: var(--ink-soft); border-left: 3px solid var(--sun); padding-left: 8px; }
+.story { display: block; width: clamp(150px, 38vw, 210px); text-decoration: none; color: inherit; }
+.story-media { position: relative; display: block; aspect-ratio: 9 / 16; border-radius: 16px; overflow: hidden; background: var(--cobalt); box-shadow: var(--shadow); }
+.story-media img { width: 100%; height: 100%; object-fit: cover; transition: transform .25s; }
+.story:hover .story-media img { transform: scale(1.03); }
+.story:focus-visible .story-media { outline: 3px solid var(--sun); outline-offset: 2px; }
+.story-play { position: absolute; top: 10px; right: 10px; width: 28px; height: 28px; border-radius: 50%; background: rgb(0 0 0 / .55); color: #fff; font-size: .75rem; display: grid; place-items: center; }
+.story-text { display: grid; gap: 2px; padding: 8px 2px 0; }
+.story-text time { font: 600 .75rem/1 var(--sans); text-transform: uppercase; letter-spacing: .05em; color: var(--ink-soft); }
+.story-title { font: 700 1rem/1.25 var(--display); }
+.story-where { font: 500 .8rem/1.3 var(--sans); color: var(--ink-soft); }
+.tl-nav { position: absolute; top: calc(50% - 40px); z-index: 2; width: 44px; height: 44px; border-radius: 50%; border: 0; background: var(--surface); color: var(--ink); box-shadow: var(--shadow); font-size: 1.6rem; line-height: 1; cursor: pointer; }
+.tl-older { left: 12px; } .tl-newer { right: 12px; }
+@media (hover: none) { .tl-nav { display: none; } }
+
+/* Home page strip reuses the tiles */
+.home-strip { list-style: none; margin: 0; padding: 4px 0 16px; display: flex; gap: 14px; overflow-x: auto; scroll-snap-type: x proximity; }
+.home-strip li { flex: 0 0 auto; scroll-snap-align: start; }
+
+/* Entry page */
+.entry { padding: 40px 0 24px; }
+.entry-head { margin-bottom: 20px; }
+.entry-head h1 { margin: 6px 0 8px; }
+.entry-where { margin: 0; font: 600 1rem/1.4 var(--sans); color: var(--ink-soft); }
+.entry-media { display: flex; gap: 12px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 0 max(16px, calc((100vw - 1240px) / 2 + 16px)) 16px; }
+.entry-slide { flex: 0 0 auto; margin: 0; scroll-snap-align: center; }
+.entry-slide img, .entry-slide video { height: min(72vh, 680px); width: auto; max-width: 88vw; object-fit: cover; border-radius: 14px; box-shadow: var(--shadow); background: #000; }
+.entry-slide figcaption { font: 500 .9rem/1.4 var(--sans); color: var(--ink-soft); padding-top: 6px; max-width: 60ch; }
+.entry-body { padding-top: 12px; }
+.entry-nav { display: flex; justify-content: space-between; gap: 16px; margin-top: 40px; padding-top: 18px; border-top: 2px dashed var(--line); font: 600 1rem/1.4 var(--sans); }
+
+/* Recipe credit: badge on cards, box on pages */
+.credit { display: inline-block; font: 700 .72rem/1 var(--sans); text-transform: uppercase; letter-spacing: .05em; padding: 5px 8px; border-radius: 6px; }
+.credit-mine { background: var(--mark); color: var(--ink); }
+.credit-other { background: transparent; color: var(--link); border: 1.5px solid currentColor; }
+.card-credit { margin: 6px 0 0; }
+.credit-box { background: var(--surface); border-left: 4px solid var(--sun); border-radius: 10px; padding: 14px 18px; margin: 0 0 24px; box-shadow: var(--shadow); font-family: var(--sans); font-size: 1rem; }
+.credit-box .credit-kind { margin: 0 0 6px; font: 700 .75rem/1 var(--sans); text-transform: uppercase; letter-spacing: .06em; color: var(--ink-soft); }
+.credit-box ul { list-style: none; margin: 0; padding: 0; }
+.credit-box p:last-child { margin-bottom: 0; }
+.source-filter { margin-top: 14px; }
+
+/* Story viewer */
+body.viewing { overflow: hidden; }
+.viewer { width: min(100vw, 480px); height: min(100dvh, 860px); max-width: none; max-height: none; padding: 0; border: 0; border-radius: 18px; background: #000; color: #fff; overflow: hidden; }
+.viewer::backdrop { background: rgb(0 0 0 / .88); }
+.viewer[open] { display: grid; grid-template-rows: auto auto 1fr auto; }
+.viewer-bars { display: flex; gap: 4px; padding: 10px 12px 0; }
+.viewer-bars span { flex: 1; height: 3px; background: rgb(255 255 255 / .3); border-radius: 2px; overflow: hidden; }
+.viewer-bars i { display: block; height: 100%; width: 0; background: #fff; }
+.viewer-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; padding: 10px 14px 6px; }
+.viewer-title { margin: 0; font: 700 1.05rem/1.25 var(--display); }
+.viewer-sub { margin: 2px 0 0; font: 500 .8rem/1.3 var(--sans); color: rgb(255 255 255 / .75); }
+.viewer-close { background: none; border: 0; color: #fff; font-size: 2rem; line-height: 1; cursor: pointer; padding: 0 4px; }
+.viewer-stage { position: relative; min-height: 0; display: grid; }
+.viewer-media { display: grid; place-items: center; min-height: 0; }
+.viewer-media img, .viewer-media video { max-width: 100%; max-height: 100%; width: 100%; height: 100%; object-fit: contain; }
+.viewer-prev, .viewer-next { position: absolute; top: 0; bottom: 0; z-index: 1; background: none; border: 0; cursor: pointer; }
+.viewer-prev { left: 0; width: 35%; } .viewer-next { right: 0; width: 65%; }
+.viewer-foot { padding: 10px 16px 16px; font: 500 .9rem/1.45 var(--sans); background: linear-gradient(transparent, rgb(0 0 0 / .6)); }
+.viewer-credit { margin: 0 0 4px; color: var(--sun); font-weight: 700; }
+.viewer-credit:empty { display: none; }
+.viewer-caption p { margin: 0 0 6px; }
+.viewer-caption a, .viewer-link { color: #fff; }
+.viewer-link { display: inline-block; margin-top: 4px; font-weight: 700; }
+@media (max-width: 520px) { .viewer { width: 100vw; height: 100dvh; border-radius: 0; } }
+
+/* ---------------------------------------------------------------------------
+   The House
+   ------------------------------------------------------------------------- */
+.week-card { padding: 22px 0 26px; border-top: 2px dashed var(--line); }
+.week-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+.week-head h2 { margin: 0 0 6px; }
+.week-head h2 a { text-decoration: none; color: var(--ink); }
+.week-head h2 a:hover { color: var(--link); }
+.week-summary { max-width: 760px; }
+.week-strip { display: grid; grid-template-columns: repeat(8, minmax(0, 1fr)); gap: 8px; margin-top: 12px; }
+.week-strip a { display: block; aspect-ratio: 1; border-radius: 10px; overflow: hidden; background: var(--line); }
+.week-strip img { width: 100%; height: 100%; object-fit: cover; }
+.week-more { display: grid !important; place-items: center; font: 800 1.2rem var(--display); color: var(--link); text-decoration: none; background: var(--surface) !important; border: 2px solid var(--line); }
+.house-week { padding: 40px 16px 24px; }
+.week-grid { columns: 3 260px; column-gap: 12px; margin-top: 20px; }
+.week-tile { break-inside: avoid; margin: 0 0 12px; position: relative; }
+.week-tile a { display: block; position: relative; }
+.week-tile img { width: 100%; border-radius: 10px; }
+.week-tile figcaption { font: 500 .9rem/1.4 var(--sans); color: var(--ink-soft); padding-top: 4px; }
+@media (max-width: 720px) {
+  .week-strip { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .week-strip a:nth-child(n+8) { display: none; }
+  .week-grid { columns: 2 150px; column-gap: 8px; }
+}
+
+/* --- What I'm Eating, round 2 ------------------------------------------------ */
+/* room after the newest tile so it can sit in the centre of the screen */
+.timeline { padding-right: max(16px, calc(50vw - 110px)); }
+.tl-empty { color: var(--ink-soft); }
+
+.story-badge { position: absolute; left: 8px; bottom: 8px; font: 700 .7rem/1 var(--sans); text-transform: uppercase; letter-spacing: .05em; padding: 5px 8px; border-radius: 6px; background: var(--sun); color: #001033; box-shadow: 0 1px 4px rgb(0 0 0 / .25); }
+.story-badge-top { top: 8px; bottom: auto; background: rgb(255 255 255 / .92); color: var(--cobalt); }
+
+.filters { display: grid; gap: 10px; margin-top: 18px; }
+.filters > .chips { margin: 0; }
+.more-filters summary { cursor: pointer; font: 600 .9rem/1.2 var(--sans); color: var(--link); width: max-content; list-style: none; }
+.more-filters summary::-webkit-details-marker { display: none; }
+.more-filters summary::after { content: " ▾"; }
+.more-filters[open] summary::after { content: " ▴"; }
+.more-filters-body { margin-top: 10px; padding: 14px; background: var(--surface); border-radius: var(--radius); box-shadow: var(--shadow); }
+.more-filters-body input { width: 100%; max-width: 420px; font: 1rem var(--sans); padding: 10px 14px; border-radius: 999px; border: 2px solid var(--line); background: var(--paper); color: var(--ink); }
+.more-filters-body input:focus { border-color: var(--cobalt); outline: none; }
+.tag-chips { margin-top: 12px; }
+.chips .count { font-weight: 500; opacity: .6; margin-left: 2px; }
+
+.viewer-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+.viewer-btn { display: inline-flex; align-items: center; gap: 6px; font: 700 .9rem/1 var(--sans); padding: 11px 16px; border-radius: 999px; background: var(--sun); color: #001033 !important; text-decoration: none; }
+.viewer-btn:hover { filter: brightness(1.06); }
+.viewer-btn-ghost { background: rgb(255 255 255 / .14); color: #fff !important; border: 1.5px solid rgb(255 255 255 / .6); }
+.viewer-btn[hidden] { display: none; }
+.viewer-link { margin-top: 0; }
+
+.entry-trip { margin: 0 0 4px; font: 600 .9rem/1.3 var(--sans); }
+.entry-trip a { font-weight: 700; }
+
+/* trip page */
+.trip-intro { margin-bottom: 12px; }
+.trip-stop { padding-top: 26px; padding-bottom: 8px; border-top: 2px dashed var(--line); margin-top: 18px; }
+.trip-stop-head { display: flex; gap: 14px; align-items: flex-start; }
+.trip-stop-head h2 { margin: 0 0 4px; font-size: 1.4rem; }
+.trip-stop-head h2 a { color: var(--ink); text-decoration: none; }
+.trip-stop-head h2 a:hover { color: var(--link); }
+.trip-stop-n, .dish-n { flex: 0 0 auto; width: 34px; height: 34px; border-radius: 50%; display: grid; place-items: center; background: var(--cobalt); color: #fff; font: 800 1rem var(--display); }
+.trip-stop-media { display: flex; gap: 10px; overflow-x: auto; padding: 14px 0 6px; }
+.trip-stop-media a { flex: 0 0 auto; }
+.trip-stop-media img { height: 260px; width: auto; border-radius: 12px; object-fit: cover; }
+.trip-stop-text { max-width: 720px; }
+
+/* restaurant meal: each dish with its note */
+.dishes { list-style: none; display: grid; gap: 28px; margin-top: 28px; margin-bottom: 12px; }
+.dish { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 28px; align-items: center; }
+.dish:nth-child(even) .dish-media { order: 2; }
+.dish-media img, .dish-media video { width: 100%; max-height: 520px; object-fit: cover; border-radius: var(--radius); box-shadow: var(--shadow); }
+.dish-text h2 { margin: 12px 0 6px; font-size: 1.5rem; }
+.dish-text p { margin: 0; max-width: 52ch; }
+@media (max-width: 720px) {
+  .dish { grid-template-columns: 1fr; gap: 10px; }
+  .dish:nth-child(even) .dish-media { order: 0; }
+  .trip-stop-media img { height: 200px; }
+}
+/* keep tall photos inside the viewer's stage so the caption and buttons stay visible */
+.viewer-stage { overflow: hidden; }
+.viewer-media { position: absolute; inset: 0; }
+.viewer-foot { position: relative; z-index: 2; }
+
+/* --- tiles: peek at the rest of a multi-photo story ------------------------- */
+.story-multi::after { content: ""; position: absolute; inset: auto 0 0 0; height: 42%; background: linear-gradient(transparent, rgb(0 0 0 / .62)); pointer-events: none; }
+.story-more { position: absolute; z-index: 1; left: 8px; right: 8px; bottom: 8px; display: flex; gap: 4px; align-items: flex-end; }
+.story-more img { width: 24px; height: 42px; object-fit: cover; border-radius: 4px; border: 1.5px solid rgb(255 255 255 / .9); box-shadow: 0 1px 3px rgb(0 0 0 / .4); transition: none; }
+.story:hover .story-more img { transform: none; }
+.story-plus { min-width: 24px; height: 42px; padding: 0 5px; display: grid; place-items: center; border-radius: 4px; border: 1.5px solid rgb(255 255 255 / .9); background: rgb(0 0 0 / .45); color: #fff; font: 800 .75rem/1 var(--sans); }
+/* the Recipe label moves to the top-left so it doesn't collide with the peek row */
+.story-badge { top: 8px; bottom: auto; z-index: 1; }
+
+/* trips: a bar spanning the trip's tiles */
+.tl-trip { flex: 0 0 auto; display: grid; gap: 8px; align-content: start; }
+.tl-trip-bar { display: block; font: 700 .85rem/1 var(--sans); padding: 8px 12px; border-radius: 999px; background: var(--cobalt); color: #fff; text-decoration: none; white-space: nowrap; }
+.tl-trip-bar:hover { background: color-mix(in srgb, var(--cobalt) 85%, #000); }
+.tl-trip-items { list-style: none; margin: 0; padding: 0 0 0 0; display: flex; gap: 14px; }
+.tl-trip-items .tl-item { scroll-snap-align: end; }
+/* line up untripped tiles with the tiles under a bar */
+.tl-item, .tl-month { padding-top: 39px; }
+.tl-trip .tl-item { padding-top: 0; }
+@media (prefers-color-scheme: dark) { .tl-trip-bar { background: var(--sun); color: var(--cobalt); } }
+
+.rating { margin: 8px 0 0; font-size: .95rem; }
+.rating-chip { background: var(--sun); color: #001033; border: 0; }
+/* keep the trip's name in view while its bar scrolls past */
+.tl-trip-label { position: sticky; left: 16px; display: inline-block; }
+
+/* viewer: pause button and the Recipe button on the photo */
+.viewer-controls { display: flex; align-items: center; gap: 4px; }
+.viewer-pause { width: 36px; height: 36px; display: grid; place-items: center; border: 0; border-radius: 50%; background: rgb(255 255 255 / .14); color: #fff; cursor: pointer; }
+.viewer-pause:hover { background: rgb(255 255 255 / .26); }
+.viewer-pause .i-play, .viewer.is-paused .viewer-pause .i-pause { display: none; }
+.viewer.is-paused .viewer-pause .i-play { display: block; }
+.viewer-recipe { position: absolute; left: 14px; bottom: 14px; z-index: 3; display: inline-flex; align-items: center; gap: 6px; font: 700 .95rem/1 var(--sans); padding: 11px 16px; border-radius: 999px; background: var(--sun); color: #001033; text-decoration: none; box-shadow: 0 2px 10px rgb(0 0 0 / .35); }
+.viewer-recipe:hover { filter: brightness(1.06); }
+.viewer-recipe[hidden] { display: none; }
+.tl-today { position: absolute; right: 16px; top: 0; z-index: 3; font: 700 .85rem/1 var(--sans); padding: 8px 14px; border-radius: 999px; border: 0; background: var(--sun); color: #001033; cursor: pointer; box-shadow: var(--shadow); }
+.tl-today[hidden] { display: none; }
+
+/* newsletter cards: image, title, subtitle, and the issue's opening lines */
+.card-summary { margin: 8px 0 0; font-size: .95rem; line-height: 1.5; color: var(--ink-soft); }
+.grid-posts { grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); }
+.credit-note { margin: 6px 0 0; font-size: .95rem; }
+
+/* home hero: text only, wider paragraph (the logo already sits in the masthead) */
+.hero-inner { grid-template-columns: minmax(0, 1fr); }
+.hero .lede { max-width: 64ch; }

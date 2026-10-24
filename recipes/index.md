@@ -2,14 +2,23 @@
 title: "Recipes"
 url: "https://probablyworthsharing.com/recipes/"
 author: "Marko Savic"
-description: "67 recipes from Marko Savic's kitchen: seasonal, market-driven home cooking, granola, pasta, soups, and baking."
+description: "68 recipes from Marko Savic's kitchen: seasonal, market-driven home cooking, granola, pasta, soups, and baking."
 ---
 
 # Recipes
 
-67 recipes from Marko Savic's kitchen: seasonal, market-driven home cooking, granola, pasta, soups, and baking.
+68 recipes from Marko Savic's kitchen: seasonal, market-driven home cooking, granola, pasta, soups, and baking.
 
+- [Waffles with blueberries & maple syrup](https://probablyworthsharing.com/eating/2026-10-18-waffles-with-blueberries-and-maple-syrup/index.md) (2026-10-18): Waffles with blueberries & maple syrup
+- [No-Bake Pistachio & Vanilla Cheesecake](https://probablyworthsharing.com/recipes/no-bake-pistachio-vanilla-cheesecake/index.md) (2026-08-16): A no-bake vanilla bean cheesecake on a Biscoff base, with a crunchy pistachio praline layer and a smooth pistachio cream on top.
+- [Asparagus and spring onion pasta](https://probablyworthsharing.com/eating/2026-05-31-asparagus-and-spring-onion-pasta/index.md) (2026-05-31): Spring onions and asparagus, an egg-yolk dough, and a green filling for hand-shaped pasta. Started from the garganelli in Flour + Water.
+- [Mini pineapple upside-down cakes](https://probablyworthsharing.com/eating/2026-05-16-mini-pineapple-upside-down-cakes/index.md) (2026-05-16): Mini pineapple upside-down cakes
+- [Soy-glazed meatballs](https://probablyworthsharing.com/eating/2026-04-07-soy-glazed-meatballs/index.md) (2026-04-07): Soy-glazed meatballs
+- [Salted caramel chocolate cake](https://probablyworthsharing.com/eating/2025-08-02-salted-caramel-chocolate-cake/index.md) (2025-08-02): Salted caramel chocolate cake
 - [Oyster mushroom, sausage, fennel, and honey pasta](https://probablyworthsharing.com/recipes/oyster-mushroom-sausage-fennel-and-honey-pasta/index.md) (2025-05-30): Oyster mushroom, sausage, fennel, and honey pasta: a recipe by Marko Savic, with oyster mushrooms, italian sausage, and fennel seeds.
+- [Gougères](https://probablyworthsharing.com/eating/2025-03-08-gougeres/index.md) (2025-03-08): Gruyère gougères, piped and baked the same afternoon as the rolls.
+- [Pull-apart sour cream and chive rolls](https://probablyworthsharing.com/eating/2025-03-08-pull-apart-sour-cream-and-chive-rolls/index.md) (2025-03-08): Made with St Brigid’s Creamery butter and Skye Glen Creamery Jersey milk.
+- [Brown butter chocolate chip cookies](https://probablyworthsharing.com/eating/2025-01-25-brown-butter-chocolate-chip-cookies/index.md) (2025-01-25): Brown butter chocolate chip cookies
 - [Cheesy, Tomato Pasta Bake](https://probablyworthsharing.com/recipes/cheesy-tomato-pasta-bake/index.md) (2025-01-07): This is an easy, pantry-based weeknight recipe I recently made. It tastes like lasagna with substantially less effort. You can skip baking this to save…
 - [Crispy Chicken Thighs](https://probablyworthsharing.com/recipes/crispy-chicken-thighs-recipe/index.md) (2024-08-06): These are the easiest, crispiest, juiciest chicken thighs you’ll ever have – and likely better than the chicken you’ll get at any restaurant. This is a…
 - [Strawberry Almond Oat Bars](https://probablyworthsharing.com/recipes/strawberry-almond-oat-bars-recipe/index.md) (2024-07-22): This is a fresh fruit, summer vacation twist on Karen DeMasco’s Back-To-School Bars – using fresh strawberries, almonds, and vanilla for a sweet, salty…

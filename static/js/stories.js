@@ -1,0 +1,204 @@
+// What I'm Eating + The House: timeline strip, filters, and an Instagram-style story viewer.
+// Without JavaScript every tile is a plain link to its page, so nothing here is required.
+(() => {
+  const $ = (s, el = document) => el.querySelector(s);
+  const $$ = (s, el = document) => [...el.querySelectorAll(s)];
+  const still = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // ---- videos on normal pages: play (muted) only while on screen ----
+  const io = 'IntersectionObserver' in window && new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting && !still) e.target.play().catch(() => {}); else e.target.pause(); });
+  }, { threshold: 0.6 });
+  if (io) $$('main video').forEach(v => io.observe(v));
+
+  // ---- timeline: open with the newest moment centred, arrows, filters + search ----
+  const tl = $('#timeline');
+  const centreNewest = () => {
+    const items = $$('.tl-item:not([hidden])', tl);
+    const last = items[items.length - 1];
+    if (!last) return;
+    const r = last.getBoundingClientRect(), box = tl.getBoundingClientRect();   // works inside trip groups too
+    tl.scrollLeft += (r.left + r.width / 2) - (box.left + box.width / 2);
+  };
+  if (tl) {
+    centreNewest();
+    addEventListener('load', centreNewest);
+    // once you scroll away, a "Newest" button brings today's moment back to the centre
+    const today = $('.tl-today');
+    const goNewest = () => {
+      const items = $$('.tl-item:not([hidden])', tl), last = items[items.length - 1];
+      if (!last) return;
+      const r = last.getBoundingClientRect(), box = tl.getBoundingClientRect();
+      scrollByX((r.left + r.width / 2) - (box.left + box.width / 2));
+    };
+    today?.addEventListener('click', goNewest);
+    tl.addEventListener('scroll', () => {
+      const items = $$('.tl-item:not([hidden])', tl), last = items[items.length - 1];
+      if (!today || !last) return;
+      const r = last.getBoundingClientRect(), box = tl.getBoundingClientRect();
+      today.hidden = Math.abs((r.left + r.width / 2) - (box.left + box.width / 2)) < r.width;
+    }, { passive: true });
+    // smooth where the browser animates it; jump if it didn't move (some background tabs never animate)
+    const scrollByX = dx => {
+      const start = tl.scrollLeft;
+      tl.scrollBy({ left: dx, behavior: still ? 'auto' : 'smooth' });
+      setTimeout(() => { if (Math.abs(tl.scrollLeft - start) < 1 && Math.abs(dx) > 1) tl.scrollLeft = start + dx; }, 500);
+    };
+    const page = dir => scrollByX(dir * tl.clientWidth * 0.8);
+    $('.tl-older')?.addEventListener('click', () => page(-1));
+    $('.tl-newer')?.addEventListener('click', () => page(1));
+    const chips = $$('.eating-head [data-filter]');
+    const search = $('#tl-search');
+    let filter = 'all';
+    const apply = () => {
+      const words = (search?.value || '').toLowerCase().trim().split(/\s+/).filter(Boolean);
+      let shown = 0;
+      $$('.tl-item', tl).forEach(li => {
+        const f = filter;
+        const byChip = f === 'all' || (f === 'home' && li.dataset.where === 'home') || (f === 'out' && li.dataset.where === 'out')
+          || (f === 'recipe' && li.dataset.recipe === '1') || (f.startsWith('tag:') && li.dataset.tags.includes('|' + f.slice(4) + '|'));
+        const byText = words.every(w => li.dataset.search.includes(w));
+        li.hidden = !(byChip && byText);
+        if (!li.hidden) shown++;
+      });
+      // the tag list narrows as you type, too
+      $$('.tag-chips button').forEach(b => { b.hidden = !!words.length && !words.every(w => b.dataset.filter.toLowerCase().includes(w)) && b.getAttribute('aria-pressed') !== 'true'; });
+      $$('.tl-month', tl).forEach(m => { m.hidden = filter !== 'all' || words.length > 0; });
+      $$('.tl-trip', tl).forEach(g => { g.hidden = !$$('.tl-item:not([hidden])', g).length; });
+      $('#tl-empty') && ($('#tl-empty').hidden = shown > 0);
+      centreNewest();
+    };
+    chips.forEach(c => c.addEventListener('click', () => {
+      filter = c.dataset.filter;
+      chips.forEach(x => x.setAttribute('aria-pressed', String(x === c)));
+      apply();
+    }));
+    search?.addEventListener('input', apply);
+  }
+
+  // ---- house week: room filter ----
+  $$('[data-room]').filter(b => b.tagName === 'BUTTON').forEach((b, _, all) => b.addEventListener('click', () => {
+    all.forEach(x => x.setAttribute('aria-pressed', String(x === b)));
+    $$('.week-tile').forEach(t => { t.hidden = !!b.dataset.room && t.dataset.room !== b.dataset.room; });
+  }));
+
+  // ---- story viewer ----
+  const dataEl = $('#stories-data');
+  const dlg = $('#viewer');
+  if (!dataEl || !dlg || !dlg.showModal) return;
+  const stories = JSON.parse(dataEl.textContent);
+  const PHOTO_MS = 5000;
+  let s = 0, m = 0, timer = null, started = 0, paused = false, remaining = PHOTO_MS;
+  let pinned = false;   // paused with the button: stays paused while you step through
+  const pauseBtn = $('.viewer-pause', dlg);
+  const setPinned = on => {
+    pinned = on;
+    pauseBtn.setAttribute('aria-pressed', String(on));
+    pauseBtn.setAttribute('aria-label', on ? 'Play' : 'Pause');
+    dlg.classList.toggle('is-paused', on);
+    pause(on);
+  };
+
+  const bars = $('.viewer-bars', dlg), stage = $('.viewer-media', dlg);
+  const fill = i => bars.children[i]?.firstElementChild;
+
+  function render() {
+    clearTimeout(timer);
+    const st = stories[s], item = st.media[m], ch = st.chapters[item.ch || 0];
+    // a trip shows the stop's name, with the trip as the subtitle
+    $('.viewer-title', dlg).textContent = ch.title;
+    $('.viewer-sub', dlg).textContent = [st.trip ? st.title : ch.trip, ch.date, ch.where].filter(Boolean).join(' · ');
+    $('.viewer-credit', dlg).textContent = [ch.credit, ch.rating && `My rating: ${ch.rating}`].filter(Boolean).join(' · ');
+    const cap = $('.viewer-caption', dlg);
+    const own = [item.title, item.caption].filter(Boolean).join(': ');
+    cap.innerHTML = own ? '' : ch.caption;   // entry captions are our own HTML from Markdown
+    if (own) cap.textContent = (item.room ? item.room + ': ' : '') + own;
+    const rec = $('.viewer-recipe', dlg);
+    rec.hidden = !ch.recipe;
+    if (ch.recipe) rec.href = ch.recipe.url;
+    const link = $('.viewer-link', dlg);
+    link.href = ch.url;
+    link.hidden = location.pathname === ch.url;
+    bars.innerHTML = st.media.map((_, i) => `<span><i style="width:${i < m ? 100 : 0}%"></i></span>`).join('');
+    stage.innerHTML = '';
+    let el;
+    if (item.type === 'video') {
+      el = Object.assign(document.createElement('video'), { src: item.src, poster: item.poster || '', muted: true, playsInline: true, autoplay: !pinned, loop: pinned });
+      el.addEventListener('timeupdate', () => { const f = fill(m); if (f && el.duration) f.style.width = (100 * el.currentTime / el.duration) + '%'; });
+      el.addEventListener('ended', next);
+    } else {
+      el = Object.assign(document.createElement('img'), { src: item.src, alt: item.caption || st.title });
+      remaining = PHOTO_MS;
+      if (!pinned) startPhotoTimer();
+    }
+    stage.append(el);
+    // warm the next photo
+    const nx = st.media[m + 1] || stories[s + 1]?.media[0];
+    if (nx && nx.type === 'photo') new Image().src = nx.src;
+  }
+  function startPhotoTimer() {
+    started = performance.now();
+    const f = fill(m);
+    if (f) { f.style.transition = 'none'; f.style.width = (100 * (1 - remaining / PHOTO_MS)) + '%'; f.offsetWidth;
+      f.style.transition = still ? 'none' : `width ${remaining}ms linear`; f.style.width = '100%'; }
+    timer = setTimeout(next, remaining);
+  }
+  function pause(on) {
+    paused = on;
+    const v = $('video', stage);
+    if (v) { on ? v.pause() : v.play().catch(() => {}); return; }
+    if (on) { clearTimeout(timer); remaining -= performance.now() - started;
+      const f = fill(m); if (f) { f.style.width = getComputedStyle(f).width; f.style.transition = 'none'; } }
+    else startPhotoTimer();
+  }
+  function next() {
+    if (m + 1 < stories[s].media.length) m++;
+    else if (s + 1 < stories.length) { s++; m = 0; }
+    else return close();
+    render();
+  }
+  function prev() {
+    if (m > 0) m--;
+    else if (s > 0) { s--; m = stories[s].media.length - 1; }
+    render();
+  }
+  function open(si, mi = 0) { s = si; m = mi; pinned = false; paused = false; pauseBtn.setAttribute('aria-pressed', 'false'); pauseBtn.setAttribute('aria-label', 'Pause'); dlg.classList.remove('is-paused'); dlg.showModal(); document.body.classList.add('viewing'); render(); }
+  function close() { clearTimeout(timer); stage.innerHTML = ''; dlg.close(); document.body.classList.remove('viewing'); }
+
+  let suppress = false;  // releasing a press-and-hold resumes; it shouldn't also skip
+  $('.viewer-next', dlg).addEventListener('click', () => { if (suppress) suppress = false; else next(); });
+  $('.viewer-prev', dlg).addEventListener('click', () => { if (suppress) suppress = false; else prev(); });
+  $('.viewer-close', dlg).addEventListener('click', close);
+  pauseBtn.addEventListener('click', () => setPinned(!pinned));
+  // 'close' fires asynchronously; if a story was reopened in the meantime, leave it alone
+  dlg.addEventListener('close', () => { if (dlg.open) return; clearTimeout(timer); stage.innerHTML = ''; document.body.classList.remove('viewing'); });
+  dlg.addEventListener('keydown', e => {
+    if (e.key === 'ArrowRight') next();
+    else if (e.key === 'ArrowLeft') prev();
+    else if (e.key === ' ') { e.preventDefault(); setPinned(!pinned); }
+  });
+  // press and hold to pause, swipe sideways to skip, swipe down to close
+  let x0 = 0, y0 = 0, held = null;
+  stage.parentElement.addEventListener('pointerdown', e => {
+    if (e.target.closest('.viewer-recipe')) return;
+    x0 = e.clientX; y0 = e.clientY; held = pinned ? null : setTimeout(() => pause(true), 250);
+  });
+  stage.parentElement.addEventListener('pointerup', e => {
+    clearTimeout(held);
+    if (paused && !pinned) { pause(false); suppress = true; return; }
+    const dx = e.clientX - x0, dy = e.clientY - y0;
+    if (dy > 80 && Math.abs(dy) > Math.abs(dx)) close();
+    else if (Math.abs(dx) > 50) (dx < 0 ? next : prev)();
+  });
+
+  // tiles open the viewer instead of navigating
+  $$('.story[data-index]').forEach(a => a.addEventListener('click', e => {
+    if (e.metaKey || e.ctrlKey || e.shiftKey) return;
+    e.preventDefault(); open(Number(a.dataset.index));
+  }));
+  $$('.trip-play').forEach(b => b.addEventListener('click', () => open(0)));
+  $$('.week-open[data-index]').forEach(a => a.addEventListener('click', e => {
+    if (e.metaKey || e.ctrlKey || e.shiftKey) return;
+    e.preventDefault(); open(0, Number(a.dataset.index));
+  }));
+})();
