@@ -624,11 +624,15 @@ body.viewing { overflow: hidden; }
 .ts-time { font: 600 .85rem var(--sans); color: var(--ink-soft); min-width: 2.6em; text-align: right; font-variant-numeric: tabular-nums; }
 .ts-step { width: 38px; height: 38px; border-radius: 50%; border: 0; background: transparent; color: var(--ink); cursor: pointer; display: grid; place-items: center; }
 .ts-step:hover { background: var(--line); }
-.ts-list { grid-column: 1 / -1; list-style: none; margin: 4px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
-.ts-group { flex-basis: 100%; margin-top: 6px; font: 800 .75rem/1 var(--sans); text-transform: uppercase; letter-spacing: .08em; color: var(--ink-soft); }
-.ts-track { display: inline-flex; gap: 8px; align-items: center; padding: 7px 12px 7px 8px; border-radius: 999px; border: 1.5px solid var(--line); color: var(--ink); text-decoration: none; font: 600 .9rem/1.2 var(--sans); }
+.ts-list { grid-column: 1 / -1; display: grid; gap: 14px; min-width: 0; }
+.ts-group { min-width: 0; }
+.ts-group-title { margin: 0 0 8px; font: 800 .78rem/1 var(--sans); text-transform: uppercase; letter-spacing: .08em; color: var(--ink-soft); }
+.ts-row { list-style: none; margin: 0; padding: 2px 2px 8px; display: flex; gap: 10px; overflow-x: auto; scroll-snap-type: x proximity; scrollbar-width: thin; }
+.ts-row li { flex: 0 0 auto; scroll-snap-align: start; }
+.ts-track { display: flex; flex-direction: column; justify-content: space-between; gap: 10px; width: 150px; height: 92px; padding: 10px 12px; border-radius: 12px; border: 1.5px solid var(--line); background: var(--bg, transparent); color: var(--ink); text-decoration: none; font: 700 .9rem/1.25 var(--sans); }
 .ts-track:hover { border-color: var(--cobalt); }
-.ts-track .ts-n { min-width: 22px; height: 22px; border-radius: 50%; display: inline-grid; place-items: center; background: var(--line); font: 800 .75rem var(--sans); }
+.ts-track .ts-n { width: 24px; height: 24px; border-radius: 50%; display: grid; place-items: center; background: var(--line); font: 800 .75rem var(--sans); }
+.ts-name { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
 .ts-track[aria-current] { border-color: var(--cobalt); background: var(--cobalt); color: #fff; }
 .ts-track[aria-current] .ts-n { background: var(--sun); color: #001033; }
 @media (max-width: 860px) { .theme-songs { grid-template-columns: 1fr; padding: 18px; } }

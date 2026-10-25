@@ -12,13 +12,23 @@
     const show = () => {
       const a = links[i];
       $('.ts-num').textContent = i + 1;
-      $('.ts-title strong').textContent = a.textContent.replace(/^\s*\d+\s*/, '');
+      $('.ts-title strong').textContent = a.querySelector('.ts-name').textContent;
       links.forEach((l, k) => l.toggleAttribute('aria-current', k === i));
+    };
+    // bring the playing card into its row's view, without moving the page
+    const reveal = a => {
+      const row = a.closest('.ts-row'), r = a.getBoundingClientRect(), box = row.getBoundingClientRect();
+      if (r.left >= box.left && r.right <= box.right) return;
+      const start = row.scrollLeft, dx = r.left - box.left - 12;
+      row.scrollBy({ left: dx, behavior: 'smooth' });
+      // jump instead if the browser didn't animate (background tabs)
+      setTimeout(() => { if (Math.abs(row.scrollLeft - start) < 1) row.scrollLeft = start + dx; }, 500);
     };
     const load = (k, start) => {
       i = (k + links.length) % links.length;
       audio.src = links[i].href;
       show();
+      reveal(links[i]);
       if (start) audio.play().catch(() => {});
     };
     play.addEventListener('click', () => {
