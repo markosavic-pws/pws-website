@@ -542,7 +542,9 @@ body.viewing { overflow: hidden; }
 .trip-moment-head .meta { text-transform: none; letter-spacing: 0; font-size: .95rem; }
 .trip-moment-text, .trip-moment .credit-box { max-width: 720px; }
 .trip-moment:target .trip-moment-head h3 { background: var(--mark); border-radius: 4px; }
-.travel-trips .story { width: clamp(180px, 42vw, 260px); }
+.travel-trips { list-style: none; margin: 0; padding: 4px 0 16px; display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 26px 18px; }
+.travel-trips .story { width: 100%; }
+@media (max-width: 600px) { .travel-trips { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px 12px; } }
 @media (max-width: 860px) {
   .trip-map-wrap { grid-template-columns: 1fr; }
   .trip-map { height: 340px; }
