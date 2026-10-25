@@ -27,7 +27,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400..700&display=swap">
-<link rel="stylesheet" href="/static/css/site.css?v=258ca9ef">
+<link rel="stylesheet" href="/static/css/site.css?v=64c50d57">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -60,8 +60,13 @@
   <h1>The House</h1>
   <p class="lede">I bought vacant land in rural Nova Scotia in January 2025, this is my journey building a house.</p>
 
+  <nav class="leg-tabs house-tabs" data-tabs aria-label="Parts of the house">
+    <a class="leg-tab" href="#build-log" data-tab="build-log">Build Log</a>
+<a class="leg-tab" href="#build-timeline" data-tab="build-timeline">Timeline</a><a class="leg-tab" href="#design" data-tab="design">Design</a><a class="leg-tab" href="#passive-house" data-tab="passive-house">Passive House</a><a class="leg-tab" href="#made-in-canada" data-tab="made-in-canada">Made in Canada</a><a class="leg-tab" href="#trades" data-tab="trades">Trades</a>  </nav>
+</section>
 
-  <h2 class="house-log-title">Build log</h2>
+<div id="build-log" class="tab-panel">
+<section class="wrap house-log">
   <div class="filters tl-filters">
     <div class="chips" role="group" aria-label="Show weeks from">
       <button type="button" data-filter="all" aria-pressed="true">All</button>
@@ -210,6 +215,210 @@
   <button type="button" class="tl-today" hidden>Newest →</button>
 </div>
 <p class="wrap tl-empty" id="tl-empty" hidden>No weeks in that range yet.</p>
+</div>
+
+<section id="build-timeline" class="tab-panel wrap house-tab">
+  <h2 class="sr-only">Timeline</h2>
+  <div class="prose"><p>From selling my house in Ontario to (hopefully) moving in. I'll keep this up to date as the build goes;
+the week-by-week photos are in the <a href="#build-log">Build Log</a>.</p>
+<h2>2024</h2>
+<ul>
+<li><strong>September:</strong> Sold my house in Kitchener, Ontario, and <a href="/travel/cross-country-2024/">drove across the country</a></li>
+<li><strong>Late November:</strong> Landed in Nova Scotia</li>
+<li><strong>December:</strong> Found my property</li>
+</ul>
+<h2>2025</h2>
+<ul>
+<li><strong>January:</strong> Closed on the property</li>
+<li><strong>January–September:</strong> <a href="#design">Design</a> with my architect, and finding <a href="#trades">trades</a></li>
+<li><strong>April–December:</strong> Tree clearing and the driveway</li>
+</ul>
+<h2>2026</h2>
+<ul>
+<li><strong>January:</strong> Drilled the well</li>
+<li><strong>May–June:</strong> Excavation and infill</li>
+<li><strong>July:</strong> Slab prep, underground plumbing and electrical, and septic system install</li>
+<li><strong>August:</strong> Slab pour</li>
+<li><strong>August–October:</strong> Carpentry</li>
+<li><strong>October–November:</strong> HVAC install, and electrical and plumbing rough-in</li>
+<li><strong>November (scheduled):</strong> Drywall, siding and roofing, and chimney install</li>
+<li><strong>December (goal):</strong> First bathroom and a small kitchen done, and move in</li>
+</ul></div>
+</section>
+<section id="design" class="tab-panel wrap house-tab">
+  <h2 class="sr-only">Design</h2>
+  <div class="prose"><p>A 3-bedroom, 2.5-bathroom, single-storey house, designed to allow for aging in place.</p>
+<p><img loading="lazy" decoding="async" alt="A rendering of the house: a red, metal-clad single-storey house with a steep gable roof" src="https://media.probablyworthsharing.com/images/house/design/rendering.jpg?v=cf83f9d010"></p>
+<p><img loading="lazy" decoding="async" alt="The floorplan" src="https://media.probablyworthsharing.com/images/house/design/floorplan.png?v=3e684285ab"></p></div>
+</section>
+<section id="passive-house" class="tab-panel wrap house-tab">
+  <h2 class="sr-only">Passive House</h2>
+  <div class="prose"><p>I'm building a Passive House (not certified). I'd recommend the book <em>Pretty Good House</em> to understand
+the principles behind a high performance home. I chose an architecture firm that specializes in
+passive homes.</p></div>
+</section>
+<section id="made-in-canada" class="tab-panel wrap house-tab">
+  <h2 class="sr-only">Made in Canada</h2>
+  <div class="prose"><p>I've always been an <a href="/my-kitchen/in-my-videos/">advocate of Made in Canada</a>. In 2025/2026, while I'm
+building my house, this has become <a href="/newsletter/buy-canadian-bye-american/">more important than ever</a>.</p>
+<p>I've been trying very hard to build my house with as many Canadian-made products and materials as I
+can. I want to highlight what I selected here (nothing sponsored), and also share some of the other
+vendors I discovered in my research.</p>
+<p>This is a growing list:</p>
+<ul>
+<li><strong>Engineered slab insulation &amp; formwork:</strong> FastSlab, made in Truro, NS</li>
+<li><strong>Concrete:</strong> made locally</li>
+<li><strong>Wood:</strong> entirely made in Canada, various vendors, mostly from Home Hardware in Canning, NS</li>
+<li><strong>Insulation:</strong> high-density cellulose, made in Debert, NS</li>
+<li><strong>Windows &amp; doors:</strong> triple-pane, tilt-turn windows &amp; doors from NZP Fenestration in Longueuil, Quebec</li>
+<li><strong>Siding/roofing:</strong> Agway Metals, Ontario</li>
+<li><strong>Plumbing fixtures:</strong> all bathroom and kitchen fixtures are from Baril, made in Quebec</li>
+<li><strong>Bathtubs:</strong> Oceania Viele for my primary bath and a Produits Neptune alcove tub for my second bath</li>
+<li><strong>Sinks:</strong> Blanco, made in Ontario</li>
+<li><strong>Hot water heater:</strong> Giant, made in Quebec</li>
+<li><strong>Wood stove:</strong> Stûv, made in Quebec</li>
+<li><strong>Air handling system:</strong> Fantech ERV, HEPA filter, MUA, and inline fan, all made in New Brunswick</li>
+</ul>
+<h2>A few things I still have to order</h2>
+<ul>
+<li><strong>Tiles:</strong> there are very limited options here</li>
+<li><strong>Engineered wood floors:</strong> there are many good options here</li>
+<li><strong>Light fixtures:</strong> I'm looking at Anony, but I also have fixtures from Bocci, and there are some other great brands like Luminaire Authentik and Lambert + Fils</li>
+<li><strong>Appliances:</strong> I have to figure this out, but we don't make many in Canada and I'm going to prioritize cooking quality and budget here</li>
+</ul>
+<h2>A few things aren't made in Canada</h2>
+<ul>
+<li><strong>Toilets:</strong> we don't make any toilets in Canada that I'm aware of. I am using TOTO wall-mounted toilets.</li>
+<li><strong>Heat pump:</strong> we don't make slim-duct heat pump systems in Canada and I don't have the space for a forced air unit. The Daikin slim-duct heat pump is either made in the USA or Europe. I'll check when it's installed.</li>
+<li><strong>Smart locks:</strong> made in Poland</li>
+</ul></div>
+  <h2 class="vendors-title">Made in Canada Products</h2>
+  <div class="vendor-tools" data-vendor-tools hidden>
+    <input type="search" class="vendor-search" placeholder="Search manufacturers, types, places…" aria-label="Search products">
+    <div class="chips" role="group" aria-label="Filter by type">
+      <button type="button" data-group="" aria-pressed="true">All <span class="chip-n">16</span></button>
+<button type="button" data-group="Building supplies" aria-pressed="false">Building supplies <span class="chip-n">3</span></button><button type="button" data-group="Windows &amp; doors" aria-pressed="false">Windows &amp; doors <span class="chip-n">1</span></button><button type="button" data-group="Siding &amp; roofing" aria-pressed="false">Siding &amp; roofing <span class="chip-n">1</span></button><button type="button" data-group="Plumbing" aria-pressed="false">Plumbing <span class="chip-n">5</span></button><button type="button" data-group="Heating &amp; HVAC" aria-pressed="false">Heating &amp; HVAC <span class="chip-n">2</span></button><button type="button" data-group="Lighting" aria-pressed="false">Lighting <span class="chip-n">4</span></button>    </div>
+    <p class="vendor-count" aria-live="polite"></p>
+  </div>
+  <div class="vendor-table-wrap">
+    <table class="vendor-table">
+      <thead><tr><th scope="col">Type</th><th scope="col">Manufacturer</th><th scope="col">Made in</th><th scope="col">Status</th></tr></thead>
+      <tbody>
+        <tr data-group="Building supplies" data-search="building supplies slab insulation &amp; formwork fastslab truro, ns in my house">
+          <td>Slab insulation &amp; formwork</td>
+          <td>FastSlab</td>
+          <td>Truro, NS</td>
+          <td><span class="vendor-status vendor-in-my-house">In my house</span></td>
+        </tr>
+        <tr data-group="Building supplies" data-search="building supplies wood home hardware, canning ns (and others) canada in my house">
+          <td>Wood</td>
+          <td>Home Hardware, Canning NS (and others)</td>
+          <td>Canada</td>
+          <td><span class="vendor-status vendor-in-my-house">In my house</span></td>
+        </tr>
+        <tr data-group="Building supplies" data-search="building supplies insulation high-density cellulose debert, ns in my house">
+          <td>Insulation</td>
+          <td>High-density cellulose</td>
+          <td>Debert, NS</td>
+          <td><span class="vendor-status vendor-in-my-house">In my house</span></td>
+        </tr>
+        <tr data-group="Windows &amp; doors" data-search="windows &amp; doors windows &amp; doors nzp fenestration longueuil, qc in my house">
+          <td>Windows &amp; doors</td>
+          <td>NZP Fenestration</td>
+          <td>Longueuil, QC</td>
+          <td><span class="vendor-status vendor-in-my-house">In my house</span></td>
+        </tr>
+        <tr data-group="Siding &amp; roofing" data-search="siding &amp; roofing siding &amp; roofing agway metals ontario in my house">
+          <td>Siding &amp; roofing</td>
+          <td>Agway Metals</td>
+          <td>Ontario</td>
+          <td><span class="vendor-status vendor-in-my-house">In my house</span></td>
+        </tr>
+        <tr data-group="Plumbing" data-search="plumbing plumbing fixtures baril quebec in my house">
+          <td>Plumbing fixtures</td>
+          <td>Baril</td>
+          <td>Quebec</td>
+          <td><span class="vendor-status vendor-in-my-house">In my house</span></td>
+        </tr>
+        <tr data-group="Plumbing" data-search="plumbing bathtubs oceania (viele) canada in my house">
+          <td>Bathtubs</td>
+          <td>Oceania (Viele)</td>
+          <td>Canada</td>
+          <td><span class="vendor-status vendor-in-my-house">In my house</span></td>
+        </tr>
+        <tr data-group="Plumbing" data-search="plumbing bathtubs produits neptune canada in my house">
+          <td>Bathtubs</td>
+          <td>Produits Neptune</td>
+          <td>Canada</td>
+          <td><span class="vendor-status vendor-in-my-house">In my house</span></td>
+        </tr>
+        <tr data-group="Plumbing" data-search="plumbing sinks blanco ontario in my house">
+          <td>Sinks</td>
+          <td>Blanco</td>
+          <td>Ontario</td>
+          <td><span class="vendor-status vendor-in-my-house">In my house</span></td>
+        </tr>
+        <tr data-group="Plumbing" data-search="plumbing hot water heater giant quebec in my house">
+          <td>Hot water heater</td>
+          <td>Giant</td>
+          <td>Quebec</td>
+          <td><span class="vendor-status vendor-in-my-house">In my house</span></td>
+        </tr>
+        <tr data-group="Heating &amp; HVAC" data-search="heating &amp; hvac wood stove stûv quebec in my house">
+          <td>Wood stove</td>
+          <td>Stûv</td>
+          <td>Quebec</td>
+          <td><span class="vendor-status vendor-in-my-house">In my house</span></td>
+        </tr>
+        <tr data-group="Heating &amp; HVAC" data-search="heating &amp; hvac air handling (erv, hepa filter, mua, inline fan) fantech new brunswick in my house">
+          <td>Air handling (ERV, HEPA filter, MUA, inline fan)</td>
+          <td>Fantech</td>
+          <td>New Brunswick</td>
+          <td><span class="vendor-status vendor-in-my-house">In my house</span></td>
+        </tr>
+        <tr data-group="Lighting" data-search="lighting light fixtures bocci canada in my house">
+          <td>Light fixtures</td>
+          <td>Bocci</td>
+          <td>Canada</td>
+          <td><span class="vendor-status vendor-in-my-house">In my house</span></td>
+        </tr>
+        <tr data-group="Lighting" data-search="lighting light fixtures anony canada considering">
+          <td>Light fixtures</td>
+          <td>Anony</td>
+          <td>Canada</td>
+          <td><span class="vendor-status vendor-considering">Considering</span></td>
+        </tr>
+        <tr data-group="Lighting" data-search="lighting light fixtures luminaire authentik canada worth a look">
+          <td>Light fixtures</td>
+          <td>Luminaire Authentik</td>
+          <td>Canada</td>
+          <td><span class="vendor-status vendor-worth-a-look">Worth a look</span></td>
+        </tr>
+        <tr data-group="Lighting" data-search="lighting light fixtures lambert + fils canada worth a look">
+          <td>Light fixtures</td>
+          <td>Lambert + Fils</td>
+          <td>Canada</td>
+          <td><span class="vendor-status vendor-worth-a-look">Worth a look</span></td>
+        </tr>
+        <tr class="vendor-none" hidden><td colspan="4">Nothing matches that yet.</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+<section id="trades" class="tab-panel wrap house-tab">
+  <h2 class="sr-only">Trades</h2>
+  <div class="prose"><ul>
+<li>I'm managing the project, acting as the general contractor/project manager, and doing the interior design work</li>
+<li>Architect: Habit Studio, Halifax NS</li>
+<li>Structural engineer: Phil Denis, Gaspereau Building Science</li>
+<li>Geotechnical engineer: Phil Denis, Gaspereau Building Science</li>
+<li>Civil engineer: Eric Morse, DeWolfe and Morse</li>
+<li>Excavation, infill, driveway material, septic: Joe Pulsifer, Apex Excavation</li>
+<li>Well: Valley Well Drillers</li>
+<li>Carpentry: Aaron Rand, Up Country Builders, Canning NS</li>
+<li>Windows &amp; Doors: NZP Fenestration, Longueuil QC</li>
+</ul></div>
+</section>
 
 <script type="application/json" id="stories-data">[{"chapters": [{"caption": "", "credit": null, "date": "August 29, 2026", "rating": null, "recipe": null, "title": "Week of August 24, 2026", "trip": null, "url": "/house/2026-w35/", "where": "8 photos, 1 video"}], "media": [{"ch": 0, "h": null, "poster": "https://media.probablyworthsharing.com/images/house/2026-w35/img-7986-poster.jpg?v=c5c006cba3", "src": "https://media.probablyworthsharing.com/images/house/2026-w35/img-7986.mp4?v=46d2c02993", "type": "video", "w": null}, {"ch": 0, "h": 1200, "src": "https://media.probablyworthsharing.com/images/house/2026-w35/img-7951.jpg?v=bcf5e6fc93", "type": "photo", "w": 1600}, {"ch": 0, "h": 1600, "src": "https://media.probablyworthsharing.com/images/house/2026-w35/img-7952.jpg?v=564a3e18da", "type": "photo", "w": 1200}, {"ch": 0, "h": 1200, "src": "https://media.probablyworthsharing.com/images/house/2026-w35/img-7953.jpg?v=1be6c3bfb0", "type": "photo", "w": 1600}, {"ch": 0, "h": 1200, "src": "https://media.probablyworthsharing.com/images/house/2026-w35/img-7955.jpg?v=50f7395600", "type": "photo", "w": 1600}, {"ch": 0, "h": 1600, "src": "https://media.probablyworthsharing.com/images/house/2026-w35/img-7956.jpg?v=25c951c652", "type": "photo", "w": 1200}, {"ch": 0, "h": 1600, "src": "https://media.probablyworthsharing.com/images/house/2026-w35/img-7984.jpg?v=b5c497f470", "type": "photo", "w": 1200}, {"ch": 0, "h": 1600, "src": "https://media.probablyworthsharing.com/images/house/2026-w35/img-7987.jpg?v=5a87de82f3", "type": "photo", "w": 1200}, {"ch": 0, "h": 1600, "src": "https://media.probablyworthsharing.com/images/house/2026-w35/img-8005.jpg?v=041bb9c069", "type": "photo", "w": 1200}], "title": "Week of August 24, 2026", "trip": false, "url": "/house/2026-w35/", "wide": true}, {"chapters": [{"caption": "", "credit": null, "date": "September 5, 2026", "rating": null, "recipe": null, "title": "Week of August 31, 2026", "trip": null, "url": "/house/2026-w36/", "where": "17 photos, 1 video"}], "media": [{"ch": 0, "h": null, "poster": "https://media.probablyworthsharing.com/images/house/2026-w36/img-8173-poster.jpg?v=1297c84c0e", "src": "https://media.probablyworthsharing.com/images/house/2026-w36/img-8173.mp4?v=81e416c7b8", "type": "video", "w": null}, {"ch": 0, "h": 1600, "src": "https://media.probablyworthsharing.com/images/house/2026-w36/img-8137.jpg?v=84cc0482fa", "type": "photo", "w": 1200}, {"ch": 0, "h": 1600, "src": "https://media.probablyworthsharing.com/images/house/2026-w36/img-8147.jpg?v=6d745b03f2", "type": "photo", "w": 1200}, {"ch": 0, "h": 1600, "src": "https://media.probablyworthsharing.com/images/house/2026-w36/img-8148.jpg?v=e47a928035", "type": "photo", "w": 1200}, {"ch": 0, "h": 1600, "src": "https://media.probablyworthsharing.com/images/house/2026-w36/img-8150.jpg?v=ae71ebb146", "type": "photo", "w": 1200}, {"ch": 0, "h": 1600, "src": "https://media.probablyworthsharing.com/images/house/2026-w36/img-8151.jpg?v=79a8293e2c", "type": "photo", "w": 1200}, {"ch": 0, "h": 1600, "src": "https://media.probablyworthsharing.com/images/house/2026-w36/img-8153.jpg?v=fd758c7b25", "type": "photo", "w": 1200}, {"ch": 0, "h": 1200, "src": "https://media.probablyworthsharing.com/images/house/2026-w36/img-8154.jpg?v=1766048f07", "type": "photo", "w": 1600}, {"ch": 0, "h": 1200, "src": "https://media.probablyworthsharing.com/images/house/2026-w36/img-8155.jpg?v=e5331b2bee", "type": "photo", "w": 1600}, {"ch": 0, "h": 1200, "src": "https://media.probablyworthsharing.com/images/house/2026-w36/img-8156.jpg?v=1522e41695", "type": "photo", "w": 1600}, {"ch": 0, "h": 1200, "src": "https://media.probablyworthsharing.com/images/house/2026-w36/img-8158.jpg?v=c7b8f9494e", "type": "photo", "w": 1600}, {"ch": 0, "h": 1200, "src": "https://media.probablyworthsharing.com/images/house/2026-w36/img-8159.jpg?v=2888d44905", "type": "photo", "w": 1600}, {"ch": 0, "h": 1200, "src": "https://media.probablyworthsharing.com/images/house/2026-w36/img-8162.jpg?v=3192c019fe", "type": "photo", "w": 1600}, {"ch": 0, "h": 1200, "src": "https://media.probablyworthsharing.com/images/house/2026-w36/img-8165.jpg?v=9b1e10a496", "type": "photo", "w": 1600}, {"ch": 0, "h": 1200, "src": "https://media.probablyworthsharing.com/images/house/2026-w36/img-8168.jpg?v=22055a15ec", "type": "photo", "w": 1600}, {"ch": 0, "h": 1600, "src": "https://media.probablyworthsharing.com/images/house/2026-w36/img-8171.jpg?v=8595d99c85", "type": "photo", "w": 1200}, {"ch": 0, "h": 1600, "src": "https://media.probablyworthsharing.com/images/house/2026-w36/img-8174.jpg?v=40482befa7", "type": "photo", "w": 1200}, {"ch": 0, "h": 1600, "src": "https://media.probablyworthsharing.com/images/house/2026-w36/img-8176.jpg?v=0ccf690da7", "type": "photo", "w": 1200}], "title": "Week of August 31, 2026", "trip": false, "url": "/house/2026-w36/", "wide": true}, {"chapters": [{"caption": "", "credit": null, "date": "September 9, 2026", "rating": null, "recipe": null, "title": "Week of September 7, 2026", "trip": null, "url": "/house/2026-w37/", "where": "8 photos"}], "media": [{"ch": 0, "h": 1600, "src": "https://media.probablyworthsharing.com/images/house/2026-w37/img-8208.jpg?v=a4ac7d0f38", "type": "photo", "w": 1200}, {"ch": 0, "h": 1600, "src": "https://media.probablyworthsharing.com/images/house/2026-w37/img-8210.jpg?v=bc933b5c35", "type": "photo", "w": 1200}, {"ch": 0, "h": 1600, "src": "https://media.probablyworthsharing.com/images/house/2026-w37/img-8211.jpg?v=fb146858d3", "type": "photo", "w": 1200}, {"ch": 0, "h": 1600, "src": "https://media.probablyworthsharing.com/images/house/2026-w37/img-8214.jpg?v=4de7a62c2d", "type": "photo", "w": 1200}, {"ch": 0, "h": 1600, "src": "https://media.probablyworthsharing.com/images/house/2026-w37/img-8219.jpg?v=c1ac91ee12", "type": "photo", "w": 1200}, {"ch": 0, "h": 1200, "src": "https://media.probablyworthsharing.com/images/house/2026-w37/img-8220.jpg?v=60af0c579d", "type": "photo", "w": 1600}, {"ch": 0, "h": 1600, "src": "https://media.probablyworthsharing.com/images/house/2026-w37/img-8221.jpg?v=3eaa8d23b3", "type": "photo", "w": 1200}, {"ch": 0, "h": 1200, "src": "https://media.probablyworthsharing.com/images/house/2026-w37/img-8227.jpg?v=946fa34d99", "type": "photo", "w": 1600}], "title": "Week of September 7, 2026", "trip": false, "url": "/house/2026-w37/", "wide": true}, {"chapters": [{"caption": "", "credit": null, "date": "September 23, 2026", "rating": null, "recipe": null, "title": "Week of September 21, 2026", "trip": null, "url": "/house/2026-w39/", "where": "4 photos"}], "media": [{"ch": 0, "h": 1200, "src": "https://media.probablyworthsharing.com/images/house/2026-w39/img-8358.jpg?v=a8b179c911", "type": "photo", "w": 1600}, {"ch": 0, "h": 1200, "src": "https://media.probablyworthsharing.com/images/house/2026-w39/img-8364.jpg?v=0a85b0d686", "type": "photo", "w": 1600}, {"ch": 0, "h": 1200, "src": "https://media.probablyworthsharing.com/images/house/2026-w39/img-8365.jpg?v=b2a5d86b04", "type": "photo", "w": 1600}, {"ch": 0, "h": 1600, "src": "https://media.probablyworthsharing.com/images/house/2026-w39/img-8369.jpg?v=a907b4492c", "type": "photo", "w": 1200}], "title": "Week of September 21, 2026", "trip": false, "url": "/house/2026-w39/", "wide": true}, {"chapters": [{"caption": "", "credit": null, "date": "September 30, 2026", "rating": null, "recipe": null, "title": "Week of September 28, 2026", "trip": null, "url": "/house/2026-w40/", "where": "19 photos, 1 video"}], "media": [{"ch": 0, "h": null, "poster": "https://media.probablyworthsharing.com/images/house/2026-w40/img-8411-poster.jpg?v=6b08ed357f", "src": "https://media.probablyworthsharing.com/images/house/2026-w40/img-8411.mp4?v=31a94de3d2", "type": "video", "w": null}, {"ch": 0, "h": 1600, "src": "https://media.probablyworthsharing.com/images/house/2026-w40/img-8387.jpg?v=eb530b83e1", "type": "photo", "w": 1200}, {"ch": 0, "h": 1600, "src": "https://media.probablyworthsharing.com/images/house/2026-w40/img-8391.jpg?v=a8135c386e", "type": "photo", "w": 1200}, {"ch": 0, "h": 1600, "src": "https://media.probablyworthsharing.com/images/house/2026-w40/img-8392.jpg?v=82fec5eeb0", "type": "photo", "w": 1200}, {"ch": 0, "h": 1600, "src": "https://media.probablyworthsharing.com/images/house/2026-w40/img-8393.jpg?v=6447376268", "type": "photo", "w": 1200}, {"ch": 0, "h": 1600, "src": "https://media.probablyworthsharing.com/images/house/2026-w40/img-8394.jpg?v=293851d5bb", "type": "photo", "w": 1200}, {"ch": 0, "h": 1600, "src": "https://media.probablyworthsharing.com/images/house/2026-w40/img-8400.jpg?v=c8d8f349bc", "type": "photo", "w": 1200}, {"ch": 0, "h": 1200, "src": "https://media.probablyworthsharing.com/images/house/2026-w40/img-8403.jpg?v=2f52d40a59", "type": "photo", "w": 1600}, {"ch": 0, "h": 1600, "src": "https://media.probablyworthsharing.com/images/house/2026-w40/img-8408.jpg?v=f4a55bc1d6", "type": "photo", "w": 1200}, {"ch": 0, "h": 1200, "src": "https://media.probablyworthsharing.com/images/house/2026-w40/img-8410.jpg?v=87b7d5666d", "type": "photo", "w": 1600}, {"ch": 0, "h": 1200, "src": "https://media.probablyworthsharing.com/images/house/2026-w40/img-8412.jpg?v=c61d82ad4d", "type": "photo", "w": 1600}, {"ch": 0, "h": 1200, "src": "https://media.probablyworthsharing.com/images/house/2026-w40/img-8413.jpg?v=1ab20080a2", "type": "photo", "w": 1600}, {"ch": 0, "h": 1200, "src": "https://media.probablyworthsharing.com/images/house/2026-w40/img-8414.jpg?v=3b735b230e", "type": "photo", "w": 1600}, {"ch": 0, "h": 1600, "src": "https://media.probablyworthsharing.com/images/house/2026-w40/img-8415.jpg?v=bdf80c1ecc", "type": "photo", "w": 1200}, {"ch": 0, "h": 1600, "src": "https://media.probablyworthsharing.com/images/house/2026-w40/img-8416.jpg?v=76d38cf5a4", "type": "photo", "w": 1200}, {"ch": 0, "h": 1200, "src": "https://media.probablyworthsharing.com/images/house/2026-w40/img-8417.jpg?v=74382ca49f", "type": "photo", "w": 1600}, {"ch": 0, "h": 1600, "src": "https://media.probablyworthsharing.com/images/house/2026-w40/img-8418.jpg?v=306058453c", "type": "photo", "w": 1200}, {"ch": 0, "h": 1600, "src": "https://media.probablyworthsharing.com/images/house/2026-w40/img-8421.jpg?v=efe305cb14", "type": "photo", "w": 1200}, {"ch": 0, "h": 1600, "src": "https://media.probablyworthsharing.com/images/house/2026-w40/img-8423.jpg?v=47ec70606a", "type": "photo", "w": 1200}, {"ch": 0, "h": 1600, "src": "https://media.probablyworthsharing.com/images/house/2026-w40/img-8427.jpg?v=d5ed243542", "type": "photo", "w": 1200}], "title": "Week of September 28, 2026", "trip": false, "url": "/house/2026-w40/", "wide": true}, {"chapters": [{"caption": "", "credit": null, "date": "October 9, 2026", "rating": null, "recipe": null, "title": "Week of October 5, 2026", "trip": null, "url": "/house/2026-w41/", "where": "15 photos, 2 videos"}], "media": [{"ch": 0, "h": null, "poster": "https://media.probablyworthsharing.com/images/house/2026-w41/img-8578-poster.jpg?v=63d4dcd202", "src": "https://media.probablyworthsharing.com/images/house/2026-w41/img-8578.mp4?v=3680fec8b7", "type": "video", "w": null}, {"ch": 0, "h": null, "poster": "https://media.probablyworthsharing.com/images/house/2026-w41/img-8580-poster.jpg?v=4e590b5484", "src": "https://media.probablyworthsharing.com/images/house/2026-w41/img-8580.mp4?v=5ea6e3aa50", "type": "video", "w": null}, {"ch": 0, "h": 1200, "src": "https://media.probablyworthsharing.com/images/house/2026-w41/img-8569.jpg?v=52217fecc7", "type": "photo", "w": 1600}, {"ch": 0, "h": 1600, "src": "https://media.probablyworthsharing.com/images/house/2026-w41/img-8570.jpg?v=8362f497cc", "type": "photo", "w": 1200}, {"ch": 0, "h": 1600, "src": "https://media.probablyworthsharing.com/images/house/2026-w41/img-8571.jpg?v=254d58007b", "type": "photo", "w": 1200}, {"ch": 0, "h": 1200, "src": "https://media.probablyworthsharing.com/images/house/2026-w41/img-8572.jpg?v=84f8f2219a", "type": "photo", "w": 1600}, {"ch": 0, "h": 1200, "src": "https://media.probablyworthsharing.com/images/house/2026-w41/img-8573.jpg?v=7e3152008f", "type": "photo", "w": 1600}, {"ch": 0, "h": 1600, "src": "https://media.probablyworthsharing.com/images/house/2026-w41/img-8577.jpg?v=a5d60e9df5", "type": "photo", "w": 1200}, {"ch": 0, "h": 1200, "src": "https://media.probablyworthsharing.com/images/house/2026-w41/img-8579.jpg?v=234d38b55d", "type": "photo", "w": 1600}, {"ch": 0, "h": 1600, "src": "https://media.probablyworthsharing.com/images/house/2026-w41/img-8583.jpg?v=4ecbe74c30", "type": "photo", "w": 1200}, {"ch": 0, "h": 1600, "src": "https://media.probablyworthsharing.com/images/house/2026-w41/img-8584.jpg?v=ff8fc95985", "type": "photo", "w": 1200}, {"ch": 0, "h": 1600, "src": "https://media.probablyworthsharing.com/images/house/2026-w41/img-8586.jpg?v=d2cd6fa860", "type": "photo", "w": 1200}, {"ch": 0, "h": 1200, "src": "https://media.probablyworthsharing.com/images/house/2026-w41/img-8587.jpg?v=319bdaccc2", "type": "photo", "w": 1600}, {"ch": 0, "h": 1200, "src": "https://media.probablyworthsharing.com/images/house/2026-w41/img-8588.jpg?v=6f879e03a2", "type": "photo", "w": 1600}, {"ch": 0, "h": 1200, "src": "https://media.probablyworthsharing.com/images/house/2026-w41/img-8592.jpg?v=04d5d638fa", "type": "photo", "w": 1600}, {"ch": 0, "h": 1200, "src": "https://media.probablyworthsharing.com/images/house/2026-w41/img-8593.jpg?v=0c00364144", "type": "photo", "w": 1600}, {"ch": 0, "h": 1200, "src": "https://media.probablyworthsharing.com/images/house/2026-w41/img-8594.jpg?v=0e60fde68b", "type": "photo", "w": 1600}], "title": "Week of October 5, 2026", "trip": false, "url": "/house/2026-w41/", "wide": true}, {"chapters": [{"caption": "", "credit": null, "date": "October 17, 2026", "rating": null, "recipe": null, "title": "Week of October 12, 2026", "trip": null, "url": "/house/2026-w42/", "where": "30 photos"}], "media": [{"ch": 0, "h": 1600, "src": "https://media.probablyworthsharing.com/images/house/2026-w42/img-8642.jpg?v=1aa5d5b5a9", "type": "photo", "w": 1200}, {"ch": 0, "h": 1600, "src": "https://media.probablyworthsharing.com/images/house/2026-w42/img-8643.jpg?v=5d291d6175", "type": "photo", "w": 1200}, {"ch": 0, "h": 1200, "src": "https://media.probablyworthsharing.com/images/house/2026-w42/img-8646.jpg?v=93b111ff8c", "type": "photo", "w": 1600}, {"ch": 0, "h": 1200, "src": "https://media.probablyworthsharing.com/images/house/2026-w42/img-8647.jpg?v=1c127cd9c2", "type": "photo", "w": 1600}, {"ch": 0, "h": 1200, "src": "https://media.probablyworthsharing.com/images/house/2026-w42/img-8648.jpg?v=6e2d7b4fc1", "type": "photo", "w": 1600}, {"ch": 0, "h": 1200, "src": "https://media.probablyworthsharing.com/images/house/2026-w42/img-8649.jpg?v=1406942991", "type": "photo", "w": 1600}, {"ch": 0, "h": 1600, "src": "https://media.probablyworthsharing.com/images/house/2026-w42/img-8654.jpg?v=1f4b853a1a", "type": "photo", "w": 1200}, {"ch": 0, "h": 1600, "src": "https://media.probablyworthsharing.com/images/house/2026-w42/img-8655.jpg?v=ecb4c57966", "type": "photo", "w": 1200}, {"ch": 0, "h": 1600, "src": "https://media.probablyworthsharing.com/images/house/2026-w42/img-8656.jpg?v=fc01099e84", "type": "photo", "w": 1200}, {"ch": 0, "h": 1200, "src": "https://media.probablyworthsharing.com/images/house/2026-w42/img-8657.jpg?v=50f4765a41", "type": "photo", "w": 1600}, {"ch": 0, "h": 1600, "src": "https://media.probablyworthsharing.com/images/house/2026-w42/img-8658.jpg?v=b6820b5ab2", "type": "photo", "w": 1200}, {"ch": 0, "h": 1600, "src": "https://media.probablyworthsharing.com/images/house/2026-w42/img-8659.jpg?v=f828eff787", "type": "photo", "w": 1200}, {"ch": 0, "h": 900, "src": "https://media.probablyworthsharing.com/images/house/2026-w42/dji-fly-20261015-181530-0140-1792099771852-photo.jpg?v=d68c3e68c1", "type": "photo", "w": 1600}, {"ch": 0, "h": 900, "src": "https://media.probablyworthsharing.com/images/house/2026-w42/dji-fly-20261015-181702-0143-1792099770369-photo.jpg?v=4be86af8f9", "type": "photo", "w": 1600}, {"ch": 0, "h": 900, "src": "https://media.probablyworthsharing.com/images/house/2026-w42/dji-fly-20261015-182230-0150-1792099475232-photo.jpg?v=94c62fddc2", "type": "photo", "w": 1600}, {"ch": 0, "h": 1600, "src": "https://media.probablyworthsharing.com/images/house/2026-w42/img-8676.jpg?v=42ea35f31e", "type": "photo", "w": 1200}, {"ch": 0, "h": 1200, "src": "https://media.probablyworthsharing.com/images/house/2026-w42/img-8677.jpg?v=c538025baf", "type": "photo", "w": 1600}, {"ch": 0, "h": 1200, "src": "https://media.probablyworthsharing.com/images/house/2026-w42/img-8681.jpg?v=5f571ee3ac", "type": "photo", "w": 1600}, {"ch": 0, "h": 1600, "src": "https://media.probablyworthsharing.com/images/house/2026-w42/img-8711.jpg?v=bf97012824", "type": "photo", "w": 1200}, {"ch": 0, "h": 1600, "src": "https://media.probablyworthsharing.com/images/house/2026-w42/img-8712.jpg?v=e7fdabd04b", "type": "photo", "w": 1200}, {"ch": 0, "h": 1600, "src": "https://media.probablyworthsharing.com/images/house/2026-w42/img-8713.jpg?v=1f1be40721", "type": "photo", "w": 1200}, {"ch": 0, "h": 1600, "src": "https://media.probablyworthsharing.com/images/house/2026-w42/img-8714.jpg?v=8016ef4deb", "type": "photo", "w": 1200}, {"ch": 0, "h": 1600, "src": "https://media.probablyworthsharing.com/images/house/2026-w42/img-8715.jpg?v=efad2d7ae0", "type": "photo", "w": 1200}, {"ch": 0, "h": 1200, "src": "https://media.probablyworthsharing.com/images/house/2026-w42/img-8716.jpg?v=f8f69032d1", "type": "photo", "w": 1600}, {"ch": 0, "h": 1600, "src": "https://media.probablyworthsharing.com/images/house/2026-w42/img-8717.jpg?v=0a84eb9084", "type": "photo", "w": 1200}, {"ch": 0, "h": 1600, "src": "https://media.probablyworthsharing.com/images/house/2026-w42/img-8718.jpg?v=9261006b0b", "type": "photo", "w": 1200}, {"ch": 0, "h": 1600, "src": "https://media.probablyworthsharing.com/images/house/2026-w42/img-8719.jpg?v=8ff2b9e1d5", "type": "photo", "w": 1200}, {"ch": 0, "h": 1600, "src": "https://media.probablyworthsharing.com/images/house/2026-w42/img-8720.jpg?v=3ce0ffcdce", "type": "photo", "w": 1200}, {"ch": 0, "h": 1200, "src": "https://media.probablyworthsharing.com/images/house/2026-w42/img-8721.jpg?v=eb47b15a1c", "type": "photo", "w": 1600}, {"ch": 0, "h": 1200, "src": "https://media.probablyworthsharing.com/images/house/2026-w42/img-8722.jpg?v=b9de3aa0d4", "type": "photo", "w": 1600}], "title": "Week of October 12, 2026", "trip": false, "url": "/house/2026-w42/", "wide": true}, {"chapters": [{"caption": "", "credit": null, "date": "October 19, 2026", "rating": null, "recipe": null, "title": "Week of October 19, 2026", "trip": null, "url": "/house/2026-w43/", "where": "7 photos"}], "media": [{"ch": 0, "h": 1200, "src": "https://media.probablyworthsharing.com/images/house/2026-w43/img-8726.jpg?v=fa3752d3dd", "type": "photo", "w": 1600}, {"ch": 0, "h": 1600, "src": "https://media.probablyworthsharing.com/images/house/2026-w43/img-8727.jpg?v=418f670e39", "type": "photo", "w": 1200}, {"ch": 0, "h": 1600, "src": "https://media.probablyworthsharing.com/images/house/2026-w43/img-8728.jpg?v=156b06b9be", "type": "photo", "w": 1200}, {"ch": 0, "h": 1600, "src": "https://media.probablyworthsharing.com/images/house/2026-w43/img-8729.jpg?v=130dd211f1", "type": "photo", "w": 1200}, {"ch": 0, "h": 1200, "src": "https://media.probablyworthsharing.com/images/house/2026-w43/img-8730.jpg?v=e62357e7bd", "type": "photo", "w": 1600}, {"ch": 0, "h": 1600, "src": "https://media.probablyworthsharing.com/images/house/2026-w43/img-8731.jpg?v=e5ed514801", "type": "photo", "w": 1200}, {"ch": 0, "h": 1600, "src": "https://media.probablyworthsharing.com/images/house/2026-w43/img-8732.jpg?v=ee54a60b80", "type": "photo", "w": 1200}], "title": "Week of October 19, 2026", "trip": false, "url": "/house/2026-w43/", "wide": true}]</script>
 <dialog class="viewer" id="viewer" aria-label="Story viewer">
@@ -275,5 +484,7 @@
   addEventListener('keydown', e => { if (e.key === 'Escape' && document.body.classList.contains('menu-open')) set(false); });
 })();
 </script>
-<script src="/static/js/stories.js?v=41427602" defer></script></body>
+<script src="/static/js/stories.js?v=b746f670" defer></script>
+<script src="/static/js/tabs.js?v=ee826729" defer></script>
+<script src="/static/js/vendortable.js?v=f11da3a1" defer></script></body>
 </html>

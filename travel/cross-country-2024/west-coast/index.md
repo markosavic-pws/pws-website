@@ -1,5 +1,5 @@
 ---
-title: "Leg 2: Down the West Coast"
+title: "Leg 2: Portland and San Francisco with Friends"
 url: "https://probablyworthsharing.com/travel/cross-country-2024/west-coast/"
 author: "Marko Savic"
 published: "2024-10-03"
@@ -7,7 +7,7 @@ type: "trip"
 description: "The ferry from Victoria to Washington, ten days in Portland, then down to San Francisco by way of the Weasku Inn."
 ---
 
-# Leg 2: Down the West Coast
+# Leg 2: Portland and San Francisco with Friends
 
 The ferry from Victoria to Washington, ten days in Portland, then down to San Francisco by way of the Weasku Inn.
 

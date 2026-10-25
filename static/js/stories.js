@@ -11,6 +11,10 @@
   }, { threshold: 0.6 });
   if (io) $$('main video').forEach(v => io.observe(v));
 
+  // ---- a trip's highlight reel opens part-scrolled, so the first still is cut by the edge ----
+  const reel = $('.reel-strip');
+  if (reel && reel.firstElementChild) reel.scrollLeft = reel.firstElementChild.offsetWidth * 0.45;
+
   // ---- timeline: open with the newest moment centred, arrows, filters + search ----
   const tl = $('#timeline');
   const centreNewest = () => {
@@ -29,6 +33,7 @@
     tl.addEventListener('blur', () => tl.classList.remove('kb-focus'));
     centreNewest();
     addEventListener('load', centreNewest);
+    addEventListener('tab:show', e => { if (e.detail === 'build-log') { centreNewest(); arrows(); } });
     // once you scroll away, a "Newest" button brings today's moment back to the centre
     const today = $('.tl-today');
     const goNewest = () => {

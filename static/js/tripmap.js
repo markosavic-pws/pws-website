@@ -38,6 +38,7 @@ async function init() {
     cooperativeGestures: true, attributionControl: { compact: true }, maxZoom: 15,
   });
   map.addControl(new maplibregl.NavigationControl({ showCompass: false }), 'top-right');
+  window.tripMap = map;   // tabs.js resizes it when the Overview tab is shown
 
   // draw our layers as soon as the style is ready; map tiles fill in as they arrive
   map.once('style.load', () => {
