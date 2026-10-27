@@ -1,0 +1,15 @@
+{
+ "name": "Probably Worth Sharing",
+ "short_name": "PWS",
+ "start_url": "/",
+ "display": "standalone",
+ "background_color": "#fbf8f1",
+ "theme_color": "#094cdc",
+ "icons": [
+  {
+   "src": "/logo.png",
+   "sizes": "400x400",
+   "type": "image/png"
+  }
+ ]
+}

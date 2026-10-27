@@ -268,6 +268,11 @@
     e.preventDefault(); open(Number(a.dataset.index));
   }));
   $$('.trip-play').forEach(b => b.addEventListener('click', () => open(0)));
+  // any link with a story number (guide place photos) opens that story at that photo
+  $$('[data-story][data-index]').forEach(a => a.addEventListener('click', e => {
+    if (e.metaKey || e.ctrlKey || e.shiftKey) return;
+    e.preventDefault(); open(Number(a.dataset.story), Number(a.dataset.index));
+  }));
   $$('.week-open[data-index]').forEach(a => a.addEventListener('click', e => {
     if (e.metaKey || e.ctrlKey || e.shiftKey) return;
     e.preventDefault(); open(0, Number(a.dataset.index));

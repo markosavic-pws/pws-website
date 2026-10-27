@@ -132,6 +132,18 @@ h3 { font-size: 1.25rem; font-weight: 700; }
 .prose ul, .prose ol { padding-left: 1.3em; }
 .prose li { margin: .3em 0; }
 .prose h2, .prose h3 { scroll-margin-top: 16px; }
+
+/* Notifications: the opt-in form on /notifications/ and the small links to it (rules/publishing.md) */
+.notify fieldset { border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); padding: 12px 20px 16px; margin: 24px 0 0; }
+.notify legend { font: 700 .9rem/1 var(--sans); padding: 0 6px; margin-left: -6px; color: var(--ink-soft); }
+.notify label { display: flex; gap: 12px; align-items: baseline; padding: 8px 0; font-size: 1.05rem; cursor: pointer; }
+.notify input[type=checkbox] { width: 18px; height: 18px; flex: none; accent-color: var(--cobalt); transform: translateY(3px); }
+.notify-actions { display: flex; gap: 10px; flex-wrap: wrap; margin: 20px 0 0; }
+.notify-actions .btn:disabled { opacity: .6; cursor: progress; }
+.notify-actions [hidden] { display: none; }   /* .btn would otherwise show hidden buttons */
+.notify-status { min-height: 1.6em; margin: 12px 0 0; color: var(--ink-soft); }
+.notify-unsupported, .notify-ios { padding: 14px 18px; border-radius: var(--radius); background: var(--surface); border: 1px solid var(--line); }
+.notify-link { margin: 6px 0 0; font: 600 .95rem/1.4 var(--sans); }
 .post-recipes .prose #ingredients + p, .post-recipes .prose #ingredients ~ ul { font-family: var(--sans); font-size: 1.02rem; }
 .post-recipes .prose #ingredients ~ ul { background: var(--surface); border-radius: var(--radius); padding: 16px 20px 16px 2.2em; box-shadow: var(--shadow); }
 .video { position: relative; aspect-ratio: 16 / 9; margin: 24px 0; border-radius: 10px; overflow: hidden; background: #000; }
@@ -278,6 +290,18 @@ h3 { font-size: 1.25rem; font-weight: 700; }
 .entry-slide img, .entry-slide video { height: min(72vh, 680px); width: auto; max-width: 88vw; object-fit: cover; border-radius: 14px; box-shadow: var(--shadow); background: #000; }
 .entry-slide figcaption { font: 500 .9rem/1.4 var(--sans); color: var(--ink-soft); padding-top: 6px; max-width: 60ch; }
 .entry-body { padding-top: 12px; }
+/* moment pages (not menus): stacked on phones, photos beside the words on desktop */
+.entry-layout { display: grid; grid-template-areas: "head" "media" "body"; }
+.entry-layout > .entry-head { grid-area: head; }
+.entry-layout > .entry-media { grid-area: media; margin: 0 -16px; padding: 0 16px 16px; }
+.entry-layout > .entry-body { grid-area: body; width: 100%; max-width: 720px; margin: 0 auto; }
+@media (min-width: 900px) {
+  .entry-layout { grid-template-columns: minmax(0, max-content) minmax(340px, 460px); grid-template-rows: auto 1fr;
+    grid-template-areas: "media head" "media body"; column-gap: 48px; justify-content: center; align-items: start; }
+  .entry-layout > .entry-media { margin: 0; padding: 0 0 12px; }
+  .entry-layout > .entry-body { margin: 0; padding-top: 4px; }
+  .entry-layout .entry-slide img, .entry-layout .entry-slide video { height: min(80vh, 760px); max-width: 100%; }
+}
 .entry-nav { display: flex; justify-content: space-between; gap: 16px; margin-top: 40px; padding-top: 18px; border-top: 2px dashed var(--line); font: 600 1rem/1.4 var(--sans); }
 
 /* Recipe credit: badge on cards, box on pages */
@@ -415,12 +439,12 @@ body.viewing { overflow: hidden; }
 /* trips: a bar spanning the trip's tiles */
 .tl-trip { flex: 0 0 auto; display: grid; gap: 8px; align-content: start; }
 .tl-trip-bar { display: block; font: 700 .85rem/1 var(--sans); padding: 8px 12px; border-radius: 999px; background: var(--cobalt); color: #fff; text-decoration: none; white-space: nowrap; }
-.tl-trip-bar:hover { background: color-mix(in srgb, var(--cobalt) 85%, #000); }
+a.tl-trip-bar:hover { background: color-mix(in srgb, var(--cobalt) 85%, #000); }
 .tl-trip-items { list-style: none; margin: 0; padding: 0 0 0 0; display: flex; gap: 14px; }
 .tl-trip-items .tl-item { scroll-snap-align: center; }
 /* line up untripped tiles with the tiles under a bar */
 .tl-item, .tl-month { padding-top: 39px; }
-.tl-trip .tl-item { padding-top: 0; }
+.tl-trip .tl-item, .tl-trip .tl-month { padding-top: 0; }
 @media (prefers-color-scheme: dark) { .tl-trip-bar { background: var(--sun); color: var(--cobalt); } }
 
 .rating { margin: 8px 0 0; font-size: .95rem; }
@@ -691,3 +715,45 @@ body.viewing { overflow: hidden; }
 #build-timeline .prose li { position: relative; margin: 0; padding: 8px 0; }
 #build-timeline .prose li::before { content: ""; position: absolute; left: -31px; top: 17px; width: 13px; height: 13px; border-radius: 50%; background: var(--cobalt); box-shadow: 0 0 0 3px var(--paper); }
 #build-timeline .prose li strong { font-family: var(--sans); }
+
+/* Travel guides (templates/guide.html) */
+.guide-legend { display: flex; gap: 8px; flex-wrap: wrap; margin: 8px 0 0; }
+.guide-map-wrap { margin: 18px auto 0; }
+.guide-map { height: 440px; }
+.guide-controls { display: grid; gap: 10px; margin: 16px auto 4px; }
+.guide-controls .chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; }
+.guide-panel { padding-top: 10px; padding-bottom: 40px; }
+.guide-region-intro { margin: 12px 0 4px; }
+.guide-region-extra { margin-top: 34px; padding-top: 22px; border-top: 2px dashed var(--line); }
+.guide-regions { list-style: none; margin: 10px 0 30px; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 12px; }
+.guide-regions a { display: grid; gap: 4px; padding: 14px 16px; border-radius: var(--radius); background: var(--surface); box-shadow: var(--shadow); color: var(--ink); text-decoration: none; font: 500 .9rem/1.3 var(--sans); }
+.guide-regions a strong { font-size: 1.1rem; }
+.guide-regions a span { color: var(--ink-soft); }
+.place-list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 12px; }
+.place { padding: 14px 16px; border-radius: 12px; background: var(--surface); box-shadow: var(--shadow); scroll-margin-top: 20px; }
+.place:target { outline: 3px solid var(--sun); }
+.place-name { margin: 0 0 4px; font: 800 1.05rem/1.3 var(--sans); }
+.place-meta { margin: 0 0 6px; font: 500 .85rem/1.4 var(--sans); color: var(--ink-soft); }
+.place-note { margin: 0; font-size: 1rem; line-height: 1.5; }
+.place-see { margin: 8px 0 0; font: 700 .9rem var(--sans); }
+.place-status { display: inline-block; padding: 1px 8px; border-radius: 999px; font: 700 .72rem/1.5 var(--sans); }
+.status-favourite { background: var(--cobalt); color: #fff; box-shadow: 0 0 0 2px var(--sun); }
+.status-favourite::before { content: "★ "; color: var(--sun); }
+.status-notyet { background: var(--line); color: var(--ink); }
+.status-occasion { background: #2b1d4d; color: #f3e9ff; }
+.place-been { font: 700 .78rem/1.5 var(--sans); color: var(--cobalt); }
+.place-photos { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin: -4px -6px 12px; }
+.place-photo { position: relative; display: block; aspect-ratio: 3 / 4; border-radius: 9px; overflow: hidden; background: var(--line); }
+.place-photo img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .25s; }
+.place-photo:hover img { transform: scale(1.05); }
+.place-more { position: absolute; inset: 0; display: grid; place-items: center; background: rgb(0 0 0 / .45); color: #fff; font: 800 1.2rem var(--sans); }
+.guide-none { color: var(--ink-soft); font-style: italic; }
+.guide-map .maplibregl-popup-content { font: 600 .9rem/1.35 var(--sans); padding: 8px 12px; }
+.guide-map .pin-meta { font-weight: 500; color: #5b584f; font-size: .8rem; }
+.travel-guides { margin: 6px 0 30px; }
+.guide-card { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr); border-radius: var(--radius); overflow: hidden; background: var(--surface); box-shadow: var(--shadow); color: var(--ink); text-decoration: none; }
+.guide-card img { width: 100%; height: 100%; min-height: 200px; object-fit: cover; display: block; }
+.guide-card-text { padding: 20px 22px; display: grid; gap: 8px; align-content: center; }
+.guide-card-text strong { font: 800 1.5rem/1.2 var(--display); }
+.guide-card-text span { font: 500 1rem/1.5 var(--sans); color: var(--ink-soft); }
+@media (max-width: 700px) { .guide-card { grid-template-columns: 1fr; } .guide-card img { height: 180px; min-height: 0; } .guide-map { height: 340px; } }

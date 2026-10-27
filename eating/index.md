@@ -31,6 +31,9 @@ What Marko Savic is cooking, baking, buying, and eating: home cooking, cookbook 
 - [Sticky bun from Boulangerie La Vendéenne](https://probablyworthsharing.com/eating/2026-05-12-la-vendeenne-sticky-bun/index.md) (2026-05-12): From Boulangerie La Vendéenne in Blockhouse, picked up at Noggins Corner Farm Market in Greenwich.
 - [Mini pineapple upside-down cakes](https://probablyworthsharing.com/eating/2026-05-16-mini-pineapple-upside-down-cakes/index.md) (2026-05-16): Mini pineapple upside-down cakes
 - [Asparagus and spring onion pasta](https://probablyworthsharing.com/eating/2026-05-31-asparagus-and-spring-onion-pasta/index.md) (2026-05-31): Spring onions and asparagus, an egg-yolk dough, and a green filling for hand-shaped pasta. Started from a recipe in Flour + Water.
+- [Bedard Bakery cruffin](https://probablyworthsharing.com/eating/2026-06-07-bedard-bakery/index.md) (2026-06-07): Cruffin! Bedard Bakery cruffin
+- [Jonny’s burger](https://probablyworthsharing.com/eating/2026-06-12-jonny-s/index.md) (2026-06-12): Jonny’s burger is the best in the Valley, maybe the province
+- [Braised short ribs](https://probablyworthsharing.com/eating/2026-06-18-20260618-142724-1/index.md) (2026-06-18): Braised shortribs (these were added to homemade mac and cheese!). Braised short ribs
 - [Dipped soft serve from Leonidas](https://probablyworthsharing.com/eating/2026-06-21-leonidas-dipped-soft-serve/index.md) (2026-06-21): Dipped soft serve from Leonidas
 - [No-bake pistachio and vanilla cheesecake](https://probablyworthsharing.com/eating/2026-08-16-no-bake-pistachio-vanilla-cheesecake/index.md) (2026-08-16): No-bake pistachio and vanilla cheesecake
 - [Salad from Poyo + The Sprout](https://probablyworthsharing.com/eating/2026-09-16-poyo-and-the-sprout-salad/index.md) (2026-09-16): The Super Saiyan salad, I think. Salad from Poyo + The Sprout
@@ -41,3 +44,4 @@ What Marko Savic is cooking, baking, buying, and eating: home cooking, cookbook 
 - [Plywood Thanksgiving](https://probablyworthsharing.com/eating/2026-10-07-plywood-thanksgiving/index.md) (2026-10-07): Brined, dried in the fridge, roasted, and eaten on the plywood floor of the house we are building.
 - [Dinner at Bessie North House](https://probablyworthsharing.com/eating/2026-10-16-bessie-north-house/index.md) (2026-10-16): Dinner at Bessie North House
 - [Waffles with blueberries & maple syrup](https://probablyworthsharing.com/eating/2026-10-18-waffles-with-blueberries-and-maple-syrup/index.md) (2026-10-18): Waffles with blueberries & maple syrup
+- [Baked short rib pasta](https://probablyworthsharing.com/eating/2026-10-25-baked-short-rib-pasta/index.md) (2026-10-25): I made braised short ribs in tomatoes, with carrots, onion, and garlic. I added the short ribs and sauce to pasta. I baked it with smoked Gouda, jalapeño…

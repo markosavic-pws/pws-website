@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en-CA">
+<head>
+<meta charset="utf-8">
+<script>document.documentElement.classList.add('js')</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Notifications · Probably Worth Sharing</title>
+<meta name="description" content="Get a notification in your browser when I post something new. Pick what you want to hear about. Posted a lot at once? You’ll get one notification for the…">
+<link rel="canonical" href="https://probablyworthsharing.com/notifications/"><meta property="og:site_name" content="Probably Worth Sharing">
+<meta property="og:locale" content="en_CA">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Notifications">
+<meta property="og:description" content="Get a notification in your browser when I post something new. Pick what you want to hear about. Posted a lot at once? You’ll get one notification for the…">
+<meta property="og:url" content="https://probablyworthsharing.com/notifications/"><meta property="og:image" content="https://probablyworthsharing.com/og/notifications.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Notifications · Probably Worth Sharing">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Notifications">
+<meta name="twitter:description" content="Get a notification in your browser when I post something new. Pick what you want to hear about. Posted a lot at once? You’ll get one notification for the…">
+<meta name="twitter:image" content="https://probablyworthsharing.com/og/notifications.jpg">
+<link rel="alternate" type="text/markdown" title="Markdown version" href="/notifications/index.md"><meta name="theme-color" content="#094cdc">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/logo.png">
+<link rel="manifest" href="/manifest.webmanifest"><link rel="alternate" type="application/rss+xml" title="Probably Worth Sharing" href="/feed.xml">
+<link rel="alternate" type="application/rss+xml" title="Probably Worth Sharing newsletter" href="/newsletter/feed.xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400..700&display=swap">
+<link rel="stylesheet" href="/static/css/site.css?v=1bb00efc">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="masthead">
+  <div class="wrap masthead-inner">
+    <a class="brand" href="/" aria-label="Probably Worth Sharing home">
+      <img src="/logo.png" alt="" width="56" height="56">
+      <span>Probably Worth Sharing</span>
+    </a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="site-nav" aria-label="Main">
+      <button class="menu-close" type="button" aria-label="Close menu">×</button>
+      <ul>
+        <li><a href="/eating/">Eating</a></li>
+        <li><a href="/recipes/">Recipes</a></li>
+        <li><a href="/house/">House</a></li>
+        <li><a href="/travel/">Travel</a></li>
+        <li><a href="/newsletter/">Newsletter</a></li>
+        <li><a href="https://www.youtube.com/channel/UCF3Rvw0Hh8iPXbm_4VeF_dQ" target="_blank" rel="noopener">YouTube</a></li>
+        <li><a href="/about/">About</a></li>
+      </ul>
+    </nav>
+    <div class="menu-scrim" hidden></div>
+  </div>
+</header>
+<main id="main">
+<article class="post">
+  <div class="wrap-narrow prose page-prose">
+    <h1>Notifications</h1>
+<p>Get a notification in your browser when I post something new. Pick what you want to hear about.</p>
+<form class="notify" id="notify" data-worker="https://notify.probablyworthsharing.com" hidden>
+  <fieldset>
+    <legend>Tell me about</legend>
+    <label><input type="checkbox" name="topic" value="house" checked> <strong>The House</strong>: each new week of the build log</label>
+    <label><input type="checkbox" name="topic" value="eating" checked> <strong>What I’m Eating</strong>: new photos and trips</label>
+    <label><input type="checkbox" name="topic" value="recipes" checked> <strong>Recipes and the newsletter</strong></label>
+  </fieldset>
+  <p class="notify-actions">
+    <button class="btn" type="submit" data-on>Turn on notifications</button>
+    <button class="btn" type="submit" data-save hidden>Save</button>
+    <button class="btn btn-ghost" type="button" data-off hidden>Turn off</button>
+  </p>
+  <p class="notify-status" role="status" aria-live="polite"></p>
+</form>
+
+<p class="notify-unsupported" hidden>This browser can’t show notifications from websites.</p>
+<p class="notify-ios" hidden>On iPhone and iPad, add this site to your Home Screen first: tap <strong>Share</strong>, then <strong>Add to Home Screen</strong>. Open it from there and come back to this page.</p>
+<noscript><p>Notifications need JavaScript.</p></noscript>
+
+<p>Posted a lot at once? You’ll get one notification for the batch, not one for each.</p>
+<p>Rather use a feed reader? There’s an <a href="/feed.xml">RSS feed</a>.</p>
+<h3>What’s stored</h3>
+<p>When you turn notifications on, your browser gives this site an address to send them to. That address, and the topics you picked, are all that’s kept: no name, no email, nothing about what you read. It isn’t shared with anyone. Turn notifications off here, or block them in your browser’s settings, and the address is deleted (if you block them, it goes the next time I post).</p>
+  </div>
+</article>
+</main>
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <p class="footer-about">I make a cooking show on <a href="https://www.youtube.com/channel/UCF3Rvw0Hh8iPXbm_4VeF_dQ" target="_blank" rel="noopener">YouTube</a> sometimes. But mostly I post photos of <a href="/eating/">what I’m cooking</a>. I used to write a <a href="/newsletter/">newsletter</a> that I hope to start again one day, but I’m busy these days <a href="/house/">building a house</a> and working full-time in tech. This site is a home for all my adventures in food (and life).</p>
+    <p class="footer-cta">Like and subscribe on <a href="https://www.youtube.com/channel/UCF3Rvw0Hh8iPXbm_4VeF_dQ" target="_blank" rel="noopener">YouTube</a> or follow along on <a href="https://www.instagram.com/markosavic/" target="_blank" rel="noopener">Instagram</a>.</p>
+    <p class="footer-links">
+      <a href="/about/">About</a>
+      <a href="/ethics-in-advertising/">Ethics &amp; Ads</a>
+      <a href="/newsletter/feed.xml">RSS</a>
+      <a href="/notifications/">Notifications</a>
+      <a href="mailto:marko@markosavic.ca">Email</a>
+    </p>
+    <p class="fine">© 2026 Marko Savic</p>
+  </div>
+</footer>
+<script>
+// phone menu: slide-over panel
+(() => {
+  const btn = document.querySelector('.menu-toggle'), nav = document.getElementById('site-nav');
+  const scrim = document.querySelector('.menu-scrim'), close = nav.querySelector('.menu-close');
+  const set = open => {
+    document.body.classList.toggle('menu-open', open);
+    btn.setAttribute('aria-expanded', String(open));
+    scrim.hidden = !open;
+    if (open) nav.querySelector('a')?.focus(); else if (document.activeElement && nav.contains(document.activeElement)) btn.focus();
+  };
+  btn.addEventListener('click', () => set(true));
+  close.addEventListener('click', () => set(false));
+  scrim.addEventListener('click', () => set(false));
+  addEventListener('keydown', e => { if (e.key === 'Escape' && document.body.classList.contains('menu-open')) set(false); });
+})();
+</script>
+<script src="/static/js/notify.js?v=39cabfc5" defer></script></body>
+</html>
