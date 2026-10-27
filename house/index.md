@@ -19,5 +19,6 @@ Week-by-week updates from the house Marko Savic is building in Nova Scotia: fram
 - [Week of August 31, 2026](https://probablyworthsharing.com/house/2026-w36/index.md) (2026-09-05): Week of August 31, 2026
 - [Week of August 24, 2026](https://probablyworthsharing.com/house/2026-w35/index.md) (2026-08-29): Week of August 24, 2026
 - [Week of August 17, 2026](https://probablyworthsharing.com/house/2026-w34/index.md) (2026-08-17): Week of August 17, 2026
+- [Week of July 13, 2026](https://probablyworthsharing.com/house/2026-w29/index.md) (2026-07-14): Week of July 13, 2026
 - [Week of June 22, 2026](https://probablyworthsharing.com/house/2026-w26/index.md) (2026-06-22): Week of June 22, 2026
 - [Week of June 1, 2026](https://probablyworthsharing.com/house/2026-w23/index.md) (2026-06-02): Week of June 1, 2026
