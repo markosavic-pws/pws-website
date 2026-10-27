@@ -14,7 +14,8 @@ Get a notification in your browser when I post something new. Pick what you want
     Tell me about
      The House: each new week of the build log
      What I’m Eating: new photos and trips
-     Recipes and the newsletter
+     Recipes
+     The newsletter
   
 
     Turn on notifications
