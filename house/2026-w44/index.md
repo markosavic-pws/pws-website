@@ -4,7 +4,7 @@ url: "https://probablyworthsharing.com/house/2026-w44/"
 author: "Marko Savic"
 published: "2026-10-26"
 type: "house build update"
-description: "Week of October 26, 2026: 25 photos and videos from building Marko Savic's house in Nova Scotia."
+description: "Week of October 26, 2026: 23 photos and videos from building Marko Savic's house in Nova Scotia."
 ---
 
 # Week of October 26, 2026
@@ -30,8 +30,6 @@ description: "Week of October 26, 2026: 25 photos and videos from building Marko
 - Photo, 2026-10-27 17:50: https://probablyworthsharing.com/images/house/2026-w44/20261027-175045-7.jpg
 - Photo, 2026-10-27 17:50: https://probablyworthsharing.com/images/house/2026-w44/20261027-175051-8.jpg
 - Photo, 2026-10-27 17:51: https://probablyworthsharing.com/images/house/2026-w44/20261027-175102-9.jpg
-- Photo, 2026-10-27 17:51: https://probablyworthsharing.com/images/house/2026-w44/20261027-175118-10.jpg
-- Photo, 2026-10-27 17:51: https://probablyworthsharing.com/images/house/2026-w44/20261027-175122-11.jpg
 - Photo, 2026-10-27 17:54: https://probablyworthsharing.com/images/house/2026-w44/20261027-175453-12.jpg
 - Photo, 2026-10-27 17:55: https://probablyworthsharing.com/images/house/2026-w44/20261027-175505-13.jpg
 - Photo, 2026-10-27 17:55: https://probablyworthsharing.com/images/house/2026-w44/20261027-175514-14.jpg
